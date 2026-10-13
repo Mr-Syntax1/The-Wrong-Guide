@@ -27,7 +27,6 @@ const footerLinks = {
   legal: [
     { label: "Privacy Policy", href: "/privacy", external: false },
     { label: "Terms of Service", href: "/terms", external: false },
-    { label: "Cookie Policy", href: "/cookies", external: false },
   ],
   contact: [
     { label: "General Inquiries", href: `mailto:${gameConfig.businessEmail}` },

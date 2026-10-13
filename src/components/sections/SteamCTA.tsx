@@ -50,7 +50,7 @@ export function SteamCTA() {
                     <Button
                       variant="primary"
                       size="xl"
-                      className="w-full sm:w-auto min-w-[280px] group"
+                      className="w-full sm:w-auto min-w-[280px] group cursor-pointer"
                       aria-label={isReleased ? `Buy ${gameConfig.title} on Steam` : `Wishlist ${gameConfig.title} on Steam`}
                     >
                       <Monitor className="w-6 h-6 mr-2" aria-hidden="true" />
@@ -62,7 +62,7 @@ export function SteamCTA() {
                   <Button
                     variant="secondary"
                     size="lg"
-                    className="w-full sm:w-auto"
+                    className="w-full sm:w-auto cursor-pointer"
                     onClick={() => document.getElementById("features")?.scrollIntoView({ behavior: "smooth" })}
                   >
                     LEARN MORE

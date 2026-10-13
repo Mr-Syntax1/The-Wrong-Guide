@@ -5,15 +5,27 @@ import { ResponsiveImage } from "@/components/ui";
 import { gameConfig } from "@/config/game";
 import { cn, formatDate } from "@/lib/utils";
 import { ChevronLeft, ExternalLink } from "lucide-react";
+import { Suspense } from "react";
+import NewsArticleSkeleton from "./NewsArticleContent";
 
 interface Props {
   params: Promise<{ slug: string }>;
+}
+
+
+export default function NewsArticle({ params }: Props) {
+  return (
+    <Suspense fallback={<NewsArticleSkeleton />}>
+      <NewsArticleContent params={params} />
+    </Suspense>
+  );
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = gameConfig.news.find((p) => p.slug === slug);
   if (!post) return { title: "Not Found" };
+
   return {
     title: post.title,
     description: post.excerpt,
@@ -31,7 +43,7 @@ export async function generateStaticParams() {
   return gameConfig.news.map((post) => ({ slug: post.slug }));
 }
 
-export default async function NewsArticle({ params }: Props) {
+export  async function NewsArticleContent({ params }: Props) {
   const { slug } = await params;
   const post = gameConfig.news.find((p) => p.slug === slug);
 
@@ -48,7 +60,7 @@ export default async function NewsArticle({ params }: Props) {
 
   return (
     <article className="min-h-screen">
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24" aria-labelledby="article-heading">
+      <section className="relative pb-16 pt-14 md:pb-24" aria-labelledby="article-heading">
         <div className="absolute inset-0 -z-10" aria-hidden="true">
           <ResponsiveImage
             src={post.image}

@@ -46,7 +46,7 @@ export function World() {
       </div>
 
       <div className="container-custom">
-        <header className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
+        <header className="text-center max-w-3xl mt-10 mx-auto mb-16 md:mb-24">
           <h2 id="world-heading" className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-fg-primary tracking-tight mb-6">
             BEYOND THE GUIDE
           </h2>
@@ -118,7 +118,7 @@ export function World() {
                           >
                             {isExpanded && index === selectedIndex ? (
                               <>
-                                <ChevronLeft className="w-4 h-4" aria-hidden="true" />
+                                <ChevronLeft className="w-4 h-4 " aria-hidden="true" />
                                 COLLAPSE
                               </>
                             ) : (
@@ -161,7 +161,7 @@ export function World() {
             <button
               onClick={() => setSelectedIndex((prev) => (prev === 0 ? locations.length - 1 : prev - 1))}
               onKeyDown={handleKeyDown}
-              className="p-3 rounded-full bg-bg-tertiary border border-border-primary text-fg-secondary hover:text-accent-red hover:border-accent-red/50 transition-colors"
+              className="p-3 rounded-full bg-bg-tertiary border border-border-primary text-fg-secondary hover:text-accent-red hover:border-accent-red/50 transition-colors cursor-pointer"
               aria-label="Previous location"
               tabIndex={0}
             >
@@ -173,7 +173,7 @@ export function World() {
             <button
               onClick={() => setSelectedIndex((prev) => (prev === locations.length - 1 ? 0 : prev + 1))}
               onKeyDown={handleKeyDown}
-              className="p-3 rounded-full bg-bg-tertiary border border-border-primary text-fg-secondary hover:text-accent-red hover:border-accent-red/50 transition-colors"
+              className="p-3 rounded-full bg-bg-tertiary border border-border-primary text-fg-secondary hover:text-accent-red hover:border-accent-red/50 transition-colors cursor-pointer"
               aria-label="Next location"
               tabIndex={0}
             >

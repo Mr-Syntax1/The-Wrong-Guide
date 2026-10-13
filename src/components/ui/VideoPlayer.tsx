@@ -203,7 +203,7 @@ export const VideoPlayer = forwardRef<HTMLVideoElement, VideoPlayerProps>(
           <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/90 via-transparent to-transparent z-10" />
 
           <button
-            className="z-20 p-4 rounded-full bg-bg-primary/80 backdrop-blur-sm text-fg-primary hover:bg-accent-red hover:text-fg-primary transition-all duration-300"
+            className="z-20 p-4 rounded-full bg-bg-primary/80 backdrop-blur-sm text-fg-primary hover:bg-accent-red hover:text-fg-primary transition-all duration-300 cursor-pointer"
             onClick={handlePlayPause}
             aria-label={isPlaying ? "Pause" : "Play"}
             aria-pressed={isPlaying}
@@ -344,7 +344,7 @@ export function VideoModal({ isOpen, onClose, src, poster, title, autoPlay = tru
           {title}
         </h2>
         <button
-          className="absolute top-4 right-4 z-10 p-2 rounded-full bg-bg-secondary/80 backdrop-blur-sm text-fg-secondary hover:text-fg-primary hover:bg-bg-tertiary transition-colors"
+          className="absolute top-4 right-4 z-50 p-2 rounded-full bg-bg-secondary/80 backdrop-blur-sm text-fg-secondary hover:text-fg-primary hover:bg-bg-tertiary transition-colors cursor-pointer"
           onClick={onClose}
           aria-label="Close video"
         >

@@ -20,9 +20,7 @@ const taglines = [
 ];
 
 export function Hero() {
-  const [currentTagline, setCurrentTagline] = useState(0);
   const [showContent, setShowContent] = useState(false);
-  const taglineRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => setShowContent(true), 100);
@@ -30,10 +28,42 @@ export function Hero() {
   }, []);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTagline((prev) => (prev + 1) % taglines.length);
-    }, 8000);
-    return () => clearInterval(interval);
+    let typeItInstance: { destroy: () => void } | null = null;
+    let timer: ReturnType<typeof setTimeout> | null = null;
+
+    // صبر کن تا DOM آماده بشه
+    timer = setTimeout(() => {
+      const target = document.querySelector(".typewriter");
+      if (!target) return;
+
+      import("typeit")
+        .then((module) => {
+          const TypeIt = module.default;
+
+          typeItInstance = new TypeIt(".typewriter", {
+            strings: taglines,
+            speed: 80,
+            deleteSpeed: 30,
+            lifeLike: true,
+            cursor: true,
+            cursorChar: "|",
+            breakLines: false,
+            nextStringDelay: 4000,
+            loop: true,
+            waitUntilVisible: false,
+          }).go();
+        })
+        .catch((err) => console.error("TypeIt loading error:", err));
+    }, 100);
+
+    // cleanup
+    return () => {
+      if (timer) clearTimeout(timer);
+      if (typeItInstance) {
+        typeItInstance.destroy();
+        typeItInstance = null;
+      }
+    };
   }, []);
 
   return (
@@ -61,9 +91,8 @@ export function Hero() {
       <div className="relative z-20 container-custom px-4 md:px-6 lg:px-8 xl:px-12">
         <div className="max-w-5xl mx-auto text-center">
           <div
-            ref={taglineRef}
             className={cn(
-              "mb-8 md:mb-12 min-h-[3rem]",
+              "mb-8 md:mb-12 min-h-[3rem] flex items-center justify-center",
               "transition-all duration-1000 ease-in-out",
               showContent ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             )}
@@ -71,9 +100,9 @@ export function Hero() {
             aria-live="polite"
             aria-atomic="true"
           >
-            <p className="text-fg-secondary text-xl md:text-2xl font-light tracking-wide leading-relaxed">
-              {taglines[currentTagline]}
-            </p>
+            <span
+              className="typewriter text-fg-secondary text-xl md:text-2xl font-light tracking-wide leading-relaxed"
+            />
           </div>
 
           <h1

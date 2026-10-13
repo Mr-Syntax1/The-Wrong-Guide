@@ -32,7 +32,7 @@ export function News() {
   };
 
   return (
-    <section id="news" className="relative" aria-labelledby="news-heading">
+    <section id="news" className="relative mb-12" aria-labelledby="news-heading">
       <div className="absolute inset-0 -z-10" aria-hidden="true">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-bg-secondary/20 to-transparent" />
       </div>
@@ -143,7 +143,7 @@ export function News() {
                 size="lg"
                 onClick={loadMore}
                 disabled={isLoading}
-                className="min-w-[200px]"
+                className="min-w-[200px] cursor-pointer"
               >
                 {isLoading ? (
                   <>

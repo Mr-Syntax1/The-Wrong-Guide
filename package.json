@@ -15,7 +15,8 @@
     "next": "16.4.0",
     "react": "19.3.0",
     "react-dom": "19.3.0",
-    "tailwind-merge": "^3.7.0"
+    "tailwind-merge": "^3.7.0",
+    "typeit": "^8.8.7"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",

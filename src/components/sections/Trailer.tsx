@@ -60,7 +60,7 @@ export function Trailer() {
             >
               <div className={cn(
                 "relative flex items-center justify-center w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full bg-accent-red/90 backdrop-blur-sm",
-                "hover:bg-accent-red hover:scale-105 transition-all duration-300",
+                "hover:bg-accent-red hover:scale-105 transition-all duration-300 cursor-pointer",
                 "border-4 border-fg-primary/20",
                 isLoading && "animate-pulse pointer-events-none"
               )}>

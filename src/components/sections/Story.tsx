@@ -29,27 +29,20 @@ const storySections = [
   },
 ];
 
+const sectionVariants = {
+  hidden: (index: number) => ({
+    opacity: 0,
+    x: index % 2 === 0 ? -150 : 150,  // حتی: از چپ، فرد: از راست
+  }),
+  visible: {
+    opacity: 1,
+    x: 0,
+  },
+};
+
 export function Story() {
-  const [visibleSections, setVisibleSections] = useState<Set<number>>(new Set());
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  useEffect(() => {
-    const observers = sectionRefs.current.map((ref, index) => {
-      if (!ref) return null;
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setVisibleSections((prev) => new Set(prev).add(index));
-          }
-        },
-        { threshold: 0.1, rootMargin: "0px 0px -100px 0px" }
-      );
-      observer.observe(ref);
-      return observer;
-    });
-
-    return () => observers.forEach((obs) => obs?.disconnect());
-  }, []);
 
   return (
     <section id="story" className="relative" aria-labelledby="story-heading">
@@ -67,14 +60,21 @@ export function Story() {
           </p>
         </header>
 
-        <div className="space-y-16 md:space-y-20 lg:space-y-24">
+        <div className="">
           {storySections.map((section, index) => (
             <motion.div
               key={section.id}
               ref={(el) => (sectionRefs.current[index] = el)}
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
+              custom={index}
+              variants={sectionVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{
+                duration: 1.0,
+                delay: index * 0.15,
+                ease: [0.25, 0.46, 0.45, 0.94],
+              }}
               className="relative"
             >
               <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
