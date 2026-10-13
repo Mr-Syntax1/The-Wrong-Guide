@@ -40,14 +40,14 @@ export function Hero() {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden" aria-labelledby="hero-title">
       <div className="absolute inset-0 z-0" aria-hidden="true">
         <Image
-          src="/images/hero-background.jpg"
+          src="/images/the_wrong_guide_files/eec494d7-49e9-477e-9f11-927f95c788db.jpg"
           alt=""
           fill
           priority
           className="object-cover"
           sizes="100vw"
           style={{
-            filter: "brightness(0.3) contrast(1.1) saturate(0.5)",
+            filter: "brightness(0.5) contrast(1.1) saturate(0.5)",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-bg-primary/60 via-bg-primary/30 to-bg-primary/80" />
@@ -71,7 +71,7 @@ export function Hero() {
             aria-live="polite"
             aria-atomic="true"
           >
-            <p className="text-fg-secondary text-lg md:text-xl font-light tracking-wide leading-relaxed">
+            <p className="text-fg-secondary text-xl md:text-2xl font-light tracking-wide leading-relaxed">
               {taglines[currentTagline]}
             </p>
           </div>
@@ -110,7 +110,7 @@ export function Hero() {
             aria-label="Primary actions"
           >
             <Link href={gameConfig.steamUrl} target="_blank" rel="noopener noreferrer">
-              <Button variant="primary" size="xl" className="w-full sm:w-auto min-w-[280px]" aria-label="Wishlist The Wrong Guide on Steam">
+              <Button variant="primary" size="xl" className="w-full sm:w-auto min-w-[280px] cursor-pointer" aria-label="Wishlist The Wrong Guide on Steam">
                 <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
                 </svg>
@@ -122,7 +122,7 @@ export function Hero() {
             <Button
               variant="secondary"
               size="xl"
-              className="w-full sm:w-auto min-w-[200px]"
+              className="w-full cursor-pointer sm:w-auto min-w-[200px]"
               onClick={() => document.getElementById("trailer")?.scrollIntoView({ behavior: "smooth" })}
               aria-label="Watch trailer"
             >
@@ -159,20 +159,14 @@ export function Hero() {
         </div>
 
         <div
-          className={cn(
-            "absolute bottom-8 left-1/2 -translate-x-1/2",
-            "transition-all duration-1000 ease-out delay-1000",
-            showContent ? "opacity-100" : "opacity-0"
-          )}
-          aria-hidden="true"
         >
-          <div className="flex flex-col items-center gap-3 text-fg-tertiary">
+          <div className="flex flex-col items-center gap-3 text-fg-tertiary mt-10">
             <div className="animate-bounce">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>
             </div>
-            <span className="text-xs tracking-widest uppercase">SCROLL TO BEGIN</span>
+            <span className="text-xs tracking-widest uppercase ">SCROLL TO BEGIN</span>
           </div>
         </div>
       </div>

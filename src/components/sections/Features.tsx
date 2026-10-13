@@ -27,7 +27,7 @@ export function Features() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-bg-secondary/20 to-transparent" />
       </div>
 
-      <div className="container-custom">
+      <div className="container-custom mt-24">
         <header className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
           <h2 id="features-heading" className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-fg-primary tracking-tight mb-6">
             FEATURES

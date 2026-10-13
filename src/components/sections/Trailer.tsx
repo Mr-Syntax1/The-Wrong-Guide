@@ -27,7 +27,7 @@ export function Trailer() {
 
       <div className="container-custom">
         <header className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-          <h2 id="trailer-heading" className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-fg-primary tracking-tight mb-6">
+          <h2 id="trailer-heading" className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-fg-primary tracking-tight mb-6 mt-24">
             SEE FOR YOURSELF
           </h2>
           <p className="text-fg-secondary text-lg md:text-xl leading-relaxed">

@@ -129,7 +129,7 @@ export function Footer() {
             <h3 className="font-ui font-semibold text-fg-primary tracking-wide uppercase text-sm mb-4">CONTACT</h3>
             <ul className="space-y-3" role="list">
               {footerLinks.contact.map((link) => (
-                <li key={link.href}>
+                <li key={`${link.label}-${link.href}`}>
                   <a
                     href={link.href}
                     className="flex items-center gap-2 text-fg-secondary hover:text-accent-red transition-colors text-sm"

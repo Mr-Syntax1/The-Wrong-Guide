@@ -32,7 +32,7 @@ export function PressKitPage() {
 
   return (
     <div className="min-h-screen">
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24" aria-labelledby="press-kit-heading">
+      <section className="relative pb-16 mt-24 md:pb-24" aria-labelledby="press-kit-heading">
         <div className="absolute inset-0 -z-10" aria-hidden="true">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-bg-secondary/20 to-transparent" />
         </div>

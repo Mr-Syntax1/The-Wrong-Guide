@@ -54,7 +54,7 @@ export function Navbar() {
               THE WRONG GUIDE
             </Link>
 
-            <div className="hidden md:flex items-center gap-1">
+            <div className="hidden lg:flex items-center gap-1">
               {navigation.map((item) => (
                 <Link
                   key={item.href}
@@ -76,16 +76,16 @@ export function Navbar() {
               ))}
             </div>
 
-            <div className="hidden md:flex items-center gap-3">
+            <div className="hidden lg:flex items-center gap-3">
               <Link href={gameConfig.steamUrl} target="_blank" rel="noopener noreferrer">
-                <Button variant="primary" size="sm" className="whitespace-nowrap">
+                <Button variant="primary" size="sm" className="whitespace-nowrap cursor-pointer">
                   WISHLIST ON STEAM
                 </Button>
               </Link>
             </div>
 
             <button
-              className="md:hidden p-2 text-fg-primary hover:text-accent-red transition-colors"
+              className="lg:hidden p-2 text-fg-primary hover:text-accent-red transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-expanded={isMobileMenuOpen}
               aria-controls="mobile-menu"
@@ -98,7 +98,7 @@ export function Navbar() {
           <div
             id="mobile-menu"
             className={cn(
-              "md:hidden overflow-hidden transition-all duration-300 ease-out",
+              "lg:hidden overflow-hidden transition-all duration-300 ease-out",
               isMobileMenuOpen ? "max-h-96 opacity-100 pb-6" : "max-h-0 opacity-0"
             )}
             role="navigation"
@@ -124,7 +124,7 @@ export function Navbar() {
               ))}
               <div className="pt-4 border-t border-border-primary">
                 <Link href={gameConfig.steamUrl} target="_blank" rel="noopener noreferrer">
-                  <Button variant="primary" size="md" fullWidth className="w-full">
+                  <Button variant="primary" size="md" fullWidth className="w-full cursor-pointer">
                     WISHLIST ON STEAM
                   </Button>
                 </Link>
@@ -136,7 +136,7 @@ export function Navbar() {
 
       <div
         className={cn(
-          "fixed inset-0 z-[199] bg-bg-primary/50 backdrop-blur-sm md:hidden",
+          "fixed inset-0 z-[199] bg-bg-primary/50 backdrop-blur-sm lg:hidden",
           isMobileMenuOpen ? "block" : "hidden"
         )}
         onClick={() => setIsMobileMenuOpen(false)}

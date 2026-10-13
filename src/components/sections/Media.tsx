@@ -208,7 +208,7 @@ return (
         <header className="max-w-3xl mx-auto mb-12 md:mb-16">
           <div className="flex items-center justify-between flex-wrap gap-4 mb-6">
             <div>
-              <h2 id="media-heading" className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-fg-primary tracking-tight">
+              <h2 id="media-heading" className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-fg-primary tracking-tight mt-24 mb-6">
                 MEDIA
               </h2>
               <p className="text-fg-secondary text-lg mt-2">Screenshots, gameplay footage, and concept art.</p>

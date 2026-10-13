@@ -14,19 +14,7 @@ export const metadata: Metadata = {
 export default function FeaturesPage() {
   return (
     <>
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24" aria-labelledby="page-heading">
-        <div className="absolute inset-0 -z-10" aria-hidden="true">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-bg-secondary/20 to-transparent" />
-        </div>
-        <div className="container-custom text-center max-w-3xl mx-auto">
-          <h1 id="page-heading" className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-fg-primary tracking-tight mb-6">
-            FEATURES
-          </h1>
-          <p className="text-fg-secondary text-lg md:text-xl leading-relaxed">
-            Core pillars that define The Wrong Guide experience.
-          </p>
-        </div>
-      </section>
+
       <Features />
       <section className="py-16" aria-labelledby="cta-heading">
         <div className="container-custom text-center">
@@ -37,7 +25,7 @@ export default function FeaturesPage() {
             No hand-holding. No false safety. Only the guide.
           </p>
           <a href={gameConfig.steamUrl} target="_blank" rel="noopener noreferrer">
-            <button className="inline-flex items-center gap-2 px-8 py-4 rounded-base bg-accent-red text-fg-primary font-medium text-lg hover:bg-accent-red-hover transition-colors">
+            <button className="inline-flex items-center gap-2 px-8 py-4 rounded-base bg-accent-red text-fg-primary font-medium text-lg hover:bg-accent-red-hover transition-colors cursor-pointer">
               WISHLIST ON STEAM
             </button>
           </a>

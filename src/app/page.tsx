@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${gameConfig.title} | Official Website`,
     description: gameConfig.shortDescription,
-    images: ["/images/og-image.jpg"],
+    images: ["/images/og-image.png"],
   },
 };
 

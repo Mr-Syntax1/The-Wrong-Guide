@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     description: gameConfig.shortDescription,
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
         alt: gameConfig.title,
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     creator: "@thewrongguide",
     title: `${gameConfig.title} | Official Website`,
     description: gameConfig.shortDescription,
-    images: ["/images/og-image.jpg"],
+    images: ["/images/og-image.png"],
   },
   verification: {
     google: "[GOOGLE_SITE_VERIFICATION]",

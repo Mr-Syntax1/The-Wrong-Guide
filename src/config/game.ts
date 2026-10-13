@@ -16,7 +16,7 @@ The Wrong Guide is a single-player, offline, story-driven horror experience that
   price: "$7.99",
    steamUrl: "https://store.steampowered.com", 
   steamAppId: "[STEAM APP ID]",
-  trailerUrl: "[TRAILER URL]",
+  trailerUrl: "/videos/trailer.mp4",
   trailerPoster: "/images/trailer-poster.jpg",
   pressEmail: "press@[DOMAIN].com",
   businessEmail: "business@[DOMAIN].com",
