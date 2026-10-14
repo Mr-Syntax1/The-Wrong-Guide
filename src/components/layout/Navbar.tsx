@@ -85,7 +85,7 @@ export function Navbar() {
             </div>
 
             <button
-              className="lg:hidden p-2 text-fg-primary hover:text-accent-red transition-colors"
+              className="lg:hidden p-2 text-fg-primary hover:text-accent-red transition-colors cursor-pointer"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-expanded={isMobileMenuOpen}
               aria-controls="mobile-menu"
@@ -104,7 +104,7 @@ export function Navbar() {
             role="navigation"
             aria-label="Mobile navigation"
           >
-            <div className="pt-4 space-y-1 border-t border-border-primary">
+            <div className="pt-4 space-y-1 border-t border-border-primary ">
               {navigation.map((item) => (
                 <Link
                   key={item.href}

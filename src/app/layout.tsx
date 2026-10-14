@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar, Footer } from "@/components/layout";
 import { WrongGuideEffects } from "@/components/ui/WrongGuideEffects";
 import { gameConfig } from "@/config/game";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -98,6 +99,7 @@ export default function RootLayout({
         <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600;700&display=swap" />
       </head>
       <body className="min-h-full flex flex-col bg-bg-primary text-fg-primary">
+        <ScrollToTop />
         <Navbar />
         <main className="flex-1 pt-16 md:pt-20">{children}</main>
         <Footer />

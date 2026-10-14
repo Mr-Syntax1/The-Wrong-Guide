@@ -9,14 +9,14 @@ import { cn } from "@/lib/utils";
 import { Play, ArrowRight } from "lucide-react";
 
 const taglines = [
-  "You were supposed to follow the guide.",
-  "But the guide was wrong.",
-  "Every instruction leads somewhere.",
-  "But not where you think.",
-  "The path is marked.",
-  "But the markers lie.",
-  "Trust the guide.",
-  "Or trust your instincts.",
+  "You followed the guide. It led you here.",
+  "The call said she was waiting.",
+  "But she wasn't waiting for you.",
+  "The path remembers your footsteps.",
+  "The markers point both ways now.",
+  "Your daughter is somewhere ahead.",
+  "So is the thing that took her.",
+  "Trust the guide. Or trust what's left of you.",
 ];
 
 export function Hero() {
@@ -77,7 +77,7 @@ export function Hero() {
           className="object-cover"
           sizes="100vw"
           style={{
-            filter: "brightness(0.5) contrast(1.1) saturate(0.5)",
+            filter: "brightness(0.8) contrast(1.12) saturate(0.8)",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-bg-primary/60 via-bg-primary/30 to-bg-primary/80" />

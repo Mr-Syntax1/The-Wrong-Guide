@@ -80,7 +80,7 @@ export function Story() {
               <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
                 <div className={cn(
                   "relative",
-                  index % 2 === 0 ? "lg:order-1" : "lg:order-2"
+                  index % 2 === 0 ? "order-1" : "order-2"
                 )}>
                   <div className="relative aspect-[4/5] lg:aspect-[3/4] overflow-hidden rounded-base">
                     <ResponsiveImage
@@ -91,7 +91,7 @@ export function Story() {
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover transition-transform duration-700 hover:scale-[1.02]"
                       style={{
-                        filter: "brightness(0.6) contrast(1.2) saturate(0.4)",
+                        filter: "brightness(0.8) contrast(1.12) saturate(0.9)",
                       }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/60 via-transparent to-transparent" />

@@ -69,7 +69,7 @@
 @layer base {
   :root {
     --background: #030303;
-    --foreground: #fafafa;
+
   }
 
   * {

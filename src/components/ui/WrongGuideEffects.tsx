@@ -25,8 +25,8 @@ interface WrongGuideConfig {
 const DEFAULT_CONFIG: WrongGuideConfig = {
   enabled: true,
   intensity: "subtle",
-  minInterval: 45000,
-  maxInterval: 120000,
+  minInterval: 8000,
+  maxInterval: 20000,
   effects: [
     "text-shift",
     "label-flicker",
@@ -41,14 +41,18 @@ const DEFAULT_CONFIG: WrongGuideConfig = {
 };
 
 const textShifts = [
-  { original: "The guide is your only friend.", shifted: "The guide is your only end." },
-  { original: "Follow the path.", shifted: "Follow the path?" },
-  { original: "Trust the instructions.", shifted: "Trust the instructions?" },
-  { original: "You are being guided.", shifted: "You are being guided." },
-  { original: "Don't leave the path.", shifted: "Don't leave the path." },
-  { original: "The guide knows the way.", shifted: "The guide knows the way..." },
-  { original: "Safety lies ahead.", shifted: "Safety lies ahead?" },
-  { original: "Continue forward.", shifted: "Continue forward?" },
+  { original: "You are safe.", shifted: "You were safe." },
+  { original: "The guide protects you.", shifted: "The guide protects itself." },
+  { original: "Keep moving forward.", shifted: "Keep moving forward. It's closer now." },
+  { original: "The path is clear.", shifted: "The path was clear." },
+  { original: "You are alone.", shifted: "You are not alone." },
+  { original: "Don't look back.", shifted: "Don't look back. It's already behind you." },
+  { original: "The exit is ahead.", shifted: "The exit was ahead." },
+  { original: "Trust the guide.", shifted: "Trust the guide. Trust the guide. Trust the guide." },
+  { original: "Follow the light.", shifted: "Follow the light. It knows your name." },
+  { original: "You will survive.", shifted: "You will survive. For now." },
+  { original: "The door is locked.", shifted: "The door is locked from the outside." },
+  { original: "She is waiting for you.", shifted: "She has been waiting for a long time." },
 ];
 
 const labelFlickers = [
@@ -80,12 +84,49 @@ const warningFlashes = [
   "⚠ MARKER INCONSISTENCY",
   "⚠ SIGNAL INTERFERENCE",
   "⚠ TRUST LEVEL DECLINING",
+  "⚠ SUBJECT IS BEING OBSERVED",
+  "⚠ GUIDANCE SOURCE UNVERIFIED",
+  "⚠ DEVIATION DETECTED",
+  "⚠ THE GUIDE HAS NOTICED YOU",
+  "⚠ SOMETHING IS FOLLOWING YOU",
+  "⚠ DO NOT TRUST THE NEXT INSTRUCTION",
+  "⚠ SHE KNOWS YOU ARE HERE",
+  "⚠ THE PATH HAS BEEN REWRITTEN",
 ];
 
 const textCorrections = [
-  { original: "The cabin is a safe haven.", corrected: "The cabin is a safe haven. [CORRECTION: The cabin locks from the outside.]" },
-  { original: "The tower offers a clear view.", corrected: "The tower offers a clear view. [CORRECTION: The higher you climb, the less you see.]" },
-  { original: "Follow the markers.", corrected: "Follow the markers. [CORRECTION: Some markers point both ways.]" },
+  {
+    original: "The cabin is a safe haven.",
+    corrected: "The cabin is a safe haven. [CORRECTION: The cabin locks from the outside.]",
+  },
+  {
+    original: "The tower offers a clear view.",
+    corrected: "The tower offers a clear view. [CORRECTION: The higher you climb, the less you see.]",
+  },
+  {
+    original: "Follow the markers.",
+    corrected: "Follow the markers. [CORRECTION: Some markers point both ways.]",
+  },
+  {
+    original: "You are the only one here.",
+    corrected: "You are the only one here. [CORRECTION: You are the only one who is still alive.]",
+  },
+  {
+    original: "The guide wants to help you.",
+    corrected: "The guide wants to help you. [CORRECTION: The guide wants to help itself.]",
+  },
+  {
+    original: "Your daughter is safe.",
+    corrected: "Your daughter is safe. [CORRECTION: Your daughter is safe... for now.]",
+  },
+  {
+    original: "The exit is this way.",
+    corrected: "The exit is this way. [CORRECTION: The exit was this way. It moved.]",
+  },
+  {
+    original: "Don't trust anyone.",
+    corrected: "Don't trust anyone. [CORRECTION: Including yourself.]",
+  },
 ];
 
 const locationDrifts = [
@@ -93,6 +134,10 @@ const locationDrifts = [
   { original: "The Cabin", drifted: "The Cabin?" },
   { original: "The Tower", drifted: "The Tower?" },
   { original: "The Subterrain", drifted: "The Subterrain?" },
+  { original: "The Path", drifted: "The Path That Was" },
+  { original: "The Cabin", drifted: "The Locked Cabin" },
+  { original: "The Tower", drifted: "The Blind Tower" },
+  { original: "The Subterrain", drifted: "The Below" },
 ];
 
 const observedHints = [
@@ -101,6 +146,15 @@ const observedHints = [
   "Something is watching.",
   "You are not alone on the path.",
   "The markers are watching.",
+  "It knows you are reading this.",
+  "You should not be here.",
+  "The guide remembers your face.",
+  "You have been here before.",
+  "She can hear you breathing.",
+  "The path was never meant for you.",
+  "You are being guided. Not saved.",
+  "Someone is reading over your shoulder.",
+  "The guide is closer than you think.",
 ];
 
 function getRandomElement<T>(array: T[]): T {
@@ -313,7 +367,7 @@ export function WrongGuideText({
   useEffect(() => {
     if (!originalText) return;
     const interval = setInterval(() => {
-      if (Math.random() < 0.001) {
+      if (Math.random() < 0.01) {
         const shifts = {
           "text-shift": textShifts,
           "label-flicker": labelFlickers,
@@ -324,10 +378,10 @@ export function WrongGuideText({
         if (match) {
           setShiftedText(effect === "label-flicker" ? match.flicker : match.shifted);
           setIsShifted(true);
-          setTimeout(() => setIsShifted(false), getRandomInt(100, 3000));
+          setTimeout(() => setIsShifted(false), getRandomInt(500, 3000));
         }
       }
-    }, 5000);
+    }, 2000);
     return () => clearInterval(interval);
   }, [originalText, effect]);
 
@@ -350,7 +404,7 @@ export function WrongGuideObserver() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (Math.random() < 0.0005) {
+      if (Math.random() < 0.01) {
         setHint(getRandomElement(observedHints));
         setTimeout(() => setHint(null), getRandomInt(3000, 6000));
       }

@@ -170,7 +170,7 @@ The trailer was crafted to give you a taste of the game's atmosphere without spo
 
 Watch it now and decide for yourself: can you trust the guide?`,
       category: "Trailer",
-      image: "/images/news/trailer-release.jpg",
+      image: "/images/news/story-4.jpg",
       slug: "first-trailer",
     },
     {

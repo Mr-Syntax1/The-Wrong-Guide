@@ -89,7 +89,7 @@ export function News() {
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                       style={{
-                        filter: "brightness(0.5) contrast(1.15) saturate(0.4)",
+                        filter: "brightness(0.9) contrast(1.1) saturate(0.8)",
                       }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/70 via-transparent to-transparent" />

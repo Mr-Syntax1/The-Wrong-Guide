@@ -61,18 +61,6 @@ export  async function NewsArticleContent({ params }: Props) {
   return (
     <article className="min-h-screen">
       <section className="relative pb-16 pt-14 md:pb-24" aria-labelledby="article-heading">
-        <div className="absolute inset-0 -z-10" aria-hidden="true">
-          <ResponsiveImage
-            src={post.image}
-            alt=""
-            fill
-            priority
-            className="object-cover"
-            style={{ filter: "brightness(0.25) contrast(1.2) saturate(0.2)" }}
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-bg-primary/80 via-bg-primary/40 to-bg-primary/90" />
-        </div>
 
         <div className="container-custom relative z-10">
           <Link
@@ -110,7 +98,7 @@ export  async function NewsArticleContent({ params }: Props) {
                 fill
                 sizes="100vw"
                 className="object-cover"
-                style={{ filter: "brightness(0.5) contrast(1.15) saturate(0.4)" }}
+                style={{ filter: "brightness(0.8) contrast(1.1) saturate(0.8)" }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/60 via-transparent to-transparent" />
             </div>

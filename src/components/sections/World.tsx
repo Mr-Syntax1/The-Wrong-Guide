@@ -72,16 +72,21 @@ export function World() {
                   aria-roledescription="slide"
                   aria-label={`${location.name}, ${index + 1} of ${locations.length}`}
                 >
-                  <div className="relative aspect-[16/10] lg:aspect-[21/9] overflow-hidden rounded-base bg-bg-tertiary">
+                  <div className="relative aspect-[4/5] md:aspect-[21/9] overflow-hidden rounded-base bg-bg-tertiary">
+
                     <ResponsiveImage
                       src={location.image}
                       alt={location.name}
                       fill
-                      sizes="(max-width: 1024px) 100vw, 100vw"
-                      className="object-cover transition-transform duration-1000"
+                      sizes="100vw"
+                      className={`
+                    object-cover 
+                    transition-transform duration-700 ease-out
+                    will-change-transform
+                    ${isExpanded && index === selectedIndex ? "scale-[1.08]" : "scale-100"}
+                                `}
                       style={{
-                        filter: "brightness(0.5) contrast(1.15) saturate(0.3)",
-                        transform: isExpanded && index === selectedIndex ? "scale(1.02)" : "scale(1)",
+                        filter: "brightness(0.9) contrast(1.1) saturate(0.9)",
                       }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/80 via-bg-primary/20 to-transparent" />
@@ -111,14 +116,14 @@ export function World() {
                           <button
                             onClick={() => setIsExpanded(!isExpanded)}
                             onKeyDown={(e) => e.key === "Enter" && setIsExpanded(!isExpanded)}
-                            className="flex items-center gap-2 px-4 py-2 rounded-base bg-bg-tertiary border border-border-primary text-fg-secondary hover:text-accent-red hover:border-accent-red/50 transition-colors text-sm font-medium"
+                            className="flex items-center gap-2 px-4 py-2 rounded-base bg-bg-tertiary border border-border-primary text-fg-secondary hover:text-accent-red hover:border-accent-red/50 transition-colors text-sm font-medium cursor-pointer"
                             aria-expanded={isExpanded && index === selectedIndex}
                             aria-label={isExpanded && index === selectedIndex ? "Collapse details" : `Expand ${location.name} details`}
                             tabIndex={0}
                           >
                             {isExpanded && index === selectedIndex ? (
                               <>
-                                <ChevronLeft className="w-4 h-4 " aria-hidden="true" />
+                                <ChevronLeft className="w-4 h-4" aria-hidden="true" />
                                 COLLAPSE
                               </>
                             ) : (
@@ -207,7 +212,7 @@ function LocationDetail({ location, onClose }: { location: typeof gameConfig.loc
       <div className="absolute top-4 right-4">
         <button
           onClick={onClose}
-          className="p-2 rounded-full bg-bg-tertiary border border-border-primary text-fg-secondary hover:text-accent-red hover:border-accent-red/50 transition-colors"
+          className="p-2 rounded-full bg-bg-tertiary border border-border-primary text-fg-secondary hover:text-accent-red hover:border-accent-red/50 transition-colors cursor-pointer"
           aria-label="Close details"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -276,7 +281,7 @@ function LocationDetail({ location, onClose }: { location: typeof gameConfig.loc
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
-              style={{ filter: "brightness(0.55) contrast(1.2) saturate(0.35)" }}
+              style={{ filter: "brightness(0.8) contrast(1.12) saturate(0.8)" }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/70 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 text-fg-tertiary text-sm font-mono tracking-wider">
