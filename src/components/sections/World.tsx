@@ -61,7 +61,7 @@ export function World() {
   return (
     <section id="world" className="relative" aria-labelledby="world-heading">
       <div className="absolute inset-0 -z-10" aria-hidden="true">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-bg-secondary/20 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-bg-secondary/20 to-transparent" />
       </div>
 
       <div className="container-custom">
@@ -86,7 +86,7 @@ export function World() {
               {locations.map((location, index) => (
                 <article
                   key={location.id}
-                  className="w-full flex-shrink-0 px-4"
+                  className="w-full shrink-0 px-4"
                   role="group"
                   aria-roledescription="slide"
                   aria-label={`${location.name}, ${index + 1} of ${locations.length}`}
@@ -102,19 +102,19 @@ export function World() {
                     object-cover 
                     transition-transform duration-700 ease-out
                     will-change-transform
-                    ${isExpanded && index === selectedIndex ? "scale-[1.08]" : "scale-100"}
+                    ${isExpanded && index === selectedIndex ? "scale-[1.1]" : "scale-100"}
                                 `}
                       style={{
                         filter: "brightness(0.9) contrast(1.1) saturate(0.9)",
                       }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/80 via-bg-primary/20 to-transparent" />
-                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_50%,#030303_100%)]" />
+                    <div className="absolute inset-0 bg-linear-to-t from-bg-primary/80 via-bg-primary/20 to-transparent" />
+                    <div className="absolute inset-0 bg-[radial-linear(ellipse_at_center,_transparent_50%,#030303_100%)]" />
 
                     <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
                       <div className="max-w-3xl">
                         <div className="flex items-center gap-3 mb-4">
-                          <MapPin className="w-5 h-5 text-accent-red flex-shrink-0" aria-hidden="true" />
+                          <MapPin className="w-5 h-5 text-accent-red shrink-0" aria-hidden="true" />
                           <h3 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl text-fg-primary tracking-tight">
                             {location.name.toUpperCase()}
                           </h3>
@@ -129,7 +129,7 @@ export function World() {
                             moodDescriptions[location.mood as keyof typeof moodDescriptions]?.color?.replace("text-", "border-") || "border-border-primary",
                             "bg-bg-primary/50"
                           )}>
-                            <AlertTriangle className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
+                            <AlertTriangle className="w-3 h-3 shrink-0" aria-hidden="true" />
                             {moodDescriptions[location.mood as keyof typeof moodDescriptions]?.label || location.mood.toUpperCase()}
                           </span>
                           <button
@@ -300,9 +300,9 @@ function LocationDetail({ location, onClose }: { location: typeof gameConfig.loc
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
-              style={{ filter: "brightness(0.8) contrast(1.12) saturate(0.8)" }}
+              style={{ filter: "brightness(0.85) contrast(1.12) saturate(0.9)" }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/70 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-bg-primary/70 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 text-fg-tertiary text-sm font-mono tracking-wider">
               LOCATION DATA CLASSIFIED — GUIDE ACCESS ONLY
             </div>

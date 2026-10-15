@@ -4,11 +4,10 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Gallery } from "@/components/ui/Lightbox";
 import { cn } from "@/lib/utils";
-import { gameConfig } from "@/config/game";
-import { Image, Video, Layers, Grid } from "lucide-react";
+import { Image as ImageIcon, Video, Layers, Grid } from "lucide-react";
 
 const mediaCategories = [
-  { id: "screenshots", label: "SCREENSHOTS", icon: Image, count: 8 },
+  { id: "screenshots", label: "SCREENSHOTS", icon: ImageIcon, count: 8 },
   { id: "gameplay", label: "GAMEPLAY", icon: Video, count: 3 },
   { id: "concept-art", label: "CONCEPT ART", icon: Layers, count: 6 },
 ];
@@ -17,8 +16,8 @@ const mediaItems = [
   {
     id: "scr-1",
     type: "image" as const,
-    src: "/images/screenshots/screenshot-01.jpg",
-    thumbnail: "/images/screenshots/thumb-01.jpg",
+src: "/images/screenshots/screenshot-01.webp",
+      thumbnail: "/images/screenshots/screenshot-01.webp",
     alt: "The Path - First steps into the unknown",
     caption: "The Path - First steps into the unknown",
     width: 1920,
@@ -27,8 +26,8 @@ const mediaItems = [
   {
     id: "scr-2",
     type: "image" as const,
-    src: "/images/screenshots/screenshot-02.jpg",
-    thumbnail: "/images/screenshots/thumb-02.jpg",
+src: "/images/screenshots/screenshot-02.webp",
+      thumbnail: "/images/screenshots/screenshot-02.webp",
     alt: "The Cabin - Safety or trap?",
     caption: "The Cabin - Safety or trap?",
     width: 1920,
@@ -37,8 +36,8 @@ const mediaItems = [
   {
     id: "scr-3",
     type: "image" as const,
-    src: "/images/screenshots/screenshot-03.jpg",
-    thumbnail: "/images/screenshots/thumb-03.jpg",
+src: "/images/screenshots/screenshot-03.webp",
+      thumbnail: "/images/screenshots/screenshot-03.webp",
     alt: "The Tower - Ascending into fog",
     caption: "The Tower - Ascending into fog",
     width: 1920,
@@ -47,8 +46,8 @@ const mediaItems = [
   {
     id: "scr-4",
     type: "image" as const,
-    src: "/images/screenshots/screenshot-04.jpg",
-    thumbnail: "/images/screenshots/thumb-04.jpg",
+src: "/images/screenshots/screenshot-04.webp",
+      thumbnail: "/images/screenshots/screenshot-04.webp",
     alt: "Environmental puzzle - Read the signs carefully",
     caption: "Environmental puzzle - Read the signs carefully",
     width: 1920,
@@ -57,8 +56,8 @@ const mediaItems = [
   {
     id: "scr-5",
     type: "image" as const,
-    src: "/images/screenshots/screenshot-05.jpg",
-    thumbnail: "/images/screenshots/thumb-05.jpg",
+src: "/images/screenshots/screenshot-05.webp",
+      thumbnail: "/images/screenshots/screenshot-05.webp",
     alt: "The Subterrain - Below the surface",
     caption: "The Subterrain - Below the surface",
     width: 1920,
@@ -67,8 +66,8 @@ const mediaItems = [
   {
     id: "scr-6",
     type: "image" as const,
-    src: "/images/screenshots/screenshot-06.jpg",
-    thumbnail: "/images/screenshots/thumb-06.jpg",
+src: "/images/screenshots/screenshot-06.webp",
+      thumbnail: "/images/screenshots/screenshot-06.webp",
     alt: "The Guide's instructions - Follow them?",
     caption: "The Guide's instructions - Follow them?",
     width: 1920,
@@ -77,8 +76,8 @@ const mediaItems = [
   {
     id: "scr-7",
     type: "image" as const,
-    src: "/images/screenshots/screenshot-07.jpg",
-    thumbnail: "/images/screenshots/thumb-07.jpg",
+src: "/images/screenshots/screenshot-07.webp",
+      thumbnail: "/images/screenshots/screenshot-07.webp",
     alt: "Atmospheric interior - Light and shadow",
     caption: "Atmospheric interior - Light and shadow",
     width: 1920,
@@ -87,8 +86,8 @@ const mediaItems = [
   {
     id: "scr-8",
     type: "image" as const,
-    src: "/images/screenshots/screenshot-08.jpg",
-    thumbnail: "/images/screenshots/thumb-08.jpg",
+src: "/images/screenshots/screenshot-08.webp",
+      thumbnail: "/images/screenshots/screenshot-08.webp",
     alt: "A moment of wrongness - Something changed",
     caption: "A moment of wrongness - Something changed",
     width: 1920,
@@ -98,7 +97,7 @@ const mediaItems = [
     id: "gp-1",
     type: "video" as const,
     src: "/videos/gameplay-01.mp4",
-    thumbnail: "/images/gameplay/thumb-gp-04.jpg",
+    thumbnail: "/images/gameplay/thumb-gp-04.webp",
     alt: "Gameplay footage - Path exploration",
     caption: "Gameplay: Path exploration",
     width: 1920,
@@ -108,7 +107,7 @@ const mediaItems = [
   //   id: "gp-2",
   //   type: "video" as const,
   //   src: "/videos/gameplay-02.mp4",
-  //   thumbnail: "/images/gameplay/thumb-gp-02.jpg",
+  //   thumbnail: "/images/gameplay/thumb-gp-02.webp",
   //   alt: "Gameplay footage - Cabin interior",
   //   caption: "Gameplay: Cabin interior",
   //   width: 1920,
@@ -118,7 +117,7 @@ const mediaItems = [
   //   id: "gp-3",
   //   type: "video" as const,
   //   src: "/videos/gameplay-03.mp4",
-  //   thumbnail: "/images/gameplay/thumb-gp-03.jpg",
+  //   thumbnail: "/images/gameplay/thumb-gp-03.webp",
   //   alt: "Gameplay footage - Puzzle solving",
   //   caption: "Gameplay: Puzzle solving",
   //   width: 1920,
@@ -127,8 +126,8 @@ const mediaItems = [
   // {
   //   id: "ca-1",
   //   type: "image" as const,
-  //   src: "/images/concept-art/concept-01.jpg",
-  //   thumbnail: "/images/concept-art/thumb-ca-01.jpg",
+  //   src: "/images/concept-art/concept-01.webp",
+  //   thumbnail: "/images/concept-art/thumb-ca-01.webp",
   //   alt: "Early Path environment concept",
   //   caption: "Early Path environment concept",
   //   width: 1920,
@@ -137,8 +136,8 @@ const mediaItems = [
   // {
   //   id: "ca-2",
   //   type: "image" as const,
-  //   src: "/images/concept-art/concept-02.jpg",
-  //   thumbnail: "/images/concept-art/thumb-ca-02.jpg",
+  //   src: "/images/concept-art/concept-02.webp",
+  //   thumbnail: "/images/concept-art/thumb-ca-02.webp",
   //   alt: "Cabin interior mood study",
   //   caption: "Cabin interior mood study",
   //   width: 1920,
@@ -147,8 +146,8 @@ const mediaItems = [
   // {
   //   id: "ca-3",
   //   type: "image" as const,
-  //   src: "/images/concept-art/concept-03.jpg",
-  //   thumbnail: "/images/concept-art/thumb-ca-03.jpg",
+  //   src: "/images/concept-art/concept-03.webp",
+  //   thumbnail: "/images/concept-art/thumb-ca-03.webp",
   //   alt: "Tower architecture exploration",
   //   caption: "Tower architecture exploration",
   //   width: 1920,
@@ -157,8 +156,8 @@ const mediaItems = [
   // {
   //   id: "ca-4",
   //   type: "image" as const,
-  //   src: "/images/concept-art/concept-04.jpg",
-  //   thumbnail: "/images/concept-art/thumb-ca-04.jpg",
+  //   src: "/images/concept-art/concept-04.webp",
+  //   thumbnail: "/images/concept-art/thumb-ca-04.webp",
   //   alt: "Subterrain tunnel system",
   //   caption: "Subterrain tunnel system",
   //   width: 1920,
@@ -167,8 +166,8 @@ const mediaItems = [
   // {
   //   id: "ca-5",
   //   type: "image" as const,
-  //   src: "/images/concept-art/concept-05.jpg",
-  //   thumbnail: "/images/concept-art/thumb-ca-05.jpg",
+  //   src: "/images/concept-art/concept-05.webp",
+  //   thumbnail: "/images/concept-art/thumb-ca-05.webp",
   //   alt: "Guide UI/UX iterations",
   //   caption: "Guide UI/UX iterations",
   //   width: 1920,
@@ -177,8 +176,8 @@ const mediaItems = [
   // {
   //   id: "ca-6",
   //   type: "image" as const,
-  //   src: "/images/concept-art/concept-06.jpg",
-  //   thumbnail: "/images/concept-art/thumb-ca-06.jpg",
+  //   src: "/images/concept-art/concept-06.webp",
+  //   thumbnail: "/images/concept-art/thumb-ca-06.webp",
   //   alt: "Character silhouette studies",
   //   caption: "Character silhouette studies",
   //   width: 1920,
@@ -201,7 +200,7 @@ export function Media() {
 return (
     <section id="media" className="relative" aria-labelledby="media-heading">
       <div className="absolute inset-0 -z-10" aria-hidden="true">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-bg-secondary/20 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-bg-secondary/20 to-transparent" />
       </div>
 
       <div className="container-custom">
@@ -267,7 +266,7 @@ return (
           {filteredItems.length === 0 && (
             <div className="text-center py-20">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-bg-tertiary text-fg-tertiary mb-4">
-                <Image className="w-8 h-8" alt="" aria-hidden="true" />
+                <ImageIcon className="w-8 h-8" aria-hidden="true" />
               </div>
               <h3 className="font-display font-semibold text-xl text-fg-primary mb-2">No media available</h3>
               <p className="text-fg-secondary">Media for this category will be added soon.</p>

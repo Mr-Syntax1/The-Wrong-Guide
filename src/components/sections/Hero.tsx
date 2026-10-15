@@ -70,7 +70,7 @@ export function Hero() {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden" aria-labelledby="hero-title">
       <div className="absolute inset-0 z-0" aria-hidden="true">
         <Image
-          src="/images/the_wrong_guide_files/eec494d7-49e9-477e-9f11-927f95c788db.jpg"
+          src="/images/screenshots/screenshot-02.webp"
           alt=""
           fill
           priority

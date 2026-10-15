@@ -32,11 +32,12 @@ const storySections = [
 const sectionVariants = {
   hidden: (index: number) => ({
     opacity: 0,
-    x: index % 2 === 0 ? -150 : 150,  // حتی: از چپ، فرد: از راست
+    // به‌جای x از transform استفاده کن + فاصله کمتر
+    transform: `translate3d(${index % 2 === 0 ? -120 : 120}px, 0, 0)`,
   }),
   visible: {
     opacity: 1,
-    x: 0,
+    transform: "translate3d(0, 0, 0)",
   },
 };
 
@@ -47,7 +48,7 @@ export function Story() {
   return (
     <section id="story" className="relative" aria-labelledby="story-heading">
       <div className="absolute inset-0 -z-10" aria-hidden="true">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-bg-secondary/30 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-bg-secondary/30 to-transparent" />
       </div>
 
       <div className="container-custom">
@@ -64,16 +65,17 @@ export function Story() {
           {storySections.map((section, index) => (
             <motion.div
               key={section.id}
+              style={{ willChange: "transform, opacity" }}
               ref={(el) => (sectionRefs.current[index] = el)}
               custom={index}
               variants={sectionVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.15, margin: "0px 0px -10% 0px" }}
               transition={{
-                duration: 1.0,
-                delay: index * 0.10,
-                ease: [0.25, 0.46, 0.45, 0.84],
+                duration: 0.6,
+                ease: "easeOut",
+                // delay را کاملاً حذف کن
               }}
               className="relative"
             >
@@ -84,17 +86,17 @@ export function Story() {
                 )}>
                   <div className="relative aspect-[4/5] lg:aspect-[3/4] overflow-hidden rounded-base">
                     <ResponsiveImage
-                      src={gameConfig.locations[index]?.image || `/images/story-${index + 1}.jpg`}
+                      src={gameConfig.locations[index]?.image || `/images/story-${index + 1}.webp`}
                       alt={section.title}
                       fill
                       priority={index === 0}
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover transition-transform duration-700 hover:scale-[1.02]"
                       style={{
-                        filter: "brightness(0.8) contrast(1.12) saturate(0.9)",
+                        filter: "brightness(0.82) contrast(1.12) saturate(0.9)",
                       }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/60 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-linear-to-t from-bg-primary/60 via-transparent to-transparent" />
                   </div>
 
                   {index === 1 && (

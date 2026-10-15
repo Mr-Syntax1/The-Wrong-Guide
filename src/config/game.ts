@@ -17,7 +17,7 @@ The Wrong Guide is a single-player, offline, story-driven horror experience that
    steamUrl: "https://store.steampowered.com", 
   steamAppId: "[STEAM APP ID]",
   trailerUrl: "/videos/trailer.mp4",
-  trailerPoster: "/images/trailer-poster.jpg",
+  trailerPoster: "/images/trailer-poster.webp",
   pressEmail: "press@[DOMAIN].com",
   businessEmail: "business@[DOMAIN].com",
   social: {
@@ -98,7 +98,7 @@ The Wrong Guide is a single-player, offline, story-driven horror experience that
       name: "The Path",
       description:
         "A narrow trail winding through ancient woods. The guide says stay on it. But the trees seem to lean inward, watching.",
-      image: "/images/locations/the-path.jpg",
+      image: "/images/locations/the-path.webp",
       mood: "oppressive",
     },
     {
@@ -106,7 +106,7 @@ The Wrong Guide is a single-player, offline, story-driven horror experience that
       name: "The Cabin",
       description:
         "A solitary structure in a clearing. The guide marks it as a safe haven. But the door opens inward, and the lock is on the outside.",
-      image: "/images/locations/the-cabin.jpg",
+      image: "/images/locations/the-cabin.webp",
       mood: "uncanny",
     },
     {
@@ -114,7 +114,7 @@ The Wrong Guide is a single-player, offline, story-driven horror experience that
       name: "The Tower",
       description:
         "A concrete monolith rising from the fog. The guide says climb it for a better view. But the higher you go, the less you can see.",
-      image: "/images/locations/the-tower.jpg",
+      image: "/images/locations/the-tower.webp",
       mood: "vertigo",
     },
     {
@@ -122,7 +122,7 @@ The Wrong Guide is a single-player, offline, story-driven horror experience that
       name: "The Subterrain",
       description:
         "Tunnels beneath the surface. The guide says this is the shortcut. But the walls breathe, and the map doesn't match the territory.",
-      image: "/images/locations/the-subterrain.jpg",
+      image: "/images/locations/the-subterrain.webp",
       mood: "claustrophobic",
     },
   ],
@@ -148,7 +148,7 @@ We've been working hard to create an atmospheric horror experience that respects
 
 Add The Wrong Guide to your wishlist today to be notified the moment the guide becomes available.`,
       category: "Announcement",
-      image: "/images/news/steam-page.jpg",
+      image: "/images/news/steam-page.webp",
       slug: "steam-page-live",
     },
     {
@@ -170,7 +170,7 @@ The trailer was crafted to give you a taste of the game's atmosphere without spo
 
 Watch it now and decide for yourself: can you trust the guide?`,
       category: "Trailer",
-      image: "/images/news/story-4.jpg",
+      image: "/images/news/story-4.webp",
       slug: "first-trailer",
     },
     {
@@ -197,7 +197,7 @@ This philosophy extends to every aspect of the game — level design, audio, UI,
 
 More devlogs coming soon, covering environmental storytelling, audio design, and the technical challenges of building an unreliable guide system.`,
       category: "Development",
-      image: "/images/news/devlog-1.jpg",
+      image: "/images/news/devlog-1.webp",
       slug: "devlog-1-concept",
     },
     {
@@ -223,7 +223,7 @@ More details about the release timeline and marketing plans will be shared in th
 
 Thank you for your patience and support. The guide is almost ready.`,
       category: "Business",
-      image: "/images/news/publisher.jpg",
+      image: "/images/news/publisher.webp",
       slug: "publisher-announcement",
     },
   ],
@@ -231,19 +231,19 @@ Thank you for your patience and support. The guide is almost ready.`,
     logos: [
       {
         name: "Logo - Horizontal",
-        file: "logo-horizontal.png",
+        file: "logo-horizontal.webp",
         formats: ["PNG", "SVG"],
         description: "Primary horizontal logo for header usage",
       },
       {
         name: "Logo - Vertical",
-        file: "logo-vertical.png",
+        file: "logo-vertical.webp",
         formats: ["PNG", "SVG"],
         description: "Stacked logo for square formats",
       },
       {
         name: "Logo - Icon Only",
-        file: "logo-icon.png",
+        file: "logo-icon.webp",
         formats: ["PNG", "SVG"],
         description: "Minimal icon for favicon and social avatars",
       },
@@ -251,32 +251,32 @@ Thank you for your patience and support. The guide is almost ready.`,
     keyArt: [
       {
         name: "Key Art - Main",
-        file: "key-art-main.jpg",
+        file: "key-art-main.webp",
         resolution: "3840x2160",
         description: "Primary marketing artwork",
       },
       {
         name: "Key Art - Vertical",
-        file: "key-art-vertical.jpg",
+        file: "key-art-vertical.webp",
         resolution: "2160x3840",
         description: "Vertical format for mobile and poster use",
       },
       {
         name: "Key Art - Capsule",
-        file: "key-art-capsule.jpg",
+        file: "key-art-capsule.webp",
         resolution: "616x353",
         description: "Steam capsule art format",
       },
     ],
     screenshots: [
-      { file: "screenshot-01.jpg", caption: "The Path - First steps into the unknown" },
-      { file: "screenshot-02.jpg", caption: "The Cabin - Safety or trap?" },
-      { file: "screenshot-03.jpg", caption: "The Tower - Ascending into fog" },
-      { file: "screenshot-04.jpg", caption: "Environmental puzzle - Read the signs carefully" },
-      { file: "screenshot-05.jpg", caption: "The Subterrain - Below the surface" },
-      { file: "screenshot-06.jpg", caption: "The Guide's instructions - Follow them?" },
-      { file: "screenshot-07.jpg", caption: "Atmospheric interior - Light and shadow" },
-      { file: "screenshot-08.jpg", caption: "A moment of wrongness - Something changed" },
+      { file: "screenshot-01.webp", caption: "The Path - First steps into the unknown" },
+      { file: "screenshot-02.webp", caption: "The Cabin - Safety or trap?" },
+      { file: "screenshot-03.webp", caption: "The Tower - Ascending into fog" },
+      { file: "screenshot-04.webp", caption: "Environmental puzzle - Read the signs carefully" },
+      { file: "screenshot-05.webp", caption: "The Subterrain - Below the surface" },
+      { file: "screenshot-06.webp", caption: "The Guide's instructions - Follow them?" },
+      { file: "screenshot-07.webp", caption: "Atmospheric interior - Light and shadow" },
+      { file: "screenshot-08.webp", caption: "A moment of wrongness - Something changed" },
     ],
     trailers: [
       {
@@ -295,12 +295,12 @@ Thank you for your patience and support. The guide is almost ready.`,
       },
     ],
     conceptArt: [
-      { file: "concept-01.jpg", caption: "Early Path environment concept" },
-      { file: "concept-02.jpg", caption: "Cabin interior mood study" },
-      { file: "concept-03.jpg", caption: "Tower architecture exploration" },
-      { file: "concept-04.jpg", caption: "Subterrain tunnel system" },
-      { file: "concept-05.jpg", caption: "Guide UI/UX iterations" },
-      { file: "concept-06.jpg", caption: "Character silhouette studies" },
+      { file: "concept-01.webp", caption: "Early Path environment concept" },
+      { file: "concept-02.webp", caption: "Cabin interior mood study" },
+      { file: "concept-03.webp", caption: "Tower architecture exploration" },
+      { file: "concept-04.webp", caption: "Subterrain tunnel system" },
+      { file: "concept-05.webp", caption: "Guide UI/UX iterations" },
+      { file: "concept-06.webp", caption: "Character silhouette studies" },
     ],
     downloads: {
       pressKitZip: "/press-kit/the-wrong-guide-press-kit.zip",

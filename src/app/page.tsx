@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${gameConfig.title} | The Wrong Guide`,
     description: gameConfig.shortDescription,
-    images: ["/images/trailer-poster.jpg"],
+    images: ["/images/trailer-poster.webp"],
   },
 };
 
