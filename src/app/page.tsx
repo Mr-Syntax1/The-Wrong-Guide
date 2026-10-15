@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { Hero, Story, World, Features, Trailer, Media, SteamCTA, News } from "@/components/sections";
+import { Hero, Story, World, Features, Trailer, Media, SteamCTA, News, FAQ } from "@/components/sections";
 import { gameConfig } from "@/config/game";
 
 export const metadata: Metadata = {
@@ -22,6 +22,7 @@ export default function Home() {
       <Trailer />
       <Media />
       <SteamCTA />
+      <FAQ />
       <News />
     </>
   );

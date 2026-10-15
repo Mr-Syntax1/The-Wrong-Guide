@@ -6,3 +6,4 @@ export { Trailer } from "./Trailer";
 export { Media } from "./Media";
 export { SteamCTA } from "./SteamCTA";
 export { News } from "./News";
+export { FAQ } from "./FAQ";
