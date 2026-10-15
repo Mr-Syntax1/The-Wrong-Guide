@@ -22,7 +22,7 @@ export function Trailer() {
   return (
     <section id="trailer" className="relative" aria-labelledby="trailer-heading">
       <div className="absolute inset-0 -z-10" aria-hidden="true">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-bg-secondary/20 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-bg-secondary/20 to-transparent" />
       </div>
 
       <div className="container-custom">
@@ -49,7 +49,7 @@ export function Trailer() {
                 }}
                 sizes="100vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/80 via-bg-primary/20 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-bg-primary/80 via-bg-primary/20 to-transparent" />
             </div>
 
             <button

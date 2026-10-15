@@ -8,10 +8,29 @@ import { gameConfig } from "@/config/game";
 import { MapPin, ChevronLeft, ChevronRight, AlertTriangle, Eye, Maximize2 } from "lucide-react";
 
 const moodDescriptions = {
-  oppressive: { label: "OPPRESSIVE", description: "Heavy atmosphere, constant pressure, feeling watched", color: "text-accent-red" },
-  uncanny: { label: "UNCANNY", description: "Familiar yet deeply wrong, subtle distortions", color: "text-accent-amber" },
-  vertigo: { label: "VERTIGO", description: "Disorienting verticality, loss of spatial grounding", color: "text-fg-tertiary" },
-  claustrophobic: { label: "CLAUSTROPHOBIC", description: "Confined spaces, walls closing in, limited escape", color: "text-accent-red" },
+  oppressive: {
+    label: "OPPRESSIVE",
+    description: "Heavy atmosphere, constant pressure, feeling watched",
+    color: "text-accent-red"
+  },
+
+  uncanny: {
+    label: "UNCANNY",
+    description: "Familiar yet deeply wrong, subtle distortions",
+    color: "text-accent-amber"
+  },
+
+  vertigo: {
+    label: "VERTIGO",
+    description: "Disorienting verticality, loss of spatial grounding",
+    color: "text-fg-tertiary"
+  },
+
+  claustrophobic: {
+    label: "CLAUSTROPHOBIC",
+    description: "Confined spaces, walls closing in, limited escape",
+    color: "text-accent-red"
+  },
 };
 
 export function World() {

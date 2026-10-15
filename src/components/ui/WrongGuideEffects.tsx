@@ -367,7 +367,7 @@ export function WrongGuideText({
   useEffect(() => {
     if (!originalText) return;
     const interval = setInterval(() => {
-      if (Math.random() < 0.01) {
+      if (Math.random() < 0.001) {
         const shifts = {
           "text-shift": textShifts,
           "label-flicker": labelFlickers,
@@ -381,7 +381,7 @@ export function WrongGuideText({
           setTimeout(() => setIsShifted(false), getRandomInt(500, 3000));
         }
       }
-    }, 2000);
+    }, 3000);
     return () => clearInterval(interval);
   }, [originalText, effect]);
 
@@ -404,7 +404,7 @@ export function WrongGuideObserver() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (Math.random() < 0.01) {
+      if (Math.random() < 0.001) {
         setHint(getRandomElement(observedHints));
         setTimeout(() => setHint(null), getRandomInt(3000, 6000));
       }

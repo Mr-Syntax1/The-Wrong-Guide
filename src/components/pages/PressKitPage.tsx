@@ -64,7 +64,7 @@ export function PressKitPage() {
 
           <div className="grid md:grid-cols-2 gap-6 mb-16">
             <div className="p-6 bg-bg-secondary border border-border-primary rounded-base">
-              <h3 className="font-display font-semibold text-xl text-fg-primary mb-2">DEVELOPER</h3>
+              <h3 className="font-display font-semibold text-xl text-fg-primary mb-2">DEVELOPERS</h3>
               <p className="text-fg-secondary">{gameConfig.developer}</p>
             </div>
             <div className="p-6 bg-bg-secondary border border-border-primary rounded-base">

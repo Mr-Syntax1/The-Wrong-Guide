@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui";
@@ -77,7 +77,7 @@ export function Hero() {
           className="object-cover"
           sizes="100vw"
           style={{
-            filter: "brightness(0.8) contrast(1.12) saturate(0.8)",
+            filter: "brightness(0.8) contrast(1.18) saturate(0.9)",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-bg-primary/60 via-bg-primary/30 to-bg-primary/80" />

@@ -34,7 +34,7 @@ export function News() {
   return (
     <section id="news" className="relative mb-12" aria-labelledby="news-heading">
       <div className="absolute inset-0 -z-10" aria-hidden="true">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-bg-secondary/20 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-bg-secondary/20 to-transparent" />
       </div>
 
       <div className="container-custom">
@@ -92,7 +92,7 @@ export function News() {
                         filter: "brightness(0.9) contrast(1.1) saturate(0.8)",
                       }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/70 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-linear-to-t from-bg-primary/70 via-transparent to-transparent" />
                     <div className="absolute top-4 left-4">
                       <span className="px-3 py-1 rounded-full bg-accent-red/20 border border-accent-red/30 text-accent-red text-xs font-medium tracking-wider uppercase">
                         {post.category}

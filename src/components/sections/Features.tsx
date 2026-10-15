@@ -24,7 +24,7 @@ export function Features() {
   return (
     <section id="features" className="relative" aria-labelledby="features-heading">
       <div className="absolute inset-0 -z-10" aria-hidden="true">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-bg-secondary/20 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-bg-secondary/20 to-transparent" />
       </div>
 
       <div className="container-custom mt-24">
@@ -76,7 +76,7 @@ export function Features() {
 
         <div className="mt-16 md:mt-24">
           <div className="relative bg-bg-secondary border border-border-primary rounded-base overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-accent-red/5 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-r from-accent-red/5 via-transparent to-transparent" />
             <div className="p-8 md:p-12 lg:p-16 relative">
               <div className="max-w-4xl">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-red/10 border border-accent-red/30 text-accent-red text-xs font-medium tracking-widest uppercase mb-6">

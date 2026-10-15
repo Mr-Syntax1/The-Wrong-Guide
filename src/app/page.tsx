@@ -3,12 +3,12 @@ import { Hero, Story, World, Features, Trailer, Media, SteamCTA, News } from "@/
 import { gameConfig } from "@/config/game";
 
 export const metadata: Metadata = {
-  title: "Official Website",
+  title: "The Wrong Guide",
   description: gameConfig.shortDescription,
   openGraph: {
-    title: `${gameConfig.title} | Official Website`,
+    title: `${gameConfig.title} | The Wrong Guide`,
     description: gameConfig.shortDescription,
-    images: ["/images/og-image.png"],
+    images: ["/images/trailer-poster.jpg"],
   },
 };
 

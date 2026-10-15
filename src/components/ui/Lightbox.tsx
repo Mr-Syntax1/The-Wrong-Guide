@@ -161,7 +161,7 @@ export function Lightbox({ isOpen, onClose, items, initialIndex }: LightboxProps
       aria-label={`Viewing ${currentItem.alt} (${currentIndex + 1} of ${items.length})`}
     >
       <button
-        className="absolute top-4 right-4 z-10 p-2 rounded-full bg-bg-secondary/80 backdrop-blur-sm text-fg-secondary hover:text-fg-primary hover:bg-bg-tertiary transition-colors"
+        className="absolute top-4 right-4 z-10 p-2 rounded-full bg-bg-secondary/80 backdrop-blur-sm text-fg-secondary hover:text-fg-primary hover:bg-bg-tertiary transition-colors cursor-pointer"
         onClick={onClose}
         aria-label="Close lightbox"
       >
@@ -170,7 +170,7 @@ export function Lightbox({ isOpen, onClose, items, initialIndex }: LightboxProps
 
       <button
         className={cn(
-          "absolute left-4 z-10 p-3 rounded-full bg-bg-secondary/80 backdrop-blur-sm text-fg-secondary hover:text-fg-primary hover:bg-bg-tertiary transition-colors",
+          "absolute left-4 z-10 p-3 rounded-full bg-bg-secondary/80 backdrop-blur-sm text-fg-secondary hover:text-fg-primary hover:bg-bg-tertiary transition-colors cursor-pointer",
           currentIndex === 0 && items.length === 1 && "opacity-30 pointer-events-none"
         )}
         onClick={(e) => { e.stopPropagation(); goToPrevious(); }}
@@ -182,7 +182,7 @@ export function Lightbox({ isOpen, onClose, items, initialIndex }: LightboxProps
 
       <button
         className={cn(
-          "absolute right-4 z-10 p-3 rounded-full bg-bg-secondary/80 backdrop-blur-sm text-fg-secondary hover:text-fg-primary hover:bg-bg-tertiary transition-colors",
+          "absolute right-4 z-10 p-3 rounded-full bg-bg-secondary/80 backdrop-blur-sm text-fg-secondary hover:text-fg-primary hover:bg-bg-tertiary transition-colors cursor-pointer",
           currentIndex === items.length - 1 && items.length === 1 && "opacity-30 pointer-events-none"
         )}
         onClick={(e) => { e.stopPropagation(); goToNext(); }}
@@ -261,7 +261,7 @@ export function Lightbox({ isOpen, onClose, items, initialIndex }: LightboxProps
 
         <div className="flex items-center gap-2 ml-4 border-l border-border-primary pl-4">
           <button
-            className="p-2 text-fg-secondary hover:text-fg-primary transition-colors"
+            className="p-2 text-fg-secondary hover:text-fg-primary transition-colors cursor-pointer"
             onClick={() => handleZoom(0.2)}
             aria-label="Zoom in"
             disabled={zoom >= 5}
@@ -271,7 +271,7 @@ export function Lightbox({ isOpen, onClose, items, initialIndex }: LightboxProps
             </svg>
           </button>
           <button
-            className="p-2 text-fg-secondary hover:text-fg-primary transition-colors"
+            className="p-2 text-fg-secondary hover:text-fg-primary transition-colors cursor-pointer"
             onClick={() => handleZoom(-0.2)}
             aria-label="Zoom out"
             disabled={zoom <= 0.5}
@@ -281,7 +281,7 @@ export function Lightbox({ isOpen, onClose, items, initialIndex }: LightboxProps
             </svg>
           </button>
           <button
-            className="p-2 text-fg-secondary hover:text-fg-primary transition-colors"
+            className="p-2 text-fg-secondary hover:text-fg-primary transition-colors cursor-pointer"
             onClick={resetZoom}
             aria-label="Reset zoom"
             disabled={zoom === 1}
@@ -289,7 +289,7 @@ export function Lightbox({ isOpen, onClose, items, initialIndex }: LightboxProps
             <RotateCcw className="w-5 h-5" aria-hidden="true" />
           </button>
           <button
-            className="p-2 text-fg-secondary hover:text-fg-primary transition-colors"
+            className="p-2 text-fg-secondary hover:text-fg-primary transition-colors cursor-pointer"
             onClick={rotateImage}
             aria-label="Rotate image"
           >
@@ -298,7 +298,7 @@ export function Lightbox({ isOpen, onClose, items, initialIndex }: LightboxProps
           <a
             href={currentItem.src}
             download={currentItem.alt}
-            className="p-2 text-fg-secondary hover:text-fg-primary transition-colors"
+            className="p-2 text-fg-secondary hover:text-fg-primary transition-colors cursor-pointer"
             aria-label="Download image"
           >
             <Download className="w-5 h-5" aria-hidden="true" />

@@ -8,7 +8,7 @@ But what if the guide was wrong?
 
 The Wrong Guide is a single-player, offline, story-driven horror experience that explores the terror of misplaced trust. Navigate through mysterious environments where every instruction, every sign, every guiding voice might be leading you somewhere you never intended to go.`,
   genre: "Psychological Horror / Narrative Exploration",
-  developer: "[DEVELOPER NAME]",
+  developer: "[BMS]",
   publisher: "[PUBLISHER NAME]",
   platforms: ["Steam (Windows)"],
   releaseStatus: "Coming Soon",

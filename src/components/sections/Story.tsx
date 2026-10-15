@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import { motion } from "framer-motion";
 import { ResponsiveImage } from "@/components/ui";
 import { cn } from "@/lib/utils";
 import { gameConfig } from "@/config/game";
@@ -69,11 +69,11 @@ export function Story() {
               variants={sectionVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.3 }}
               transition={{
                 duration: 1.0,
-                delay: index * 0.15,
-                ease: [0.25, 0.46, 0.45, 0.94],
+                delay: index * 0.10,
+                ease: [0.25, 0.46, 0.45, 0.84],
               }}
               className="relative"
             >
