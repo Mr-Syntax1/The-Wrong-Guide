@@ -8,7 +8,7 @@ export const SITE_NAME = "The Wrong Guide";
 
 /** Default share image (700x700). Used in Open Graph / Twitter metadata. */
 export const OG_IMAGE = {
-  url: "/images/icon.webp",
+  url: "/images/icon-v2.webp",
   width: 700,
   height: 700,
   alt: "The Wrong Guide",
@@ -68,7 +68,7 @@ interface PageSeo {
 
 /**
  * Builds the full per-page metadata block: canonical + hreflang,
- * Open Graph and Twitter cards (all sharing icon.webp).
+ * Open Graph and Twitter cards (all sharing icon-v2.webp).
  */
 export function pageMetadata({ locale, path, title, description, ogType = "website", publishedTime }: PageSeo): Metadata {
   const url = canonicalUrl(locale, path);
