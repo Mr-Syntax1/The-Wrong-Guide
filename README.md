@@ -1,259 +1,307 @@
-<div align="center">
+# 🩸 The Wrong Guide
 
-# 🩸 THE WRONG GUIDE 🩸
+<p align="center">
+  <strong>You followed the guide. It led you here.</strong>
+  <br />
+  An official website for a story-driven psychological horror game by BMS Studio.
+  <br /><br />
+  <a href="https://the-wrong-guide.netlify.app">
+    <img src="https://img.shields.io/badge/WEBSITE-Live-8B1E2D?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Website" />
+  </a>
+  <a href="https://store.steampowered.com">
+    <img src="https://img.shields.io/badge/STEAM-Coming_Soon-171A21?style=for-the-badge&logo=steam&logoColor=white" alt="Coming to Steam" />
+  </a>
+</p>
 
-### *You followed the guide. It led you here.* 👀
-
-**The official website for The Wrong Guide — a story-driven atmospheric horror game coming to Steam** 🎮
-
-[![Wishlist on Steam](https://img.shields.io/badge/🎮_WISHLIST_ON_STEAM-Coming_Soon-1b2838?style=for-the-badge&logo=steam&logoColor=white)](https://store.steampowered.com)
-[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
-
-![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38BDF8?logo=tailwindcss&logoColor=white)
-![next-intl](https://img.shields.io/badge/i18n-5_Languages-success)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-Animation-FF0080?logo=framer&logoColor=white)
-![License](https://img.shields.io/badge/License-All_Rights_Reserved-red)
-
-**🌍 English · فارسی · Türkçe · 日本語 · Русский | 📱 RTL Ready | ⚡ Turbopack | 🔍 SEO Optimized**
-
-</div>
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-16-000000?style=flat-square&logo=next.js&logoColor=white" alt="Next.js 16" />
+  <img src="https://img.shields.io/badge/React-19-149ECA?style=flat-square&logo=react&logoColor=white" alt="React 19" />
+  <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript 5" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS 4" />
+  <img src="https://img.shields.io/badge/Localization-5_Languages-6B7280?style=flat-square" alt="Five Languages" />
+  <img src="https://img.shields.io/badge/License-All_Rights_Reserved-8B1E2D?style=flat-square" alt="All Rights Reserved" />
+</p>
 
 ---
 
 ## 📖 Table of Contents
 
-- [🎬 About the Game](#-about-the-game)
-- [✨ Website Features](#-website-features)
-- [🛠️ Tech Stack](#️-tech-stack)
-- [🗂️ Project Structure](#️-project-structure)
-- [🌍 Localization System](#-localization-system)
-- [🚀 Getting Started](#-getting-started)
-- [📰 Press & Business](#-press--business)
-- [📜 License](#-license)
+- [Overview](#-overview)
+- [About the Game](#-about-the-game)
+- [Website Features](#-website-features)
+- [Technology Stack](#-technology-stack)
+- [Project Architecture](#-project-architecture)
+- [Localization](#-localization)
+- [Getting Started](#-getting-started)
+- [Available Scripts](#-available-scripts)
+- [Press & Business Inquiries](#-press--business)
+- [License](#-license)
 
 ---
 
-## 🎬 About the Game
+## 🎬 Overview
 
-<div align="center">
+**The Wrong Guide** is the official website for an atmospheric, story-driven psychological horror game currently in development for PC.
 
-### 🌙 *A father. A phone call. A guide that was never meant to save him.* 📞
+Built with Next.js, React, and TypeScript, the website combines cinematic presentation, narrative-driven content, multilingual navigation, and a dark visual identity inspired by the unsettling world of the game.
 
-</div>
+The experience extends beyond a conventional game landing page, using subtle visual effects and carefully crafted storytelling to reflect the central theme of the game: **trusting the wrong guide.**
 
-**The Wrong Guide** is a **single-player, offline, story-driven psychological horror game** — a real commercial title currently in development for **Steam**! 🚀
+<p align="center">
+  <em>Some directions lead you forward. Others lead you somewhere you were never meant to go.</em>
+</p>
 
-> You are **Mohsen** — a father 👨‍👧, a nature explorer 🏕️, a man who loves his 9-year-old daughter more than anything in the world. One night, a mysterious phone call pulls him onto an empty desert highway… and he wakes up in an **abandoned hospital** 🏥 where the hallways breathe.
->
-> A strange **guide** 🧭 speaks through notes 📝, signs 🪧, and radio voices 📻 — marking the way with paint, light, and crumbs of certainty. You follow… because the alternative is the unknown. 🌫️
->
-> But sometimes the guide **hesitates** 😨. A marker points **two ways** ↔️. A voice cracks into **something else** 🔊. The map shows a room that **doesn't exist** 🚪.
->
-> ### *How far do you follow before you stop?* 🛑
-
-<div align="center">
-
-| 🎮 Fact | 📋 Details |
-|:---|:---|
-| 🎭 **Genre** | Psychological Horror / Narrative Exploration / Story-Driven |
-| 👤 **Players** | Single-player, offline 🔌 |
-| 🖥️ **Platform** | Steam (Windows) — Steam Deck verification planned ✅ |
-| 💰 **Price** | $7.99 USD (regional pricing on Steam) |
-| 📅 **Release** | 2027 🗓️ |
-| 🔞 **Rating** | Mature 17+ |
-| 🗣️ **Languages** | 🇬🇧 English, 🇮🇷 Persian at launch |
-| 🏢 **Developer** | BMS Studio |
-| 📢 **Publisher** | Sourena Games |
-
-</div>
+<p align="center">
+  <a href="https://the-wrong-guide.netlify.app">
+    <strong>Explore the Live Website ↗</strong>
+  </a>
+</p>
 
 ---
 
-## ✨ Website Features
+## 🌒 About the Game
+
+> A father. A mysterious phone call. An abandoned hospital. And a guide that may not want you to escape.
+
+You play as **Mohsen**, a father and nature explorer whose life takes an unexpected turn after a mysterious phone call leads him onto an empty desert highway.
+
+He awakens inside an abandoned hospital where familiar rules no longer seem to apply. Strange notes, painted markers, distorted radio transmissions, and contradictory directions offer a path through the darkness.
+
+But as the environment grows increasingly unfamiliar, one question becomes impossible to ignore:
+
+**What if the guide is the reason you are lost?**
+
+### Game Information
+
+| Detail | Description |
+|:--|:--|
+| Genre | Psychological Horror / Narrative Exploration |
+| Game Mode | Single-player, Offline |
+| Platform | PC — Windows |
+| Distribution | Steam |
+| Developer | BMS Studio |
+| Release | Planned for 2027 |
+
+*Release plans and game specifications may change during development.*
+
+---
+
+## ✦ Website Features
 
 <table>
-<tr>
-<td width="50%">
-
-### 🌍 Full Localization
-- 🇬🇧 English
-- 🇮🇷 Persian **(RTL support!)** ↔️
-- 🇹🇷 Turkish
-- 🇯🇵 Japanese
-- 🇷🇺 Russian
-- One-click language switcher in the navbar 🔄
-
-### 🎥 Immersive Sections
-- 🎞️ Cinematic hero with typewriter taglines ⌨️
-- 📚 Story chapters
-- 🗺️ Interactive location explorer
-- 💎 Feature pillars + core design
-- 🎬 Trailer + media gallery 🖼️
-- ❓ FAQ + Steam CTA + News 📰
-
-</td>
-<td width="50%">
-
-### 👻 "Wrong Guide" Horror FX
-The site itself is haunted! 😱
-- ✏️ Text shifts & corrections
-- 💡 Label flickers
-- ⚠️ Warning flashes
-- 👀 "You are being observed" hints
-- *…all translated per locale!* 🌍
-
-### 🛠️ Everything Else
-- 💼 Press kit with downloadable assets 📦
-- 📰 Newsroom with per-article pages
-- 🔍 SEO: localized metadata, OG cards, sitemap
-- ♿ A11y: ARIA, keyboard nav, reduced-motion
-- 🌗 Dark atmospheric design 🎨
-
-</td>
-</tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🎥 Cinematic Experience</h3>
+      <ul>
+        <li>Atmospheric landing page and immersive hero section</li>
+        <li>Animated typography and cinematic transitions</li>
+        <li>Dark visual design inspired by psychological horror</li>
+        <li>Subtle, narrative-driven visual effects</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🗺️ Game Exploration</h3>
+      <ul>
+        <li>Story and narrative chapters</li>
+        <li>Interactive world and location exploration</li>
+        <li>Gameplay features and design philosophy</li>
+        <li>Trailer, screenshots, and media gallery</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🌍 Internationalization</h3>
+      <ul>
+        <li>English, Persian, Turkish, Japanese, and Russian</li>
+        <li>Right-to-left layout support for Persian</li>
+        <li>Localized navigation and page content</li>
+        <li>Locale-aware routing and metadata</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <h3>⚙️ Technical Features</h3>
+      <ul>
+        <li>Reusable and modular UI components</li>
+        <li>Localized SEO metadata and sitemap</li>
+        <li>Press Kit and development news sections</li>
+        <li>Accessibility-focused interaction patterns</li>
+      </ul>
+    </td>
+  </tr>
 </table>
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Technology Stack
 
-<div align="center">
-
-| Layer | Technology |
-|:---:|:---|
-| ⚡ **Framework** | Next.js 16 (App Router + Turbopack) |
-| ⚛️ **UI** | React 19 |
-| 🎨 **Styling** | Tailwind CSS 4 |
-| 🎞️ **Animation** | Framer Motion |
-| 🔤 **Typography FX** | TypeIt |
-| 🌍 **i18n** | next-intl 4 |
-| 🎯 **Icons** | lucide-react |
-| 📘 **Language** | TypeScript 5 |
-| 🧹 **Lint** | ESLint |
-
-</div>
+| Technology | Purpose |
+|:--|:--|
+| [Next.js](https://nextjs.org/) | Application framework and routing |
+| [React](https://react.dev/) | Component-based user interface |
+| [TypeScript](https://www.typescriptlang.org/) | Static typing and maintainability |
+| [Tailwind CSS](https://tailwindcss.com/) | Responsive styling and design system |
+| [Framer Motion](https://motion.dev/) | Animations and transitions |
+| [TypeIt](https://www.typeitjs.com/) | Typewriter-style text effects |
+| [next-intl](https://next-intl.dev/) | Internationalization and localized routing |
+| [Lucide React](https://lucide.dev/) | Interface icons |
+| [ESLint](https://eslint.org/) | Code quality and linting |
 
 ---
 
-## 🗂️ Project Structure
+## 🏗️ Project Architecture
 
+The project follows a modular structure that separates routing, shared components, localized content, configuration, and static assets.
+
+```text
+the-wrong-guide/
+├── messages/
+│   ├── en.json
+│   ├── fa.json
+│   ├── tr.json
+│   ├── ja.json
+│   └── ru.json
+│
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx
+│   │   ├── not-found.tsx
+│   │   ├── sitemap.ts
+│   │   └── [locale]/
+│   │       ├── layout.tsx
+│   │       ├── page.tsx
+│   │       └── [localized pages]/
+│   │
+│   ├── components/
+│   │   ├── layout/
+│   │   ├── sections/
+│   │   ├── pages/
+│   │   └── ui/
+│   │
+│   ├── config/
+│   │   ├── game.ts
+│   │   └── game.[locale].ts
+│   │
+│   └── i18n/
+│       ├── routing.ts
+│       ├── navigation.ts
+│       └── request.ts
+│
+└── public/
+    ├── images/
+    ├── videos/
+    └── press-kit/
 ```
-📁 the-wrong-guide/
-├── 🌍 messages/                  # UI translations (next-intl)
-│   ├── 🇬🇧 en.json  🇮🇷 fa.json  🇹🇷 tr.json  🇯🇵 ja.json  🇷🇺 ru.json
-├── 📁 src/
-│   ├── 📁 app/
-│   │   ├── layout.tsx            # ⚠️ Root layout (<html>/<body> live HERE ONLY)
-│   │   ├── not-found.tsx         # 🔍 404 page
-│   │   ├── sitemap.ts            # 🗺️ Localized sitemap
-│   │   └── [locale]/             # 🌍 All localized routes
-│   │       ├── layout.tsx        # Navbar / Footer / providers (no <html>!)
-│   │       ├── page.tsx          # 🏠 Home: Hero → Story → World → … → News
-│   │       └── story|world|features|media|news|press-kit|privacy|terms/
-│   ├── 🧩 components/
-│   │   ├── layout/               # Navbar, Footer, LanguageSwitcher 🔄
-│   │   ├── sections/             # Hero 🎬 Story 📚 World 🗺️ Features 💎 …
-│   │   ├── pages/                # PressKitPage 💼
-│   │   └── ui/                   # Button, Gallery 🖼️, VideoPlayer 🎥, …
-│   ├── ⚙️ config/
-│   │   ├── game.ts               # Base config + getGameConfig(locale) merger 🔀
-│   │   └── game.en|fa|tr|ja|ru.ts  # 📝 Localized game content per language
-│   └── 🌐 i18n/
-│       ├── routing.ts            # Locales, default locale, prefix strategy
-│       ├── navigation.ts         # Localized Link / router helpers 🔗
-│       └── request.ts            # next-intl server config 🖥️
-└── 🖼️ public/                    # Images, videos, press-kit downloads 📦
-```
+
+### Architecture Principles
+
+- **Separation of concerns:** UI components, game content, translations, and routing are maintained independently.
+- **Reusable components:** Shared layout elements and interface components reduce duplication.
+- **Centralized configuration:** Common game data and locale-specific content are managed through dedicated configuration modules.
+- **Localized navigation:** Routing helpers provide consistent navigation across supported locales.
+- **Maintainability:** The structure supports extending the website as the game evolves.
+
+*The directory tree is a representative overview; individual files and folders may evolve during development.*
 
 ---
 
-## 🌍 Localization System
+## 🌐 Localization
 
-> 💡 **Golden rule:** never hand-build `/${locale}/…` URLs! Always use the localized helpers from `@/i18n/navigation` (`Link`, `useRouter().replace(pathname, { locale })`).
+The website is designed for an international audience, with support for five interface languages.
 
-<details>
-<summary><b>📝 UI strings — click to expand</b></summary>
+| Locale | Language | Layout |
+|:--|:--|:--|
+| `en` | English | LTR |
+| `fa` | Persian | RTL |
+| `tr` | Turkish | LTR |
+| `ja` | Japanese | LTR |
+| `ru` | Russian | LTR |
 
-<br>
+The localization system uses `next-intl` for translations and locale-aware navigation.
 
-- 📂 Files: `messages/{locale}.json`
-- 🪝 Client: `useTranslations("namespace")`
-- 🖥️ Server: `getTranslations({ locale, namespace })`
+UI translations are maintained in `messages/`, while game-specific content is organized separately to keep presentation, translated text, and shared data manageable.
 
-</details>
-
-<details>
-<summary><b>🎮 Game content — click to expand</b></summary>
-
-<br>
-
-- 📂 Files: `src/config/game.{locale}.ts` (features 💎, locations 🗺️, news 📰, FAQ ❓, press kit 💼, horror effects 👻, …)
-- 🔀 Merged with non-translatable data (URLs 🔗, images 🖼️, IDs) through **`getGameConfig(locale)`**
-
-</details>
-
-<details>
-<summary><b>🔗 Routing strategy — click to expand</b></summary>
-
-<br>
-
-- `localePrefix: "as-needed"` → English has **no** prefix (`/story`), others do (`/fa/story`)
-- ⚠️ Only `src/app/layout.tsx` renders `<html>`/`<body>` — never in `[locale]/layout.tsx`!
-
-</details>
+Localized links should use the project's navigation helpers rather than manually constructing locale-prefixed URLs.
 
 ---
 
 ## 🚀 Getting Started
 
-> **Prerequisites:** Node.js 20+ and npm 📦
+### Prerequisites
+
+- Node.js 20 or later
+- npm
+- Git
+
+### 1. Clone the Repository
 
 ```bash
-# 📥 Install dependencies
-npm install
+git clone <repository-url>
+cd the-wrong-guide
+```
 
-# ⚡ Run the development server
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Start the Development Server
+
+```bash
 npm run dev
 ```
 
-🌐 Open [http://localhost:3000](http://localhost:3000) — the middleware resolves your locale automatically (e.g. `/fa` for Persian 🇮🇷).
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### 4. Create a Production Build
 
 ```bash
-# 🏗️ Production build (validates all 70 localized pages ✅)
 npm run build
-
-# ▶️ Serve the production build
 npm start
-
-# 🧹 Lint
-npm run lint
 ```
+
+---
+
+## 📜 Available Scripts
+
+| Command | Description |
+|:--|:--|
+| `npm run dev` | Start the development server |
+| `npm run build` | Compile and validate the production build |
+| `npm start` | Start the production server |
+| `npm run lint` | Run ESLint |
 
 ---
 
 ## 📰 Press & Business
 
-- ✉️ **Press inquiries / review codes / interviews:** mrsyntax22@gmail.com
-- 📦 Everything else creators need — logos, key art, screenshots, trailers, usage guidelines — lives in the **Press Kit** page on the site 💼
+For press inquiries, review codes, interviews, and business-related questions:
+
+**Email:** [mrsyntax22@gmail.com](mailto:mrsyntax22@gmail.com)
+
+The website's Press Kit section is intended to provide media and content creators with relevant promotional materials and project information.
 
 ---
 
-## 📜 License
+## 🔒 License
 
-© BMS Studio / Sourena Games. **All rights reserved.** 🔒
+**All Rights Reserved.**
 
-The game, its title, artwork, trailers, screenshots, and all site content are the exclusive property of the rights holders. Assets in the press kit may be used for **editorial coverage** of *The Wrong Guide* only, per the usage guidelines on the Press Kit page. 📰
+© BMS Studio. Game-related intellectual property remains with its respective rights holders, subject to applicable agreements.
+
+The source code, website content, and game assets may not be redistributed or reused beyond the permissions granted by the relevant rights holders.
 
 ---
 
-<div align="center">
-
-### 🩸 *The guide remembers every wrong turn.* 🩸
-
-**⭐ If you like this project, give it a star! ⭐**
-
-🎮 *Wishlist The Wrong Guide on Steam — if you trust the guide…* 👀
-
-</div>
+<p align="center">
+  <strong>THE WRONG GUIDE</strong>
+  <br />
+  <em>The guide remembers every wrong turn.</em>
+  <br /><br />
+  <a href="https://the-wrong-guide.netlify.app">Website</a>
+  ·
+  <a href="https://store.steampowered.com">Steam</a>
+  ·
+  <a href="mailto:mrsyntax22@gmail.com">Contact</a>
+</p>
