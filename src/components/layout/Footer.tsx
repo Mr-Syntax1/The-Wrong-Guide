@@ -3,15 +3,16 @@
 import { Link } from "@/i18n/navigation";
 import { gameConfig } from "@/config/game";
 import { cn } from "@/lib/utils";
-import { Video, X, MessageSquare, Mail, Monitor } from "lucide-react";
+import { Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { DiscordIcon, SteamIcon, TelegramIcon } from "../ui/icons";
 
 const socialLinks = [
-  { platform: "Steam", url: gameConfig.social.steam, label: "Steam", icon: Monitor },
-  { platform: "YouTube", url: gameConfig.social.youtube, label: "YouTube", icon: Video },
-  { platform: "Twitter", url: gameConfig.social.twitter, label: "Twitter / X", icon: X },
-  { platform: "Discord", url: gameConfig.social.discord, label: "Discord", icon: MessageSquare },
-  { platform: "Telegram", url: gameConfig.social.telegram, label: "Telegram", icon: MessageSquare },
+  { platform: "Steam", url: "https://store.steampowered.com", label: "Steam", icon: SteamIcon },
+  // { platform: "YouTube", url: gameConfig.social.youtube, label: "YouTube", icon: Video },
+  // { platform: "Twitter", url: gameConfig.social.twitter, label: "Twitter / X", icon: X },
+  { platform: "Discord", url: gameConfig.social.discord, label: "Discord", icon: DiscordIcon },
+  { platform: "Telegram", url: gameConfig.social.telegram, label: "Telegram", icon: TelegramIcon },
 ].filter((link) => link.url && !link.url.includes("["));
 
 interface FooterProps {
@@ -40,8 +41,8 @@ export function Footer({ locale: _locale }: FooterProps) {
     ],
     contact: [
       { label: "General", href: `mailto:${gameConfig.pressEmail}` },
-      { label: "Press", href: `mailto:${gameConfig.pressEmail}` },
-      { label: "Business", href: `mailto:${gameConfig.pressEmail}` },
+      // { label: "Press", href: `mailto:${gameConfig.pressEmail}` },
+      // { label: "Business", href: `mailto:${gameConfig.pressEmail}` },
     ],
   };
 
@@ -138,7 +139,7 @@ export function Footer({ locale: _locale }: FooterProps) {
                     href={link.href}
                     className="flex items-center gap-2 text-fg-secondary hover:text-accent-red transition-colors text-sm"
                   >
-                    <Mail className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
+                    <Mail className="w-4 h-4 shrink-0" aria-hidden="true" />
                     <span>{link.label}</span>
                   </a>
                 </li>

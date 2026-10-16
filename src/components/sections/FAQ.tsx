@@ -84,7 +84,7 @@ export function FAQ({ locale }: FAQProps) {
                     id={`faq-question-${index}`}
                     onClick={() => toggleItem(index)}
                     onKeyDown={(e) => handleKeyDown(e, index)}
-                    className="w-full px-6 py-5 md:py-6 flex items-center justify-between gap-4 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary "
+                    className="w-full px-6 py-5 md:py-6 flex items-center justify-between gap-4 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary cursor-pointer"
                     aria-expanded={isOpen}
                     aria-controls={`faq-answer-${index}`}
                   >
