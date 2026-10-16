@@ -55,7 +55,7 @@ export function Story({ locale: _locale }: StoryProps) {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
               transition={{
-                duration: 1.0,
+                duration: 0.7,
                 delay: index * 0.10,
                 ease: [0.25, 0.46, 0.45, 0.84],
               }}
