@@ -1,27 +1,33 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui";
 import { Menu, X } from "lucide-react";
 import { gameConfig } from "@/config/game";
+import { useTranslations } from "next-intl";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const navigation = [
-  { label: "BEGIN", href: "/" },
-  { label: "THE STORY", href: "/story" },
-  { label: "LOCATIONS", href: "/world" },
-  { label: "FEATURES", href: "/features" },
-  { label: "MEDIA", href: "/media" },
-  { label: "NEWS", href: "/news" },
-  { label: "PRESS KIT", href: "/press-kit" },
+  { key: "home", href: "/" },
+  { key: "story", href: "/story" },
+  { key: "world", href: "/world" },
+  { key: "features", href: "/features" },
+  { key: "media", href: "/media" },
+  { key: "news", href: "/news" },
+  { key: "pressKit", href: "/press-kit" },
 ];
 
-export function Navbar() {
+interface NavbarProps {
+  locale: string;
+}
+
+export function Navbar({ locale: _locale }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const t = useTranslations("nav");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,7 +63,7 @@ export function Navbar() {
             <div className="hidden lg:flex items-center gap-1">
               {navigation.map((item) => (
                 <Link
-                  key={item.href}
+                  key={item.key}
                   href={item.href}
                   className={cn(
                     "px-4 py-2 text-sm font-medium tracking-wide transition-colors relative",
@@ -68,7 +74,7 @@ export function Navbar() {
                   )}
                   aria-current={pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href)) ? "page" : undefined}
                 >
-                  {item.label}
+                  {t(item.key)}
                   {pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href)) && (
                     <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-accent-red rounded-full" />
                   )}
@@ -77,9 +83,10 @@ export function Navbar() {
             </div>
 
             <div className="hidden lg:flex items-center gap-3">
+              <LanguageSwitcher />
               <Link href={gameConfig.steamUrl} target="_blank" rel="noopener noreferrer">
                 <Button variant="primary" size="sm" className="whitespace-nowrap cursor-pointer">
-                  WISHLIST ON STEAM
+                  {t("wishlist")}
                 </Button>
               </Link>
             </div>
@@ -107,7 +114,7 @@ export function Navbar() {
             <div className="pt-4 space-y-1 border-t border-border-primary ">
               {navigation.map((item) => (
                 <Link
-                  key={item.href}
+                  key={item.key}
                   href={item.href}
                   onClick={closeMobileMenu}
                   className={cn(
@@ -119,13 +126,14 @@ export function Navbar() {
                   )}
                   aria-current={pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href)) ? "page" : undefined}
                 >
-                  {item.label}
+                  {t(item.key)}
                 </Link>
               ))}
-              <div className="pt-4 border-t border-border-primary">
+              <div className="pt-4 border-t border-border-primary flex items-center gap-3">
+                <LanguageSwitcher />
                 <Link href={gameConfig.steamUrl} target="_blank" rel="noopener noreferrer">
-                  <Button variant="primary" size="md" fullWidth className="w-full cursor-pointer">
-                    WISHLIST ON STEAM
+                  <Button variant="primary" size="md" className="w-full cursor-pointer">
+                    {t("wishlist")}
                   </Button>
                 </Link>
               </div>

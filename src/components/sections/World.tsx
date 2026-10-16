@@ -4,40 +4,27 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ResponsiveImage } from "@/components/ui";
 import { cn } from "@/lib/utils";
-import { gameConfig } from "@/config/game";
+import { getGameConfig } from "@/config/game";
 import { MapPin, ChevronLeft, ChevronRight, AlertTriangle, Eye, Maximize2 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-const moodDescriptions = {
-  oppressive: {
-    label: "OPPRESSIVE",
-    description: "Heavy atmosphere, constant pressure, feeling watched",
-    color: "text-accent-red"
-  },
-
-  uncanny: {
-    label: "UNCANNY",
-    description: "Familiar yet deeply wrong, subtle distortions",
-    color: "text-accent-amber"
-  },
-
-  vertigo: {
-    label: "VERTIGO",
-    description: "Disorienting verticality, loss of spatial grounding",
-    color: "text-fg-tertiary"
-  },
-
-  claustrophobic: {
-    label: "CLAUSTROPHOBIC",
-    description: "Confined spaces, walls closing in, limited escape",
-    color: "text-accent-red"
-  },
+const moodColors: Record<string, string> = {
+  oppressive: "text-accent-red",
+  uncanny: "text-accent-amber",
+  vertigo: "text-fg-tertiary",
+  claustrophobic: "text-accent-red",
 };
 
-export function World() {
+interface WorldProps {
+  locale: string;
+}
+
+export function World({ locale }: WorldProps) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [isExpanded, setIsExpanded] = useState(false);
+  const t = useTranslations("world");
 
-  const locations = gameConfig.locations;
+  const { locations, moods: moodDescriptions } = getGameConfig(locale);
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     switch (e.key) {
@@ -61,16 +48,16 @@ export function World() {
   return (
     <section id="world" className="relative" aria-labelledby="world-heading">
       <div className="absolute inset-0 -z-10" aria-hidden="true">
-        <div className="absolute inset-0 bg-linear-to-b from-transparent via-bg-secondary/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-bg-secondary/20 to-transparent" />
       </div>
 
       <div className="container-custom">
         <header className="text-center max-w-3xl mt-10 mx-auto mb-16 md:mb-24">
           <h2 id="world-heading" className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-fg-primary tracking-tight mb-6">
-            BEYOND THE GUIDE
+            {t("heading")}
           </h2>
           <p className="text-fg-secondary text-lg md:text-xl leading-relaxed">
-            The environments you&apos;ll traverse. Each location holds its own rules, its own secrets, and its own relationship to the guide.
+            {t("subheading")}
           </p>
         </header>
 
@@ -86,13 +73,12 @@ export function World() {
               {locations.map((location, index) => (
                 <article
                   key={location.id}
-                  className="w-full shrink-0 px-4"
+                  className="w-full flex-shrink-0 px-4"
                   role="group"
                   aria-roledescription="slide"
                   aria-label={`${location.name}, ${index + 1} of ${locations.length}`}
                 >
                   <div className="relative aspect-[4/5] md:aspect-[21/9] overflow-hidden rounded-base bg-bg-tertiary">
-
                     <ResponsiveImage
                       src={location.image}
                       alt={location.name}
@@ -102,19 +88,19 @@ export function World() {
                     object-cover 
                     transition-transform duration-700 ease-out
                     will-change-transform
-                    ${isExpanded && index === selectedIndex ? "scale-[1.1]" : "scale-100"}
+                    ${isExpanded && index === selectedIndex ? "scale-[1.08]" : "scale-100"}
                                 `}
                       style={{
                         filter: "brightness(0.9) contrast(1.1) saturate(0.9)",
                       }}
                     />
-                    <div className="absolute inset-0 bg-linear-to-t from-bg-primary/80 via-bg-primary/20 to-transparent" />
-                    <div className="absolute inset-0 bg-[radial-linear(ellipse_at_center,_transparent_50%,#030303_100%)]" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/80 via-bg-primary/20 to-transparent" />
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_50%,#030303_100%)]" />
 
                     <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
                       <div className="max-w-3xl">
                         <div className="flex items-center gap-3 mb-4">
-                          <MapPin className="w-5 h-5 text-accent-red shrink-0" aria-hidden="true" />
+                          <MapPin className="w-5 h-5 text-accent-red flex-shrink-0" aria-hidden="true" />
                           <h3 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl text-fg-primary tracking-tight">
                             {location.name.toUpperCase()}
                           </h3>
@@ -125,12 +111,12 @@ export function World() {
                         <div className="flex items-center gap-4">
                           <span className={cn(
                             "inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium tracking-wider uppercase border",
-                            moodDescriptions[location.mood as keyof typeof moodDescriptions]?.color || "text-fg-tertiary",
-                            moodDescriptions[location.mood as keyof typeof moodDescriptions]?.color?.replace("text-", "border-") || "border-border-primary",
+                            moodColors[location.mood] || "text-fg-tertiary",
+                            (moodColors[location.mood] || "text-fg-tertiary").replace("text-", "border-"),
                             "bg-bg-primary/50"
                           )}>
-                            <AlertTriangle className="w-3 h-3 shrink-0" aria-hidden="true" />
-                            {moodDescriptions[location.mood as keyof typeof moodDescriptions]?.label || location.mood.toUpperCase()}
+                            <AlertTriangle className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
+                            {moodDescriptions[location.mood]?.label || location.mood.toUpperCase()}
                           </span>
                           <button
                             onClick={() => setIsExpanded(!isExpanded)}
@@ -215,7 +201,7 @@ export function World() {
             role="region"
             aria-label={`${locations[selectedIndex].name} details`}
           >
-            <LocationDetail location={locations[selectedIndex]} onClose={() => setIsExpanded(false)} />
+            <LocationDetail location={locations[selectedIndex]} mood={moodDescriptions[locations[selectedIndex].mood]} moodColor={moodColors[locations[selectedIndex].mood] || "text-fg-tertiary"} onClose={() => setIsExpanded(false)} />
           </motion.div>
         )}
       </div>
@@ -223,8 +209,7 @@ export function World() {
   );
 }
 
-function LocationDetail({ location, onClose }: { location: typeof gameConfig.locations[0]; onClose: () => void }) {
-  const mood = moodDescriptions[location.mood as keyof typeof moodDescriptions];
+function LocationDetail({ location, mood, moodColor, onClose }: { location: { name: string; description: string; mood: string; image: string }; mood?: { label: string; description: string }; moodColor: string; onClose: () => void }) {
 
   return (
     <div className="relative bg-bg-secondary border border-border-primary rounded-base overflow-hidden">
@@ -260,8 +245,8 @@ function LocationDetail({ location, onClose }: { location: typeof gameConfig.loc
                 <div className="flex items-center gap-3">
                   <span className={cn(
                     "inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium tracking-wider uppercase border",
-                    mood?.color || "text-fg-tertiary",
-                    mood?.color?.replace("text-", "border-") || "border-border-primary",
+                    moodColor,
+                    moodColor.replace("text-", "border-"),
                     "bg-bg-primary/50"
                   )}>
                     <Eye className="w-4 h-4" aria-hidden="true" />
@@ -300,9 +285,9 @@ function LocationDetail({ location, onClose }: { location: typeof gameConfig.loc
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
-              style={{ filter: "brightness(0.85) contrast(1.12) saturate(0.9)" }}
+              style={{ filter: "brightness(0.8) contrast(1.12) saturate(0.8)" }}
             />
-            <div className="absolute inset-0 bg-linear-to-t from-bg-primary/70 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/70 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 text-fg-tertiary text-sm font-mono tracking-wider">
               LOCATION DATA CLASSIFIED — GUIDE ACCESS ONLY
             </div>

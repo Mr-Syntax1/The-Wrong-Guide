@@ -65,7 +65,6 @@ export const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonPr
       size = "md",
       loading = false,
       fullWidth = false,
-      asChild = false,
       className,
       children,
       disabled,

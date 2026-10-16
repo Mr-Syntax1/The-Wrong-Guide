@@ -1,14 +1,16 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { gameConfig } from "@/config/game";
 import { ChevronLeft, ArrowRight } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "404 — Page Not Found | The Wrong Guide",
   description: "The page you followed the guide to doesn't exist. Or it did, once.",
 };
 
-export default function NotFound() {
+export default async function NotFound() {
+  const t = await getTranslations({ locale: "en", namespace: "notFound" });
+
   return (
     <main className="min-h-screen bg-bg-primary text-fg-primary flex items-center justify-center relative">
       <div className="absolute inset-0 z-0" aria-hidden="true">
@@ -37,11 +39,11 @@ export default function NotFound() {
           </h1>
 
           <p className="text-fg-secondary text-base md:text-lg leading-relaxed mb-10 max-w-xl mx-auto">
-            You followed the guide. It led you here.
+            {t("message")}
           </p>
 
           <p className="text-fg-tertiary text-sm md:text-base leading-relaxed mb-12 max-w-xl mx-auto">
-            This page doesn't exist. Or it did, once. The guide apologizes for the inconvenience. The guide is lying.
+            {t("description")}
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
@@ -50,7 +52,7 @@ export default function NotFound() {
               className="group inline-flex items-center gap-2 px-8 py-4 rounded-base bg-accent-red text-fg-primary font-medium text-lg hover:bg-accent-red-hover transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary"
             >
               <ChevronLeft className="w-5 h-5 transition-transform group-hover:-translate-x-1" aria-hidden="true" />
-              RETURN TO THE PATH
+              {t("returnHome")}
             </Link>
 
             <Link

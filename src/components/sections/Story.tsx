@@ -5,77 +5,59 @@ import { motion } from "framer-motion";
 import { ResponsiveImage } from "@/components/ui";
 import { cn } from "@/lib/utils";
 import { gameConfig } from "@/config/game";
+import { useTranslations } from "next-intl";
 
-const storySections = [
-  {
-    id: "premise",
-    title: "THE PREMISE",
-    text: `You were given instructions. They were supposed to keep you safe. Follow them. Don&apos;t question them. And whatever happens... don&apos;t leave the path.`,
-  },
-  {
-    id: "the-guide",
-    title: "THE GUIDE",
-    text: `It speaks through notes, signs, voices on the radio. It marks the way with paint, with lights, with breadcrumbs of certainty. You follow because the alternative is the unknown. And the unknown is where they are.`,
-  },
-  {
-    id: "the-wrongness",
-    title: "THE WRONGNESS",
-    text: `But sometimes the guide hesitates. A marker points two ways. A voice static-cracks into something else. The map shows a room that isn&apos;t there. The instruction says &ldquo;safe&rdquo; but your fingers find a lock on the outside.`,
-  },
-  {
-    id: "the-choice",
-    title: "THE CHOICE",
-    text: `How far do you follow before you stop? What happens when the guide leads you somewhere the guide itself warns you about? The path was never yours. But the choice to leave it... that might be the only thing that is.`,
-  },
-];
+interface StoryProps {
+  locale: string;
+}
 
 const sectionVariants = {
   hidden: (index: number) => ({
     opacity: 0,
-    // به‌جای x از transform استفاده کن + فاصله کمتر
-    transform: `translate3d(${index % 2 === 0 ? -120 : 120}px, 0, 0)`,
+    x: index % 2 === 0 ? -150 : 150,
   }),
   visible: {
     opacity: 1,
-    transform: "translate3d(0, 0, 0)",
+    x: 0,
   },
 };
 
-export function Story() {
+export function Story({ locale: _locale }: StoryProps) {
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const t = useTranslations("story");
 
+  const sections = t.raw("sections") as Array<{ title: string; text: string }>;
 
   return (
     <section id="story" className="relative" aria-labelledby="story-heading">
       <div className="absolute inset-0 -z-10" aria-hidden="true">
-        <div className="absolute inset-0 bg-linear-to-b from-transparent via-bg-secondary/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-bg-secondary/30 to-transparent" />
       </div>
 
       <div className="container-custom">
         <header className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
           <h2 id="story-heading" className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-fg-primary tracking-tight mb-6">
-            THE STORY
+            {t("heading")}
           </h2>
           <p className="text-fg-secondary text-lg md:text-xl leading-relaxed">
-            What kind of experience is this? What is the player doing? What is the &ldquo;guide&rdquo;? Why should the player care? What feels wrong?
+            {t("subheading")}
           </p>
         </header>
 
         <div className="">
-          {storySections.map((section, index) => (
+          {sections.map((section, index) => (
             <motion.div
-              key={section.id}
-              style={{ willChange: "transform, opacity" }}
+              key={section.title}
               ref={(el) => (sectionRefs.current[index] = el)}
               custom={index}
               variants={sectionVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.15, margin: "0px 0px -10% 0px" }}
+              viewport={{ once: true, amount: 0.3 }}
               transition={{
-                duration: 0.6,
-                ease: "easeOut",
-                // delay را کاملاً حذف کن
+                duration: 1.0,
+                delay: index * 0.10,
+                ease: [0.25, 0.46, 0.45, 0.84],
               }}
               className="relative"
             >
@@ -93,10 +75,10 @@ export function Story() {
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover transition-transform duration-700 hover:scale-[1.02]"
                       style={{
-                        filter: "brightness(0.82) contrast(1.12) saturate(0.9)",
+                        filter: "brightness(0.8) contrast(1.12) saturate(0.9)",
                       }}
                     />
-                    <div className="absolute inset-0 bg-linear-to-t from-bg-primary/60 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/60 via-transparent to-transparent" />
                   </div>
 
                   {index === 1 && (
@@ -123,7 +105,7 @@ export function Story() {
                   index % 2 === 0 ? "lg:order-2" : "lg:order-1"
                 )}>
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-red/10 border border-accent-red/30 text-accent-red text-xs font-medium tracking-widest uppercase mb-6">
-                    {index + 1} / {storySections.length}
+                    {index + 1} / {sections.length}
                   </div>
 
                   <h3 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl text-fg-primary tracking-tight mb-6">
@@ -138,7 +120,7 @@ export function Story() {
                     ))}
                   </div>
 
-                  {index === storySections.length - 1 && (
+                  {index === sections.length - 1 && (
                     <div className="mt-10 pt-6 border-t border-border-primary">
                       <p className="text-fg-tertiary text-sm leading-relaxed">
                         The Wrong Guide is a single-player, offline, story-driven horror experience.

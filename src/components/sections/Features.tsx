@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { gameConfig } from "@/config/game";
+import { getGameConfig } from "@/config/game";
 import {
   BookOpen,
   User,
@@ -10,6 +10,7 @@ import {
   Puzzle,
   Eye,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const featureIcons = {
   "book-open": BookOpen,
@@ -20,25 +21,32 @@ const featureIcons = {
   eye: Eye,
 };
 
-export function Features() {
+interface FeaturesProps {
+  locale: string;
+}
+
+export function Features({ locale }: FeaturesProps) {
+  const t = useTranslations("features");
+  const { features, coreDesign } = getGameConfig(locale);
+
   return (
     <section id="features" className="relative" aria-labelledby="features-heading">
       <div className="absolute inset-0 -z-10" aria-hidden="true">
-        <div className="absolute inset-0 bg-linear-to-b from-transparent via-bg-secondary/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-bg-secondary/20 to-transparent" />
       </div>
 
       <div className="container-custom mt-24">
         <header className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
           <h2 id="features-heading" className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-fg-primary tracking-tight mb-6">
-            FEATURES
+            {t("heading")}
           </h2>
           <p className="text-fg-secondary text-lg md:text-xl leading-relaxed">
-            Core pillars that define The Wrong Guide experience.
+            {t("subheading")}
           </p>
         </header>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {gameConfig.features.map((feature, index) => {
+          {features.map((feature, index) => {
             const Icon = featureIcons[feature.icon as keyof typeof featureIcons] || BookOpen;
 
             return (
@@ -76,25 +84,21 @@ export function Features() {
 
         <div className="mt-16 md:mt-24">
           <div className="relative bg-bg-secondary border border-border-primary rounded-base overflow-hidden">
-            <div className="absolute inset-0 bg-linear-to-r from-accent-red/5 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-accent-red/5 via-transparent to-transparent" />
             <div className="p-8 md:p-12 lg:p-16 relative">
               <div className="max-w-4xl">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-red/10 border border-accent-red/30 text-accent-red text-xs font-medium tracking-widest uppercase mb-6">
-                  CORE DESIGN
+                  {coreDesign.label}
                 </div>
                 <h3 className="font-display font-bold text-3xl md:text-4xl lg:text-5xl text-fg-primary tracking-tight mb-6">
-                  No Hand-Holding. No False Safety.
+                   {coreDesign.heading}
                 </h3>
                 <div className="grid md:grid-cols-2 gap-6 text-fg-secondary leading-relaxed">
                   <p className="text-lg">
-                    The Wrong Guide respects your intelligence. There are no objective markers, no quest logs,
-                    no highlighted interactables. The world communicates through environmental cues, audio,
-                    and the guide itself — which may or may not be reliable.
+                    {coreDesign.paragraph1}
                   </p>
                   <p className="text-lg">
-                    Every mechanic serves the narrative. Puzzles emerge from observation. Horror emerges from
-                    uncertainty. The guide emerges from the question: what happens when the only thing keeping
-                    you alive might be the thing leading you to your end?
+                    {coreDesign.paragraph2}
                   </p>
                 </div>
               </div>

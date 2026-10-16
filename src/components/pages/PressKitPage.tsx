@@ -3,13 +3,20 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { gameConfig } from "@/config/game";
+import { getGameConfig } from "@/config/game";
 import { Download, Copy, ExternalLink, ChevronDown, ChevronUp, Image, Video, Layers, FileText } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-const pressKit = gameConfig.pressKit;
+interface PressKitPageProps {
+  locale: string;
+}
 
-export function PressKitPage() {
+export function PressKitPage({ locale }: PressKitPageProps) {
   const [expandedSections, setExpandedSections] = useState<string[]>(["logos", "key-art"]);
+  const t = useTranslations("pressKit");
+  const gameConfig = getGameConfig(locale);
+  const pressKit = gameConfig.pressKit;
+  const businessEmail = (gameConfig as { businessEmail?: string }).businessEmail;
 
   const toggleSection = (sectionId: string) => {
     setExpandedSections((prev) =>
@@ -22,13 +29,23 @@ export function PressKitPage() {
   };
 
   const sectionConfig = {
-    logos: { title: "LOGOS", icon: Image, description: "Official logo files in multiple formats" },
-    "key-art": { title: "KEY ART", icon: Image, description: "High-resolution marketing artwork" },
-    screenshots: { title: "SCREENSHOTS", icon: Image, description: "In-game screenshots for editorial use" },
-    trailers: { title: "TRAILERS", icon: Video, description: "Official video content" },
-    "concept-art": { title: "CONCEPT ART", icon: Layers, description: "Development artwork and studies" },
-    downloads: { title: "DOWNLOADS", icon: FileText, description: "Complete press kit packages" },
+    logos: { title: t("logos"), icon: Image, description: t("officialLogoFiles") },
+    "key-art": { title: t("keyArt"), icon: Image, description: t("highResArtwork") },
+    screenshots: { title: t("screenshots"), icon: Image, description: t("inGameScreenshots") },
+    trailers: { title: t("trailers"), icon: Video, description: t("officialVideoContent") },
+    "concept-art": { title: t("conceptArt"), icon: Layers, description: t("developmentArtwork") },
+    downloads: { title: t("downloads"), icon: FileText, description: t("completePressKitPackages") },
   };
+
+  const sectionDownloads: Record<string, string | undefined> = {
+    logos: pressKit.downloads.logoZip,
+    "key-art": pressKit.downloads.keyArtZip,
+    screenshots: pressKit.downloads.screenshotsZip,
+    trailers: pressKit.downloads.trailersZip,
+    "concept-art": pressKit.downloads.conceptArtZip,
+  };
+
+  const usageRules = t.raw("usageRules") as string[];
 
   return (
     <div className="min-h-screen">
@@ -40,54 +57,54 @@ export function PressKitPage() {
         <div className="container-custom">
           <header className="text-center max-w-3xl mx-auto mb-16">
             <h1 id="press-kit-heading" className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-fg-primary tracking-tight mb-6">
-              PRESS KIT
+              {t("heading")}
             </h1>
             <p className="text-fg-secondary text-lg md:text-xl leading-relaxed">
-              Everything you need to cover {gameConfig.title}. Assets, information, and downloadable packages for press and content creators.
+              {t("subheading")}
             </p>
           </header>
 
           <div className="grid md:grid-cols-3 gap-6 mb-16">
             <div className="p-6 bg-bg-secondary border border-border-primary rounded-base">
-              <h3 className="font-display font-semibold text-xl text-fg-primary mb-2">GAME TITLE</h3>
+              <h3 className="font-display font-semibold text-xl text-fg-primary mb-2">{t("gameTitle")}</h3>
               <p className="text-fg-primary font-mono text-lg">{gameConfig.title}</p>
             </div>
             <div className="p-6 bg-bg-secondary border border-border-primary rounded-base">
-              <h3 className="font-display font-semibold text-xl text-fg-primary mb-2">GENRE</h3>
+              <h3 className="font-display font-semibold text-xl text-fg-primary mb-2">{t("genre")}</h3>
               <p className="text-fg-secondary">{gameConfig.genre}</p>
             </div>
             <div className="p-6 bg-bg-secondary border border-border-primary rounded-base">
-              <h3 className="font-display font-semibold text-xl text-fg-primary mb-2">PLATFORMS</h3>
+              <h3 className="font-display font-semibold text-xl text-fg-primary mb-2">{t("platforms")}</h3>
               <p className="text-fg-secondary">{gameConfig.platforms.join(", ")}</p>
             </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 mb-16">
             <div className="p-6 bg-bg-secondary border border-border-primary rounded-base">
-              <h3 className="font-display font-semibold text-xl text-fg-primary mb-2">DEVELOPERS</h3>
+              <h3 className="font-display font-semibold text-xl text-fg-primary mb-2">{t("developers")}</h3>
               <p className="text-fg-secondary">{gameConfig.developer}</p>
             </div>
             <div className="p-6 bg-bg-secondary border border-border-primary rounded-base">
-              <h3 className="font-display font-semibold text-xl text-fg-primary mb-2">PUBLISHER</h3>
+              <h3 className="font-display font-semibold text-xl text-fg-primary mb-2">{t("publisher")}</h3>
               <p className="text-fg-secondary">{gameConfig.publisher}</p>
             </div>
             <div className="p-6 bg-bg-secondary border border-border-primary rounded-base md:col-span-2">
-              <h3 className="font-display font-semibold text-xl text-fg-primary mb-2">RELEASE STATUS</h3>
+              <h3 className="font-display font-semibold text-xl text-fg-primary mb-2">{t("releaseStatus")}</h3>
               <p className="text-fg-secondary">{gameConfig.releaseStatus}</p>
               {gameConfig.releaseDate !== "[RELEASE DATE]" && (
-                <p className="text-fg-secondary mt-1">Release Date: {gameConfig.releaseDate}</p>
+                <p className="text-fg-secondary mt-1">{t("releaseDate")}: {gameConfig.releaseDate}</p>
               )}
               {gameConfig.price && (
-                <p className="text-fg-secondary mt-1">Price: {gameConfig.price}</p>
+                <p className="text-fg-secondary mt-1">{t("price")}: {gameConfig.price}</p>
               )}
             </div>
           </div>
 
           <div className="prose prose-invert max-w-none">
-            <h3 className="font-display font-semibold text-2xl text-fg-primary mb-4">SHORT DESCRIPTION</h3>
+            <h3 className="font-display font-semibold text-2xl text-fg-primary mb-4">{t("shortDescription")}</h3>
             <p className="text-fg-secondary leading-relaxed mb-8">{gameConfig.shortDescription}</p>
 
-            <h3 className="font-display font-semibold text-2xl text-fg-primary mb-4">LONG DESCRIPTION</h3>
+            <h3 className="font-display font-semibold text-2xl text-fg-primary mb-4">{t("longDescription")}</h3>
             <div className="text-fg-secondary leading-relaxed whitespace-pre-wrap">{gameConfig.longDescription}</div>
           </div>
         </div>
@@ -141,14 +158,14 @@ export function PressKitPage() {
                         <p className="text-fg-tertiary text-sm">{config.description}</p>
                       </div>
                     </div>
-                    {pressKit.downloads[`${id}Zip`] && (
+                    {sectionDownloads[id] && (
                       <a
-                        href={pressKit.downloads[`${id}Zip`]}
+                        href={sectionDownloads[id]}
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-base bg-accent-red/10 border border-accent-red/30 text-accent-red text-sm font-medium hover:bg-accent-red hover:text-fg-primary transition-colors"
                         download
                       >
                         <Download className="w-4 h-4" aria-hidden="true" />
-                        DOWNLOAD ALL ({id.toUpperCase()})
+                        {t("downloadAll")} ({config.title})
                       </a>
                     )}
                   </header>
@@ -182,7 +199,7 @@ export function PressKitPage() {
                         <a
                           href={pressKit.downloads.logoZip}
                           className="p-2 rounded-base bg-bg-primary border border-border-primary text-fg-secondary hover:text-accent-red hover:border-accent-red/50 transition-colors"
-                          aria-label={`Download ${asset.name}`}
+                          aria-label={`${t("download")} ${asset.name}`}
                           download
                         >
                           <Download className="w-4 h-4" aria-hidden="true" />
@@ -190,7 +207,7 @@ export function PressKitPage() {
                         <button
                           onClick={() => copyToClipboard(`/press-kit/logos/${asset.file}`)}
                           className="p-2 rounded-base bg-bg-primary border border-border-primary text-fg-secondary hover:text-accent-red hover:border-accent-red/50 transition-colors"
-                          aria-label="Copy file path"
+                          aria-label={t("copyPath")}
                         >
                           <Copy className="w-4 h-4" aria-hidden="true" />
                         </button>
@@ -223,7 +240,7 @@ export function PressKitPage() {
                         <a
                           href={pressKit.downloads.keyArtZip}
                           className="p-2 rounded-base bg-bg-primary border border-border-primary text-fg-secondary hover:text-accent-red hover:border-accent-red/50 transition-colors"
-                          aria-label={`Download ${asset.name}`}
+                          aria-label={`${t("download")} ${asset.name}`}
                           download
                         >
                           <Download className="w-4 h-4" aria-hidden="true" />
@@ -231,7 +248,7 @@ export function PressKitPage() {
                         <button
                           onClick={() => copyToClipboard(`/press-kit/key-art/${asset.file}`)}
                           className="p-2 rounded-base bg-bg-primary border border-border-primary text-fg-secondary hover:text-accent-red hover:border-accent-red/50 transition-colors"
-                          aria-label="Copy file path"
+                          aria-label={t("copyPath")}
                         >
                           <Copy className="w-4 h-4" aria-hidden="true" />
                         </button>
@@ -289,7 +306,7 @@ export function PressKitPage() {
                         <a
                           href={pressKit.downloads.trailersZip}
                           className="p-2 rounded-base bg-bg-primary border border-border-primary text-fg-secondary hover:text-accent-red hover:border-accent-red/50 transition-colors"
-                          aria-label={`Download ${asset.name}`}
+                          aria-label={`${t("download")} ${asset.name}`}
                           download
                         >
                           <Download className="w-4 h-4" aria-hidden="true" />
@@ -297,7 +314,7 @@ export function PressKitPage() {
                         <button
                           onClick={() => copyToClipboard(`/press-kit/trailers/${asset.file}`)}
                           className="p-2 rounded-base bg-bg-primary border border-border-primary text-fg-secondary hover:text-accent-red hover:border-accent-red/50 transition-colors"
-                          aria-label="Copy file path"
+                          aria-label={t("copyPath")}
                         >
                           <Copy className="w-4 h-4" aria-hidden="true" />
                         </button>
@@ -343,8 +360,8 @@ export function PressKitPage() {
                           <div className="flex items-center gap-4">
                             <FileText className="w-6 h-6 text-accent-red flex-shrink-0" aria-hidden="true" />
                             <div>
-                              <p className="font-medium text-fg-primary">{key.replace("Zip", " Package")}</p>
-                              <p className="text-fg-tertiary text-sm">ZIP archive</p>
+                              <p className="font-medium text-fg-primary">{key.replace("Zip", ` ${t("downloads")}`).replace(/^\w/, (c) => c.toUpperCase())}</p>
+                              <p className="text-fg-tertiary text-sm">ZIP</p>
                             </div>
                           </div>
                           <a
@@ -353,7 +370,7 @@ export function PressKitPage() {
                             download
                           >
                             <Download className="w-4 h-4" aria-hidden="true" />
-                            DOWNLOAD
+                            {t("download")}
                           </a>
                         </motion.div>
                       ))}
@@ -366,11 +383,11 @@ export function PressKitPage() {
         </div>
 
         <section className="mt-16 pt-12 border-t border-border-primary" aria-labelledby="contact-heading">
-          <h2 id="contact-heading" className="font-display font-bold text-2xl text-fg-primary mb-6">PRESS CONTACT</h2>
+          <h2 id="contact-heading" className="font-display font-bold text-2xl text-fg-primary mb-6">{t("pressContact")}</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="p-6 bg-bg-secondary border border-border-primary rounded-base">
-              <h3 className="font-display font-semibold text-xl text-fg-primary mb-4">PRESS INQUIRIES</h3>
-              <p className="text-fg-secondary mb-4">For review codes, interview requests, and press assets:</p>
+              <h3 className="font-display font-semibold text-xl text-fg-primary mb-4">{t("pressInquiries")}</h3>
+              <p className="text-fg-secondary mb-4">{t("forReviewCodes")}</p>
               <a
                 href={`mailto:${gameConfig.pressEmail}`}
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-base bg-accent-red/10 border border-accent-red/30 text-accent-red font-medium hover:bg-accent-red hover:text-fg-primary transition-colors"
@@ -379,32 +396,32 @@ export function PressKitPage() {
                 {gameConfig.pressEmail}
               </a>
             </div>
-            <div className="p-6 bg-bg-secondary border border-border-primary rounded-base">
-              <h3 className="font-display font-semibold text-xl text-fg-primary mb-4">BUSINESS INQUIRIES</h3>
-              <p className="text-fg-secondary mb-4">For partnership, licensing, and business opportunities:</p>
-              <a
-                href={`mailto:${gameConfig.businessEmail}`}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-base bg-bg-tertiary border border-border-primary text-fg-secondary hover:text-accent-red hover:border-accent-red/50 transition-colors"
-              >
-                <ExternalLink className="w-4 h-4" aria-hidden="true" />
-                {gameConfig.businessEmail}
-              </a>
-            </div>
+            {businessEmail && (
+              <div className="p-6 bg-bg-secondary border border-border-primary rounded-base">
+                <h3 className="font-display font-semibold text-xl text-fg-primary mb-4">{t("businessInquiries")}</h3>
+                <p className="text-fg-secondary mb-4">{t("forPartnership")}</p>
+                <a
+                  href={`mailto:${businessEmail}`}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-base bg-bg-tertiary border border-border-primary text-fg-secondary hover:text-accent-red hover:border-accent-red/50 transition-colors"
+                >
+                  <ExternalLink className="w-4 h-4" aria-hidden="true" />
+                  {businessEmail}
+                </a>
+              </div>
+            )}
           </div>
         </section>
 
         <section className="mt-12 pt-12 border-t border-border-primary" aria-labelledby="guidelines-heading">
-          <h2 id="guidelines-heading" className="font-display font-bold text-2xl text-fg-primary mb-6">USAGE GUIDELINES</h2>
+          <h2 id="guidelines-heading" className="font-display font-bold text-2xl text-fg-primary mb-6">{t("usageGuidelines")}</h2>
           <div className="prose prose-invert max-w-none space-y-4 text-fg-secondary">
-            <p>All assets in this press kit are provided for editorial coverage of <strong>{gameConfig.title}</strong> only.</p>
+            <p>{t("assetsProvidedFor")}</p>
             <ul className="list-disc list-inside space-y-2">
-              <li>Assets may be used in articles, videos, streams, and social media coverage of the game.</li>
-              <li>Do not modify assets beyond cropping/resizing for layout purposes.</li>
-              <li>Do not use assets for merchandise, endorsements, or commercial products without written permission.</li>
-              <li>Credit <strong>{gameConfig.developer}</strong> / <strong>{gameConfig.publisher}</strong> where appropriate.</li>
-              <li>Trailers may be embedded via official YouTube/Steam links or hosted directly with attribution.</li>
+              {usageRules.map((rule, index) => (
+                <li key={index}>{rule}</li>
+              ))}
             </ul>
-            <p>For uses not covered here, please contact <a href={`mailto:${gameConfig.pressEmail}`} className="text-accent-red hover:underline">{gameConfig.pressEmail}</a>.</p>
+            <p>{t("forOtherUses")} <a href={`mailto:${gameConfig.pressEmail}`} className="text-accent-red hover:underline">{gameConfig.pressEmail}</a>.</p>
           </div>
         </section>
       </div>

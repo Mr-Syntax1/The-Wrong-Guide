@@ -1,17 +1,17 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ResponsiveImage } from "@/components/ui";
-import { gameConfig } from "@/config/game";
+import { gameConfig, getGameConfig } from "@/config/game";
 import { cn, formatDate } from "@/lib/utils";
-import { ChevronLeft, ExternalLink } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
 import { Suspense } from "react";
 import NewsArticleSkeleton from "./NewsArticleContent";
+import { getTranslations } from "next-intl/server";
 
 interface Props {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }
-
 
 export default function NewsArticle({ params }: Props) {
   return (
@@ -22,8 +22,8 @@ export default function NewsArticle({ params }: Props) {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
-  const post = gameConfig.news.find((p) => p.slug === slug);
+  const { locale, slug } = await params;
+  const post = getGameConfig(locale).news.find((p) => p.slug === slug);
   if (!post) return { title: "Not Found" };
 
   return {
@@ -43,11 +43,15 @@ export async function generateStaticParams() {
   return gameConfig.news.map((post) => ({ slug: post.slug }));
 }
 
-export  async function NewsArticleContent({ params }: Props) {
-  const { slug } = await params;
-  const post = gameConfig.news.find((p) => p.slug === slug);
+async function NewsArticleContent({ params }: Props) {
+  const { locale, slug } = await params;
+  const post = getGameConfig(locale).news.find((p) => p.slug === slug);
+  const t = await getTranslations({ locale, namespace: "common" });
 
   if (!post) notFound();
+
+  // Canonical share URL (default locale "en" has no prefix with localePrefix: "as-needed")
+  const shareUrl = `https://thewrongguide.com${locale === "en" ? "" : `/${locale}`}/news/${post.slug}`;
 
   const categoryColors: Record<string, string> = {
     Announcement: "bg-accent-red/20 border-accent-red/30 text-accent-red",
@@ -68,7 +72,7 @@ export  async function NewsArticleContent({ params }: Props) {
             className="inline-flex items-center gap-2 px-3 py-2 rounded-base bg-bg-secondary/80 backdrop-blur-sm border border-border-primary text-fg-secondary hover:text-fg-primary hover:bg-bg-tertiary transition-colors text-sm mb-8"
           >
             <ChevronLeft className="w-4 h-4" aria-hidden="true" />
-            BACK TO NEWS
+            {t("backToNews")}
           </Link>
 
           <header className="max-w-3xl mx-auto text-center">
@@ -124,9 +128,9 @@ Thank you for following the guide. Or not following it. The choice, as always, i
 
             <div className="mt-12 pt-8 border-t border-border-primary flex flex-col md:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-4">
-                <span className="text-fg-tertiary text-sm">SHARE</span>
+                <span className="text-fg-tertiary text-sm">{t("share")}</span>
                 <a
-                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://thewrongguide.com/news/${post.slug}`)}`}
+                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(shareUrl)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-base bg-bg-tertiary border border-border-primary text-fg-secondary hover:text-accent-red hover:border-accent-red/50 transition-colors"
@@ -137,7 +141,7 @@ Thank you for following the guide. Or not following it. The choice, as always, i
                   </svg>
                 </a>
                 <a
-                  href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://thewrongguide.com/news/${post.slug}`)}`}
+                  href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-base bg-bg-tertiary border border-border-primary text-fg-secondary hover:text-accent-red hover:border-accent-red/50 transition-colors"
@@ -148,7 +152,7 @@ Thank you for following the guide. Or not following it. The choice, as always, i
                   </svg>
                 </a>
                 <a
-                  href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://thewrongguide.com/news/${post.slug}`)}`}
+                  href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-base bg-bg-tertiary border border-border-primary text-fg-secondary hover:text-accent-red hover:border-accent-red/50 transition-colors"
@@ -164,7 +168,7 @@ Thank you for following the guide. Or not following it. The choice, as always, i
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-base bg-bg-tertiary border border-border-primary text-fg-secondary hover:text-accent-red hover:border-accent-red/50 transition-colors text-sm font-medium"
               >
                 <ChevronLeft className="w-4 h-4" aria-hidden="true" />
-                ALL NEWS
+                {t("allNews")}
               </Link>
             </div>
           </div>

@@ -1,26 +1,22 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
+import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui";
 import { gameConfig } from "@/config/game";
 import { cn } from "@/lib/utils";
 import { Play, ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
 
-const taglines = [
-  "You followed the guide. It led you here.",
-  "The call said she was waiting.",
-  "But she wasn't waiting for you.",
-  "The path remembers your footsteps.",
-  "The markers point both ways now.",
-  "Your daughter is somewhere ahead.",
-  "So is the thing that took her.",
-  "Trust the guide. Or trust what's left of you.",
-];
+interface HeroProps {
+  locale: string;
+}
 
-export function Hero() {
+export function Hero({ locale: _locale }: HeroProps) {
   const [showContent, setShowContent] = useState(false);
+  const t = useTranslations("hero");
+  const footerT = useTranslations("footer");
 
   useEffect(() => {
     const timer = setTimeout(() => setShowContent(true), 100);
@@ -31,7 +27,6 @@ export function Hero() {
     let typeItInstance: { destroy: () => void } | null = null;
     let timer: ReturnType<typeof setTimeout> | null = null;
 
-    // صبر کن تا DOM آماده بشه
     timer = setTimeout(() => {
       const target = document.querySelector(".typewriter");
       if (!target) return;
@@ -40,8 +35,8 @@ export function Hero() {
         .then((module) => {
           const TypeIt = module.default;
 
-          typeItInstance = new TypeIt(".typewriter", {
-            strings: taglines,
+          const instance = new TypeIt(".typewriter", {
+            strings: t.raw("taglines"),
             speed: 80,
             deleteSpeed: 30,
             lifeLike: true,
@@ -51,12 +46,14 @@ export function Hero() {
             nextStringDelay: 4000,
             loop: true,
             waitUntilVisible: false,
-          }).go();
+          });
+
+          typeItInstance = instance;
+          instance.go();
         })
         .catch((err) => console.error("TypeIt loading error:", err));
     }, 100);
 
-    // cleanup
     return () => {
       if (timer) clearTimeout(timer);
       if (typeItInstance) {
@@ -64,7 +61,7 @@ export function Hero() {
         typeItInstance = null;
       }
     };
-  }, []);
+  }, [t]);
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden" aria-labelledby="hero-title">
@@ -79,6 +76,7 @@ export function Hero() {
           style={{
             filter: "brightness(0.8) contrast(1.18) saturate(0.9)",
           }}
+          aria-hidden="true"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-bg-primary/60 via-bg-primary/30 to-bg-primary/80" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_40%,#030303_100%)]" />
@@ -100,9 +98,7 @@ export function Hero() {
             aria-live="polite"
             aria-atomic="true"
           >
-            <span
-              className="typewriter text-fg-secondary text-xl md:text-2xl font-light tracking-wide leading-relaxed"
-            />
+            <span className="typewriter text-fg-secondary text-xl md:text-2xl font-light tracking-wide leading-relaxed" />
           </div>
 
           <h1
@@ -115,7 +111,7 @@ export function Hero() {
               showContent ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             )}
           >
-            THE WRONG GUIDE
+            {t("title")}
           </h1>
 
           <p
@@ -126,7 +122,7 @@ export function Hero() {
               showContent ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             )}
           >
-            A story-driven atmospheric horror game where the guide you follow may not be what it seems.
+            {footerT("tagline")}
           </p>
 
           <div
@@ -139,11 +135,11 @@ export function Hero() {
             aria-label="Primary actions"
           >
             <Link href={gameConfig.steamUrl} target="_blank" rel="noopener noreferrer">
-              <Button variant="primary" size="xl" className="w-full sm:w-auto min-w-[280px] cursor-pointer" aria-label="Wishlist The Wrong Guide on Steam">
+              <Button variant="primary" size="xl" className="w-full sm:w-auto min-w-[280px] cursor-pointer" aria-label={`Wishlist ${gameConfig.title} on Steam`}>
                 <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
                 </svg>
-                WISHLIST ON STEAM
+                {t("wishlist")}
                 <ArrowRight className="w-5 h-5 ml-2" aria-hidden="true" />
               </Button>
             </Link>
@@ -153,10 +149,10 @@ export function Hero() {
               size="xl"
               className="w-full cursor-pointer sm:w-auto min-w-[200px]"
               onClick={() => document.getElementById("trailer")?.scrollIntoView({ behavior: "smooth" })}
-              aria-label="Watch trailer"
+              aria-label={t("watchTrailer")}
             >
               <Play className="w-5 h-5 mr-2" aria-hidden="true" />
-              WATCH TRAILER
+              {t("watchTrailer")}
             </Button>
           </div>
 
@@ -187,15 +183,14 @@ export function Hero() {
           </div>
         </div>
 
-        <div
-        >
+        <div>
           <div className="flex flex-col items-center gap-3 text-fg-tertiary mt-10">
             <div className="animate-bounce">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>
             </div>
-            <span className="text-xs tracking-widest uppercase ">SCROLL TO BEGIN</span>
+            <span className="text-xs tracking-widest uppercase">{t("scrollToBegin")}</span>
           </div>
         </div>
       </div>

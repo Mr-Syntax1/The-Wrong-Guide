@@ -1,21 +1,38 @@
 import { Metadata } from "next";
 import { News } from "@/components/sections";
 import { gameConfig } from "@/config/game";
+import { routing } from "@/i18n/routing";
 
-export const metadata: Metadata = {
-  title: "News",
-  description: "Latest development updates, announcements, and behind-the-scenes content for The Wrong Guide.",
-  openGraph: {
+export const revalidate = 3600;
+
+interface Props {
+  params: Promise<{ locale: string }>;
+}
+
+export async function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+
+  return {
     title: "News | The Wrong Guide",
-    description: "Latest development updates and announcements",
-  },
-};
+    description: "Latest development updates, announcements, and behind-the-scenes content for The Wrong Guide.",
+    openGraph: {
+      title: "News | The Wrong Guide",
+      description: "Latest development updates and announcements",
+    },
+  };
+}
 
-export default function NewsPage() {
+export default async function NewsPage({ params }: Props) {
+  const { locale } = await params;
+
   return (
     <>
       <div className="mt-24">
-        <News />
+        <News locale={locale} />
         <section className="py-16" aria-labelledby="cta-heading">
           <div className="container-custom text-center">
             <h2 id="cta-heading" className="font-display font-bold text-3xl md:text-4xl text-fg-primary mb-6">

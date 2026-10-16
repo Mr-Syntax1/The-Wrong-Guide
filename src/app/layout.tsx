@@ -1,10 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Navbar, Footer } from "@/components/layout";
-import { WrongGuideEffects } from "@/components/ui/WrongGuideEffects";
-import { gameConfig } from "@/config/game";
-import { ScrollToTop } from "@/components/ScrollToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,10 +23,10 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: `${gameConfig.title} | Official Website`,
-    template: `%s | ${gameConfig.title}`,
+    default: "The Wrong Guide | Official Website",
+    template: `%s | The Wrong Guide`,
   },
-  description: gameConfig.shortDescription,
+  description: "A story-driven atmospheric horror game where the guide you follow may not be what it seems.",
   keywords: [
     "The Wrong Guide",
     "horror game",
@@ -41,9 +37,9 @@ export const metadata: Metadata = {
     "single player horror",
     "atmospheric horror",
   ],
-  authors: [{ name: gameConfig.developer }],
-  creator: gameConfig.developer,
-  publisher: gameConfig.publisher,
+  authors: [{ name: "BMS Studio" }],
+  creator: "BMS Studio",
+  publisher: "Sourena Games",
   robots: {
     index: true,
     follow: true,
@@ -59,15 +55,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://thewrongguide.com",
-    siteName: gameConfig.title,
-    title: `${gameConfig.title} | Official Website`,
-    description: gameConfig.shortDescription,
+    siteName: "The Wrong Guide",
+    title: "The Wrong Guide | Official Website",
+    description: "A story-driven atmospheric horror game where the guide you follow may not be what it seems.",
     images: [
       {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: gameConfig.title,
+        alt: "The Wrong Guide",
       },
     ],
   },
@@ -75,8 +71,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@thewrongguide",
     creator: "@thewrongguide",
-    title: `${gameConfig.title} | Official Website`,
-    description: gameConfig.shortDescription,
+    title: "The Wrong Guide | Official Website",
+    description: "A story-driven atmospheric horror game where the guide you follow may not be what it seems.",
     images: ["/images/og-image.png"],
   },
   verification: {
@@ -87,20 +83,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children, }: { children: React.ReactNode; }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+    <html className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://store.steampowered.com" />
-        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600;700&display=swap" />
+       
       </head>
       <body className="min-h-full flex flex-col bg-bg-primary text-fg-primary">
-        <ScrollToTop />
-        <Navbar />
-        <main className="flex-1 pt-16 md:pt-20">{children}</main>
-        <Footer />
-        <WrongGuideEffects />
-        <div className="film-grain vignette pointer-events-none fixed inset-0 z-[100]" aria-hidden="true" />
+        {children}
       </body>
     </html>
   );

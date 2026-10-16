@@ -1,0 +1,243 @@
+{
+  "nav": {
+    "home": "BEGIN",
+    "story": "THE STORY",
+    "world": "LOCATIONS",
+    "features": "FEATURES",
+    "media": "MEDIA",
+    "news": "NEWS",
+    "pressKit": "PRESS KIT",
+    "wishlist": "WISHLIST ON STEAM"
+  },
+  "hero": {
+    "title": "THE WRONG GUIDE",
+    "watchTrailer": "WATCH TRAILER",
+    "scrollToBegin": "SCROLL TO BEGIN",
+    "taglines": [
+      "You followed the guide. It led you here.",
+      "The call said she was waiting.",
+      "But she wasn't waiting for you.",
+      "The path remembers your footsteps.",
+      "The markers point both ways now.",
+      "Your daughter is somewhere ahead.",
+      "So is the thing that took her.",
+      "Trust the guide. Or trust what's left of you."
+    ],
+    "wishlist": "WISHLIST ON STEAM"
+  },
+  "story": {
+    "heading": "THE STORY",
+    "subheading": "What kind of experience is this? What is the player doing? What is the \"guide\"? Why should the player care? What feels wrong?",
+    "sections": [
+      {
+        "title": "THE PREMISE",
+        "text": "You are Mohsen. A father. A nature explorer. A man who loves his 9-year-old daughter more than anything in the world. One night, after an argument with his wife, Mohsen drives out to clear his head. His car runs out of gas. He stops at a lonely gas station on an empty desert highway. While he's filling the tank, his phone rings. The voice on the other end is familiar. Too familiar. It's the man his wife left him for years ago — a man with a dark past, a man who was once something else entirely. \"If you're a good father,\" the voice says, \"come save your daughter.\" Mohsen rushes to leave. But before he can reach his car, someone strikes him from behind. He wakes up in an abandoned hospital. The lights flicker. The hallways breathe. And somewhere in this decaying place, his daughter is waiting. The guide is watching. The guide is leading. But the guide was wrong from the very beginning."
+      },
+      {
+        "title": "THE GUIDE",
+        "text": "It speaks through notes, signs, voices on the radio. It marks the way with paint, with lights, with breadcrumbs of certainty. You follow because the alternative is the unknown. And the unknown is where they are."
+      },
+      {
+        "title": "THE WRONGNESS",
+        "text": "But sometimes the guide hesitates. A marker points two ways. A voice static-cracks into something else. The map shows a room that isn't there. The instruction says \"safe\" but your fingers find a lock on the outside."
+      },
+      {
+        "title": "THE CHOICE",
+        "text": "How far do you follow before you stop? What happens when the guide leads you somewhere the guide itself warns you about? The path was never yours. But the choice to leave it... that might be the only thing that is."
+      }
+    ]
+  },
+  "world": {
+    "heading": "BEYOND THE GUIDE",
+    "subheading": "The environments you'll traverse. Each location holds its own rules, its own secrets, and its own relationship to the guide."
+  },
+  "features": {
+    "heading": "FEATURES",
+    "subheading": "Core pillars that define The Wrong Guide experience."
+  },
+  "media": {
+    "heading": "MEDIA",
+    "subheading": "Screenshots, gameplay footage, and concept art.",
+    "all": "ALL",
+    "screenshots": "SCREENSHOTS",
+    "gameplay": "GAMEPLAY",
+    "conceptArt": "CONCEPT ART",
+    "viewPressKit": "VIEW PRESS KIT"
+  },
+  "trailer": {
+    "heading": "SEE FOR YOURSELF",
+    "subheading": "Two minutes of atmospheric horror. Watch the official trailer and decide if you can trust what you see.",
+    "official": "OFFICIAL TRAILER",
+    "watchTrailer": "WATCH TRAILER"
+  },
+  "steamCta": {
+    "heading": "READY TO FOLLOW THE GUIDE?",
+    "subheading": "A story-driven atmospheric horror game about misplaced trust and the price of following instructions. Wishlist now to be notified when the guide becomes available.",
+    "wishlist": "WISHLIST ON STEAM",
+    "buy": "BUY ON STEAM",
+    "learnMore": "LEARN MORE",
+    "platform": "Platform: PC (Windows)",
+    "price": "$7.99",
+    "steamPage": "STEAM PAGE"
+  },
+  "footer": {
+    "tagline": "A story-driven atmospheric horror game where the guide you follow may not be what it seems.",
+    "theGame": "THE GAME",
+    "community": "COMMUNITY",
+    "legal": "LEGAL",
+    "contact": "CONTACT",
+    "allRightsReserved": "All rights reserved.",
+    "guideIsWrong": "THE GUIDE IS WRONG",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "story": "THE STORY",
+    "world": "LOCATIONS",
+    "features": "FEATURES",
+    "media": "MEDIA",
+    "news": "NEWS",
+    "pressKit": "PRESS KIT",
+    "steam": "STEAM"
+  },
+  "faq": {
+    "heading": "FREQUENTLY ASKED",
+    "subheading": "What the guide would want you to know. Or not."
+  },
+  "notFound": {
+    "title": "404",
+    "message": "You followed the guide. It led you here.",
+    "description": "This page doesn't exist. Or it did, once. The guide apologizes for the inconvenience. The guide is lying.",
+    "returnHome": "RETURN TO THE PATH"
+  },
+  "common": {
+    "backToHome": "BACK TO HOME",
+    "backToNews": "BACK TO NEWS",
+    "allNews": "ALL NEWS",
+    "readMore": "READ MORE",
+    "share": "SHARE",
+    "loading": "LOADING...",
+    "comingSoon": "COMING SOON"
+  },
+  "news": {
+    "heading": "NEWS",
+    "subheading": "Latest development updates, announcements, and behind-the-scenes content."
+  },
+  "pressKit": {
+    "heading": "PRESS KIT",
+    "subheading": "Everything you need to cover The Wrong Guide. Assets, information, and downloadable packages for press and content creators.",
+    "gameTitle": "GAME TITLE",
+    "genre": "GENRE",
+    "platforms": "PLATFORMS",
+    "developers": "DEVELOPERS",
+    "publisher": "PUBLISHER",
+    "releaseStatus": "RELEASE STATUS",
+    "releaseDate": "Release Date",
+    "price": "Price",
+    "shortDescription": "SHORT DESCRIPTION",
+    "longDescription": "LONG DESCRIPTION",
+    "downloadAll": "DOWNLOAD ALL",
+    "pressContact": "PRESS CONTACT",
+    "businessContact": "BUSINESS CONTACT",
+    "pressInquiries": "PRESS INQUIRIES",
+    "businessInquiries": "BUSINESS INQUIRIES",
+    "usageGuidelines": "USAGE GUIDELINES",
+    "logos": "LOGOS",
+    "keyArt": "KEY ART",
+    "screenshots": "SCREENSHOTS",
+    "trailers": "TRAILERS",
+    "conceptArt": "CONCEPT ART",
+    "downloads": "DOWNLOADS",
+    "officialLogoFiles": "Official logo files in multiple formats",
+    "highResArtwork": "High-resolution marketing artwork",
+    "inGameScreenshots": "In-game screenshots for editorial use",
+    "officialVideoContent": "Official video content",
+    "developmentArtwork": "Development artwork and studies",
+    "completePressKitPackages": "Complete press kit packages",
+    "download": "DOWNLOAD",
+    "copyPath": "Copy file path",
+    "forReviewCodes": "For review codes, interview requests, and press assets:",
+    "forPartnership": "For partnership, licensing, and business opportunities:",
+    "assetsProvidedFor": "All assets in this press kit are provided for editorial coverage of The Wrong Guide only.",
+    "usageRules": [
+      "Assets may be used in articles, videos, streams, and social media coverage of the game.",
+      "Do not modify assets beyond cropping/resizing for layout purposes.",
+      "Do not use assets for merchandise, endorsements, or commercial products without written permission.",
+      "Credit BMS Studio / Sourena Games where appropriate.",
+      "Trailers may be embedded via official YouTube/Steam links or hosted directly with attribution."
+    ],
+    "forOtherUses": "For uses not covered here, please contact",
+    "pressEmail": "press@[DOMAIN].com"
+  },
+  "privacy": {
+    "metaDescription": "Privacy Policy for {title} official website. This static informational website does not collect personal data from visitors.",
+    "lastUpdatedLabel": "Last Updated",
+    "date": "October 15, 2026",
+    "intro": "This Privacy Policy applies to the official website for <b>{title}</b> (“the Site”), operated by <b>{developer}</b> (“we,” “us,” or “our”). The Site is a static informational website showcasing a single-player, offline, story-driven horror game. We respect your privacy and are committed to being transparent about our data practices.",
+    "s1Heading": "1. Information We Collect",
+    "s1P1": "The Site does not collect, store, or process any personal data from visitors. We do not use contact forms, newsletter signups, user accounts, or any other mechanism that would require you to provide personal information.",
+    "s1P2": "When you visit the Site, your browser automatically sends certain technical information to our server (such as your IP address, browser type, operating system, and referring page). This information is handled by our hosting provider and is not stored or analyzed by us.",
+    "s2Heading": "2. Cookies",
+    "s2P1": "The Site does not use cookies, local storage, session storage, or any similar client-side tracking technologies. We do not set first-party or third-party cookies for analytics, advertising, or functional purposes.",
+    "s2P2": "If you click external links (such as to Steam, YouTube, or social media), those third-party websites may set their own cookies in accordance with their privacy policies.",
+    "s3Heading": "3. Third-Party Services",
+    "s3P1": "The Site contains links to third-party services. We do not control these services and are not responsible for their privacy practices. We encourage you to review the privacy policy of each service you visit:",
+    "s3Li1Label": "Steam",
+    "s3Li1Link": "Steam Privacy Policy",
+    "s3Li2Label": "YouTube / Google",
+    "s3Li2Link": "Google Privacy Policy",
+    "s3Li3": "Social Media (Twitter/X, Discord, etc.) — Each platform has its own privacy policy governing data collected when you interact with their services.",
+    "s3P2": "We do not embed third-party scripts, tracking pixels, or social media widgets that would collect data on our behalf.",
+    "s4Heading": "4. Analytics",
+    "s4P1": "The Site does not currently use any analytics or tracking services (such as Google Analytics, Plausible, or similar). No visitor behavior is measured, recorded, or analyzed.",
+    "s4P2": "If analytics are added in the future, this section will be updated to disclose what data is collected, how it is used, and how you can opt out.",
+    "s5Heading": "5. Children’s Privacy",
+    "s5P1": "The Site is not directed at children under 13 years of age. We do not knowingly collect personal information from children under 13. The game itself is rated “Mature 17+” and is not intended for children.",
+    "s6Heading": "6. Changes to This Policy",
+    "s6P1": "We may update this Privacy Policy from time to time to reflect changes in our practices or for legal, regulatory, or operational reasons. The “Last Updated” date at the top of this page will be revised accordingly.",
+    "s6P2": "We encourage you to review this page periodically. Continued use of the Site after changes are posted constitutes acceptance of the updated policy.",
+    "s7Heading": "7. Contact",
+    "s7P1": "If you have questions or concerns about this Privacy Policy or our data practices, you may contact us at:"
+  },
+  "terms": {
+    "metaDescription": "Terms of Service for {title} official website. By using this site, you agree to these terms.",
+    "lastUpdatedLabel": "Last Updated",
+    "date": "October 15, 2026",
+    "intro": "Welcome to the official website for <b>{title}</b> (“the Site”), operated by <b>{developer}</b> (“we,” “us,” or “our”). By accessing or using the Site, you agree to be bound by these Terms of Service (“Terms”). If you do not agree to these Terms, please do not use the Site.",
+    "s1Heading": "1. Acceptance of Terms",
+    "s1P1": "These Terms constitute a legally binding agreement between you and {developer} regarding your use of the Site. By accessing, browsing, or using the Site in any manner, you acknowledge that you have read, understood, and agree to be bound by these Terms, as well as any applicable laws and regulations.",
+    "s1P2": "We reserve the right to modify these Terms at any time. Changes will be posted on this page with an updated “Last Updated” date. Your continued use of the Site after changes are posted constitutes acceptance of the modified Terms.",
+    "s2Heading": "2. Intellectual Property",
+    "s2P1": "All content on the Site — including but not limited to text, graphics, images, logos, artwork, trailers, screenshots, concept art, audio, video, code, and the arrangement thereof — is the exclusive property of <b>{developer}</b> and/or <b>{publisher}</b> (collectively, the “Rights Holders”) and is protected by copyright, trademark, and other intellectual property laws.",
+    "s2P2": "<b>{title}</b>, its logo, character names, and distinctive visual elements are trademarks of the Rights Holders. Unauthorized use of these trademarks is strictly prohibited.",
+    "s3Heading": "3. Permitted Use",
+    "s3P1": "Subject to your compliance with these Terms, you are granted a limited, non-exclusive, non-transferable, revocable license to:",
+    "s3Li1": "Access and view the Site for personal, non-commercial informational purposes.",
+    "s3Li2": "Share links to the Site via social media, messaging, or other personal communication channels.",
+    "s3Li3Before": "Use assets explicitly provided in the ",
+    "s3Li3Link": "Press Kit",
+    "s3Li3After": " for editorial coverage, reviews, previews, and news reporting about {title}, in accordance with the usage guidelines stated on that page.",
+    "s3Li4": "Embed official trailers via the provided YouTube or Steam links for editorial purposes.",
+    "s4Heading": "4. Prohibited Use",
+    "s4P1": "You may not:",
+    "s4Li1": "Copy, reproduce, distribute, modify, create derivative works from, publicly display, or publicly perform any Site content without prior written permission, except as expressly permitted in Section 3 or the Press Kit guidelines.",
+    "s4Li2": "Use any trademarks, logos, or branding of {title}, {developer}, or {publisher} for commercial purposes, merchandise, endorsements, or to imply affiliation or endorsement.",
+    "s4Li3": "Scrape, crawl, or extract data from the Site using automated means without permission.",
+    "s4Li4": "Attempt to gain unauthorized access to any portion of the Site, its server, or connected systems.",
+    "s4Li5": "Use the Site for any unlawful purpose or in any way that could damage, disable, overburden, or impair the Site.",
+    "s4Li6": "Remove or alter any copyright, trademark, or proprietary notices from Site content.",
+    "s5Heading": "5. Disclaimer of Warranties",
+    "s5P1": "THE SITE AND ALL CONTENT ARE PROVIDED “AS IS” AND “AS AVAILABLE” WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.",
+    "s5P2": "We do not warrant that the Site will be uninterrupted, error-free, secure, or free of viruses or other harmful components. We do not warrant the accuracy, completeness, or currency of any information on the Site. Release dates, features, system requirements, and pricing are subject to change without notice.",
+    "s6Heading": "6. Limitation of Liability",
+    "s6P1": "TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL {developer}, {publisher}, OR THEIR RESPECTIVE OFFICERS, DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM:",
+    "s6Li1": "Your access to or use of, or inability to access or use, the Site;",
+    "s6Li2": "Any content, errors, or omissions on the Site;",
+    "s6Li3": "Any third-party content or links on the Site;",
+    "s6Li4": "Any viruses or malware transmitted through the Site.",
+    "s6P2": "Our total liability to you for any claims arising out of or related to these Terms or the Site shall not exceed the amount you paid to access the Site (which is zero).",
+    "s7Heading": "7. Changes to These Terms",
+    "s7P1": "We may revise these Terms at any time. The updated version will be posted on this page with a new “Last Updated” date. Material changes will be noted with a brief summary of what changed.",
+    "s7P2": "Your continued use of the Site after the effective date of revised Terms constitutes your acceptance of the changes. If you do not agree to the revised Terms, your sole remedy is to stop using the Site.",
+    "s8Heading": "8. Contact",
+    "s8P1": "If you have questions about these Terms, please contact us at:"
+  }
+}

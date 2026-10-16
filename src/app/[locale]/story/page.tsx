@@ -1,21 +1,38 @@
 import { Metadata } from "next";
 import { Story } from "@/components/sections";
 import { gameConfig } from "@/config/game";
+import { routing } from "@/i18n/routing";
 
-export const metadata: Metadata = {
-  title: "The Story",
-  description: "Discover the premise of The Wrong Guide - a story-driven atmospheric horror game.",
-  openGraph: {
+export const revalidate = 3600;
+
+interface Props {
+  params: Promise<{ locale: string }>;
+}
+
+export async function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+
+  return {
     title: "The Story | The Wrong Guide",
-    description: "Discover the premise of The Wrong Guide",
-  },
-};
+    description: "Discover the premise of The Wrong Guide - a story-driven atmospheric horror game.",
+    openGraph: {
+      title: "The Story | The Wrong Guide",
+      description: "Discover the premise of The Wrong Guide",
+    },
+  };
+}
 
-export default function StoryPage() {
+export default async function StoryPage({ params }: Props) {
+  const { locale } = await params;
+
   return (
     <>
       <div className="mt-12">
-        <Story />
+        <Story locale={locale} />
         <section className="py-12" aria-labelledby="cta-heading">
           <div className="container-custom text-center">
             <h2 id="cta-heading" className="font-display font-bold text-3xl md:text-4xl text-fg-primary mb-6">

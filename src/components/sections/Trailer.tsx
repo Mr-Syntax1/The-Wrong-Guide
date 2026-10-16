@@ -6,10 +6,16 @@ import { VideoModal } from "@/components/ui/VideoPlayer";
 import { cn } from "@/lib/utils";
 import { gameConfig } from "@/config/game";
 import { Play, Loader2 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-export function Trailer() {
+interface TrailerProps {
+  locale: string;
+}
+
+export function Trailer({ locale: _locale }: TrailerProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const t = useTranslations("trailer");
 
   const handlePlay = () => {
     setIsLoading(true);
@@ -22,16 +28,16 @@ export function Trailer() {
   return (
     <section id="trailer" className="relative" aria-labelledby="trailer-heading">
       <div className="absolute inset-0 -z-10" aria-hidden="true">
-        <div className="absolute inset-0 bg-linear-to-b from-transparent via-bg-secondary/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-bg-secondary/20 to-transparent" />
       </div>
 
       <div className="container-custom">
         <header className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <h2 id="trailer-heading" className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-fg-primary tracking-tight mb-6 mt-24">
-            SEE FOR YOURSELF
+            {t("heading")}
           </h2>
           <p className="text-fg-secondary text-lg md:text-xl leading-relaxed">
-            Two minutes of atmospheric horror. Watch the official trailer and decide if you can trust what you see.
+            {t("subheading")}
           </p>
         </header>
 
@@ -40,7 +46,7 @@ export function Trailer() {
             <div className="absolute inset-0">
               <Image
                 src={gameConfig.trailerPoster}
-                alt="The Wrong Guide - Official Trailer"
+                alt={`${gameConfig.title} - Official Trailer`}
                 fill
                 priority
                 className="object-cover transition-transform duration-700"
@@ -49,14 +55,14 @@ export function Trailer() {
                 }}
                 sizes="100vw"
               />
-              <div className="absolute inset-0 bg-linear-to-t from-bg-primary/80 via-bg-primary/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/80 via-bg-primary/20 to-transparent" />
             </div>
 
             <button
               onClick={handlePlay}
               disabled={isLoading}
               className="absolute inset-0 flex items-center justify-center z-10 transition-opacity duration-300 hover:opacity-100"
-              aria-label={isLoading ? "Loading trailer..." : "Watch The Wrong Guide trailer"}
+              aria-label={isLoading ? "Loading trailer..." : `Watch ${gameConfig.title} trailer`}
             >
               <div className={cn(
                 "relative flex items-center justify-center w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full bg-accent-red/90 backdrop-blur-sm",
@@ -72,7 +78,7 @@ export function Trailer() {
               </div>
 
               <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-3 text-fg-primary/80 text-sm font-medium">
-                <span>WATCH TRAILER</span>
+                <span>{t("watchTrailer")}</span>
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
@@ -80,7 +86,7 @@ export function Trailer() {
             </button>
 
             <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-fg-tertiary text-sm">
-              <span className="font-mono tracking-wider">OFFICIAL TRAILER</span>
+              <span className="font-mono tracking-wider">{t("official")}</span>
               <span className="font-mono">1:47</span>
             </div>
           </div>

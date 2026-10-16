@@ -1,0 +1,243 @@
+{
+  "nav": {
+    "home": "BAŞLA",
+    "story": "HİKAYE",
+    "world": "MEKANLAR",
+    "features": "ÖZELLİKLER",
+    "media": "MEDYA",
+    "news": "HABERLER",
+    "pressKit": "BASIN KİTİ",
+    "wishlist": "STEAM'DE WISHLIST"
+  },
+  "hero": {
+    "title": "YANLIŞ REHBER",
+    "watchTrailer": "FRAGMAN İZLE",
+    "scrollToBegin": "BAŞLAMAK İÇİN AŞAĞI KAYDIR",
+    "taglines": [
+      "Rehberi takip ettin. Seni buraya getirdi.",
+      "Aradılar, o seni bekliyormuş dediler.",
+      "Ama o seni beklemiyordu.",
+      "Yol, ayak izlerini hatırlar.",
+      "İşaretçiler artık iki yöne gösteriyor.",
+      "Kızın bir yerlerde önde.",
+      "Onu götüren şey de orada.",
+      "Rehbere güven. Ya da geride kalanla."
+    ],
+    "wishlist": "STEAM'DE WISHLIST"
+  },
+  "story": {
+    "heading": "HİKAYE",
+    "subheading": "Bu deneyim ne? Oyuncu ne yapıyor? \"Rehber\" kim? Neden önem vermeli? Ne hissettiriyor yanlışlık?",
+    "sections": [
+      {
+        "title": "ÖNSEL",
+        "text": "Sen Mohsen'sin. Bir baba. Bir doğa keşifçisi. 9 yaşındaki kızını dünyadan fazla seven bir adam. Bir gece, eşiyle tartışmadan sonra kafasını dinlemek için arabayla yola çıkar. Benzin biter. Boş bir çöllü otoyolunda yalnız bir benzin istasyonunda durursun. Depo doldururken telefon çalar. Öbür uçtaki ses tanıdık. Çok tanıdık. Eşinin yıllar önce terk ettiği adam — karanlık bir geçmişi olan, bir zamanlar başkasıydı o. \"İyi bir baba isen,\" der ses, \"kızını kurtar gel.\" Mohsen aceleyle koşar. Ama arabasına ulaşmadan önce birisi arkadan vurur. Terk edilmiş bir hastanede uyanır. Işıklar titrer. Koridorlar nefes alır. Ve bu çürümüş yerde, kızı onu bekliyor. Rehber izliyor. Rehber yönlendiriyor. Ama rehber baştan beri yanlıştı."
+      },
+      {
+        "title": "REHBER",
+        "text": "Notlar, işaretler, radyo sesleriyle konuşur. Yolu boya, ışık, güvenin iri pırıltılarıyla işaretler. Takip edersin çünkü diğer seçenek bilinmez. Ve bilinmez, onların olduğu yerdir."
+      },
+      {
+        "title": "YANLIŞLIK",
+        "text": "Ama bazen rehber tereddüt eder. Bir işaret iki yolu gösterir. Ses parazitle başkasına dönüşür. Harita olmayan bir odayı gösterir. Talimat \"güvenli\" der ama parmakların dıştan kilitli bir kapıyı bulur."
+      },
+      {
+        "title": "SEÇİM",
+        "text": "Ne kadar takip edersin durmadan önce? Rehber kendisi uyardığı yere götürürse ne olur? Yol asla senin değildi. Ama onu bırakmayı seçmek... belki de senin olan tek şeydir."
+      }
+    ]
+  },
+  "world": {
+    "heading": "REHBERİN ÖTESİ",
+    "subheading": "Adım atacakların mekanlar. Her yerin kendi kuralları, sırları ve rehberle ilişkisi var."
+  },
+  "features": {
+    "heading": "ÖZELLİKLER",
+    "subheading": "Yanlış Rehber deneyimini tanımlayan temel direkler."
+  },
+  "media": {
+    "heading": "MEDYA",
+    "subheading": "Ekran görüntüleri, oynanış kayıtları ve konsept sanatları.",
+    "all": "HEPSİ",
+    "screenshots": "EKRAN GÖRÜNTÜLERİ",
+    "gameplay": "OYNANIŞ",
+    "conceptArt": "KONSEPT SANATI",
+    "viewPressKit": "BASIN KİTİNİ GÖR"
+  },
+  "trailer": {
+    "heading": "KENDİN GÖR",
+    "subheading": "İki dakika atmosferik korku. Resmi fragmanı izle ve gördüklerin güvenilebilir mi karar ver.",
+    "official": "RESMI FRAGMAN",
+    "watchTrailer": "FRAGMAN İZLE"
+  },
+  "steamCta": {
+    "heading": "REHBERİ TAKİP ETMEYE HAZIR MISIN?",
+    "subheading": "Yanlış güven ve talimatlara uymak bedeli üzerine kurulu atmosferik bir korku oyunu. Rehber hazır olduğunda haberdar olmak için wishlist'e ekle.",
+    "wishlist": "STEAM'DE WISHLIST",
+    "buy": "STEAM'DEN SATIN AL",
+    "learnMore": "DAHA FAZLA BİL",
+    "platform": "Platform: PC (Windows)",
+    "price": "$7.99",
+    "steamPage": "STEAM SAYFASI"
+  },
+  "footer": {
+    "tagline": "Takip ettiğin rehber göründüğü gibi olmayabilecek bir atmosferik korku oyunu.",
+    "theGame": "OYUN",
+    "community": "TOPLOLUK",
+    "legal": "YASAL",
+    "contact": "İLETİŞİM",
+    "allRightsReserved": "Tüm hakları saklıdır.",
+    "guideIsWrong": "REHBER YANLIŞ",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Şartları",
+    "story": "HİKAYE",
+    "world": "MEKANLAR",
+    "features": "ÖZELLİKLER",
+    "media": "MEDYA",
+    "news": "HABERLER",
+    "pressKit": "BASIN KİTİ",
+    "steam": "STEAM"
+  },
+  "faq": {
+    "heading": "SIKÇA SORULANLAR",
+    "subheading": "Rehberin sana bilmesini istedikleri. Ya da istemedikleri."
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Rehberi takip ettin. Seni buraya getirdi.",
+    "description": "Bu sayfa yok. Ya da bir zamanlar vardı. Rehber rahatsızlık için özür diler. Rehber yalan söylüyor.",
+    "returnHome": "YOLA DÖN"
+  },
+  "common": {
+    "backToHome": "ANA SAYFAYA DÖN",
+    "backToNews": "HABERLERE DÖN",
+    "allNews": "TÜM HABERLER",
+    "readMore": "DEVAMINI OKU",
+    "share": "PAYLAŞ",
+    "loading": "YÜKLENİYOR...",
+    "comingSoon": "YAKINDA"
+  },
+  "news": {
+    "heading": "HABERLER",
+    "subheading": "En son geliştirme güncellemeleri, duyurular ve arka sahneler."
+  },
+  "pressKit": {
+    "heading": "BASIN KİTİ",
+    "subheading": "The Wrong Guide'ı kapsamak için gereken her şey. Basın ve içerik üreticileri için varlıklar, bilgiler ve indirilebilir paketler.",
+    "gameTitle": "OYUN ADI",
+    "genre": "TÜR",
+    "platforms": "PLATFORMLAR",
+    "developers": "GELİŞTİRİCİLER",
+    "publisher": "YAYINCI",
+    "releaseStatus": "YAYIN DURUMU",
+    "releaseDate": "Yayın Tarihi",
+    "price": "Fiyat",
+    "shortDescription": "KISA AÇIKLAMA",
+    "longDescription": "UZUN AÇIKLAMA",
+    "downloadAll": "HEPSİNİ İNDİR",
+    "pressContact": "BASIN İLETİŞİM",
+    "businessContact": "TİCARİ İLETİŞİM",
+    "pressInquiries": "BASIN SORGULARI",
+    "businessInquiries": "TİCARİ SORGULAR",
+    "usageGuidelines": "KULLANIM KILAVUZU",
+    "logos": "LOGOLAR",
+    "keyArt": "KEY ART",
+    "screenshots": "EKRAN GÖRÜNTÜLERİ",
+    "trailers": "FRAGMANLAR",
+    "conceptArt": "KONSEPT SANATI",
+    "downloads": "İNDİRMELER",
+    "officialLogoFiles": "Çoklu formatlarda resmi logo dosyaları",
+    "highResArtwork": "Yüksek çözünürlüklü pazarlama sanat çalışmaları",
+    "inGameScreenshots": "Editöryel kullanım için oyun içi ekran görüntüleri",
+    "officialVideoContent": "Resmi video içeriği",
+    "developmentArtwork": "Geliştirme sanat çalışmaları ve çalışmaları",
+    "completePressKitPackages": "Tam basın kiti paketleri",
+    "download": "İNDİR",
+    "copyPath": "Dosya yolunu kopyala",
+    "forReviewCodes": "İnceleme kodları, mülakat talepleri ve basın varlıkları için:",
+    "forPartnership": "Ortaklık, lisanslama ve iş fırsatları için:",
+    "assetsProvidedFor": "Bu basın kitindeki tüm varlıklar yalnızca The Wrong Guide'ın editöryel kapsamı için sağlanmıştır.",
+    "usageRules": [
+      "Varlıklar oyunla ilgili makalelerde, videolarda, yayınlarda ve sosyal medya kapsamında kullanılabilir.",
+      "Düzenleme amacıyla kırpma/yeniden boyutlandırma dışında varlıkları değiştirmeyin.",
+      "Yazılı izin olmadan varlıkları ticari ürünler, tavsiyeler veya merchn için kullanmayın.",
+      "Uygun yerlerde BMS Studio / Sourena Games'e atıf yapın.",
+      "Fragmanlar resmi YouTube/Steam linkleri aracılığıyla gömülebilir veya atıf ile doğrudan barındırılabilir."
+    ],
+    "forOtherUses": "Burada kapsanmayan kullanımlar için lütfen şu adresle iletişime geçin",
+    "pressEmail": "press@[DOMAIN].com"
+  },
+  "privacy": {
+    "metaDescription": "Resmi {title} web sitesi için Gizlilik Politikası. Bu statik bilgilendirme sitesi ziyaretçilerden kişisel veri toplamaz.",
+    "lastUpdatedLabel": "Son Güncelleme",
+    "date": "15 Ekim 2026",
+    "intro": "Bu Gizlilik Politikası, <b>{developer}</b> tarafından işletilen <b>{title}</b> resmi web sitesi (“Site”) için geçerlidir. Site; tek oyunculu, çevrimdışı, hikâye odaklı bir korku oyununu tanıtan statik bir bilgilendirme sitesidir. Gizliliğinize saygı duyuyor ve veri uygulamalarımız konusunda şeffaf olmaya kararlıyız.",
+    "s1Heading": "1. Topladığımız Bilgiler",
+    "s1P1": "Site, ziyaretçilerden kişisel veri toplamaz, saklamaz veya işlemez. Kişisel bilgi vermenizi gerektirecek iletişim formları, bülten kayıtları, kullanıcı hesapları veya başka bir mekanizma kullanmıyoruz.",
+    "s1P2": "Siteyi ziyaret ettiğinizde tarayıcınız sunucumuza otomatik olarak belirli teknik bilgiler gönderir (IP adresiniz, tarayıcı türünüz, işletim sisteminiz ve yönlendiren sayfa gibi). Bu bilgiler barındırma sağlayıcımız tarafından işlenir; tarafımızca saklanmaz veya analiz edilmez.",
+    "s2Heading": "2. Çerezler",
+    "s2P1": "Site çerez, yerel depolama, oturum depolama veya benzeri istemci tarafı izleme teknolojileri kullanmaz. Analiz, reklam veya işlevsel amaçlarla birinci taraf ya da üçüncü taraf çerezleri ayarlamıyoruz.",
+    "s2P2": "Harici bağlantılara tıklarsanız (Steam, YouTube veya sosyal medya gibi), bu üçüncü taraf siteler kendi gizlilik politikaları uyarınca kendi çerezlerini ayarlayabilir.",
+    "s3Heading": "3. Üçüncü Taraf Hizmetler",
+    "s3P1": "Site, üçüncü taraf hizmetlere bağlantılar içerir. Bu hizmetleri kontrol etmiyoruz ve gizlilik uygulamalarından sorumlu değiliz. Ziyaret ettiğiniz her hizmetin gizlilik politikasını incelemenizi öneririz:",
+    "s3Li1Label": "Steam",
+    "s3Li1Link": "Steam Gizlilik Politikası",
+    "s3Li2Label": "YouTube / Google",
+    "s3Li2Link": "Google Gizlilik Politikası",
+    "s3Li3": "Sosyal Medya (Twitter/X, Discord vb.) — Her platformun, hizmetleriyle etkileşime girdiğinizde toplanan verileri yöneten kendi gizlilik politikası vardır.",
+    "s3P2": "Adımıza veri toplayacak üçüncü taraf betikler, izleme pikselleri veya sosyal medya widget’ları gömmüyoruz.",
+    "s4Heading": "4. Analiz",
+    "s4P1": "Site şu anda herhangi bir analiz veya izleme hizmeti (Google Analytics, Plausible veya benzeri) kullanmamaktadır. Ziyaretçi davranışı ölçülmez, kaydedilmez veya analiz edilmez.",
+    "s4P2": "Gelecekte analiz eklenirse, hangi verilerin toplandığı, nasıl kullanıldığı ve nasıl vazgeçebileceğiniz bu bölümde açıklanacaktır.",
+    "s5Heading": "5. Çocukların Gizliliği",
+    "s5P1": "Site 13 yaşından küçük çocuklara yönelik değildir. 13 yaşından küçük çocuklardan bilerek kişisel bilgi toplamıyoruz. Oyunun kendisi “17+” derecesine sahiptir ve çocuklar için değildir.",
+    "s6Heading": "6. Bu Politikadaki Değişiklikler",
+    "s6P1": "Uygulamalarımızdaki değişiklikleri yansıtmak veya yasal, düzenleyici ya da operasyonel nedenlerle bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Bu sayfanın üstündeki “Son Güncelleme” tarihi buna göre düzeltilecektir.",
+    "s6P2": "Bu sayfayı periyodik olarak incelemenizi öneririz. Değişiklikler yayınlandıktan sonra Siteyi kullanmaya devam etmeniz, güncellenmiş politikayı kabul ettiğiniz anlamına gelir.",
+    "s7Heading": "7. İletişim",
+    "s7P1": "Bu Gizlilik Politikası veya veri uygulamalarımız hakkında soru ya da endişeleriniz varsa bizimle iletişime geçebilirsiniz:"
+  },
+  "terms": {
+    "metaDescription": "Resmi {title} web sitesi Kullanım Şartları. Bu siteyi kullanarak bu şartları kabul etmiş olursunuz.",
+    "lastUpdatedLabel": "Son Güncelleme",
+    "date": "15 Ekim 2026",
+    "intro": "İşletmecisi <b>{developer}</b> (“biz”) olan <b>{title}</b> (“Site”) resmi web sitesine hoş geldiniz. Siteye erişerek veya Siteyi kullanarak bu Kullanım Şartları’na (“Şartlar”) bağlı kalmayı kabul edersiniz. Bu Şartları kabul etmiyorsanız lütfen Siteyi kullanmayın.",
+    "s1Heading": "1. Şartların Kabulü",
+    "s1P1": "Bu Şartlar, Siteyi kullanımınıza ilişkin siz ile {developer} arasında yasal olarak bağlayıcı bir sözleşmedir. Siteye herhangi bir şekilde erişerek, göz atarak veya kullanarak bu Şartları ve geçerli yasa ve düzenlemeleri okuduğunuzu, anladığınızı ve bağlı kalmayı kabul ettiğinizi beyan edersiniz.",
+    "s1P2": "Bu Şartları dilediğimiz zaman değiştirme hakkını saklı tutarız. Değişiklikler güncellenmiş “Son Güncelleme” tarihiyle bu sayfada yayınlanır. Değişiklikler yayınlandıktan sonra Siteyi kullanmaya devam etmeniz, değiştirilmiş Şartları kabul ettiğiniz anlamına gelir.",
+    "s2Heading": "2. Fikri Mülkiyet",
+    "s2P1": "Sitedeki tüm içerik — metin, grafik, görseller, logolar, artwork, fragmanlar, ekran görüntüleri, konsept tasarımlar, ses, video, kod ve bunların düzenlenmesi dahil ancak bunlarla sınırlı olmamak üzere — <b>{developer}</b> ve/veya <b>{publisher}</b>’ın (birlikte “Hak Sahipleri”) münhasır mülkiyetindedir ve telif hakkı, marka ve diğer fikri mülkiyet yasalarıyla korunmaktadır.",
+    "s2P2": "<b>{title}</b>, logosu, karakter adları ve ayırt edici görsel öğeleri Hak Sahiplerinin ticari markalarıdır. Bu markaların izinsiz kullanımı kesinlikle yasaktır.",
+    "s3Heading": "3. İzin Verilen Kullanım",
+    "s3P1": "Bu Şartlara uymanız koşuluyla, aşağıdakiler için size sınırlı, münhasır olmayan, devredilemez, geri alınabilir bir lisans verilir:",
+    "s3Li1": "Siteye kişisel, ticari olmayan bilgilendirme amaçlı erişim ve görüntüleme.",
+    "s3Li2": "Site bağlantılarını sosyal medya, mesajlaşma veya diğer kişisel iletişim kanallarıyla paylaşma.",
+    "s3Li3Before": "",
+    "s3Li3Link": "Basın Kiti",
+    "s3Li3After": "’nde editoryal haber, inceleme, önizleme ve {title} hakkında haberler için açıkça sağlanan materyallerin, o sayfadaki kullanım kurallarına uygun kullanımı.",
+    "s3Li4": "Editoryal amaçlarla sağlanan YouTube veya Steam bağlantılarıyla resmi fragmanları gömme.",
+    "s4Heading": "4. Yasaklanan Kullanım",
+    "s4P1": "Şunları yapamazsınız:",
+    "s4Li1": "Bölüm 3’te veya Basın Kiti kurallarında açıkça izin verilenler dışında, önceden yazılı izin olmadan Site içeriğini kopyalama, çoğaltma, dağıtma, değiştirme, türev çalışmalar oluşturma, herkese açık sergileme veya icra etme.",
+    "s4Li2": "{title}, {developer} veya {publisher}’a ait ticari markaları, logoları veya marka öğelerini ticari amaçlarla, ürünlerde, onaylarda ya da bağlantı veya onay izlenimi verecek şekilde kullanma.",
+    "s4Li3": "İzinsiz otomatik yöntemlerle Siteden veri kazıma, tarama veya çıkarma.",
+    "s4Li4": "Sitenin herhangi bir bölümüne, sunucusuna veya bağlı sistemlere yetkisiz erişim sağlamaya çalışma.",
+    "s4Li5": "Siteyi yasa dışı amaçlarla veya Siteye zarar verebilecek, devre dışı bırakabilecek, aşırı yükleyebilecek ya da bozabilecek şekilde kullanma.",
+    "s4Li6": "Site içeriğindeki telif hakkı, marka veya mülkiyet bildirimlerini kaldırma veya değiştirme.",
+    "s5Heading": "5. Garanti Reddi",
+    "s5P1": "SİTE VE TÜM İÇERİK, AÇIK VEYA ZIMNİ HİÇBİR GARANTİ OLMAKSIZIN “OLDUĞU GİBİ” VE “MEVCUT OLDUĞU GİBİ” SUNULUR; BUNA SATILABİLİRLİK, BELİRLİ BİR AMACA UYGUNLUK, MÜLKİYET VE İHLAL ETMEME ZIMNİ GARANTİLERİ DAHİL ANCAK BUNLARLA SINIRLI OLMAMAK ÜZERE.",
+    "s5P2": "Sitenin kesintisiz, hatasız, güvenli ya da virüs veya diğer zararlı bileşenlerden arınmış olacağını garanti etmiyoruz. Sitedeki bilgilerin doğruluğunu, eksiksizliğini veya güncelliğini garanti etmiyoruz. Çıkış tarihleri, özellikler, sistem gereksinimleri ve fiyatlar önceden haber verilmeksizin değişebilir.",
+    "s6Heading": "6. Sorumluluğun Sınırlandırılması",
+    "s6P1": "GEÇERLİ YASALARIN İZİN VERDİĞİ AZAMİ ÖLÇÜDE, {developer}, {publisher} VEYA BUNLARIN YÖNETİCİLERİ, ÇALIŞANLARI VEYA TEMSİLCİLERİ AŞAĞIDAKİLERDEN KAYNAKLANAN DOLAYLI, ARIZİ, ÖZEL, SONUÇSAL VEYA CEZAİ ZARARLARDAN YA DA KÂR, VERİ, KULLANIM, İTİBAR VEYA DİĞER MADDİ OLMAYAN KAYIPLARDAN HİÇBİR ŞEKİLDE SORUMLU OLMAYACAKTIR:",
+    "s6Li1": "Siteye erişiminiz veya Siteyi kullanımınız ya da erişememeniz veya kullanamamanız;",
+    "s6Li2": "Sitedeki içerik, hata veya eksiklikler;",
+    "s6Li3": "Sitedeki üçüncü taraf içerikleri veya bağlantılar;",
+    "s6Li4": "Site üzerinden iletilen virüsler veya kötü amaçlı yazılımlar.",
+    "s6P2": "Bu Şartlardan veya Siteden kaynaklanan taleplerde size karşı toplam sorumluluğumuz, Siteye erişim için ödediğiniz tutarı (yani sıfırı) aşamaz.",
+    "s7Heading": "7. Bu Şartlardaki Değişiklikler",
+    "s7P1": "Bu Şartları dilediğimiz zaman gözden geçirebiliriz. Güncellenmiş sürüm yeni bir “Son Güncelleme” tarihiyle bu sayfada yayınlanır. Önemli değişiklikler, neyin değiştiğine dair kısa bir özetle belirtilir.",
+    "s7P2": "Gözden geçirilmiş Şartların yürürlük tarihinden sonra Siteyi kullanmaya devam etmeniz, değişiklikleri kabul ettiğiniz anlamına gelir. Gözden geçirilmiş Şartları kabul etmiyorsanız tek çareniz Siteyi kullanmayı bırakmaktır.",
+    "s8Heading": "8. İletişim",
+    "s8P1": "Bu Şartlarla ilgili sorularınız varsa lütfen bizimle iletişime geçin:"
+  }
+}

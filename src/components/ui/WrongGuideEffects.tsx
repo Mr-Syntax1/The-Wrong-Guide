@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState, useCallback } from "react";
 import { cn } from "@/lib/utils";
+import { getGameConfig } from "@/config/game";
+import { useLocale } from "next-intl";
 
 type WrongGuideEffect =
   | "text-shift"
@@ -40,123 +42,6 @@ const DEFAULT_CONFIG: WrongGuideConfig = {
   ],
 };
 
-const textShifts = [
-  { original: "You are safe.", shifted: "You were safe." },
-  { original: "The guide protects you.", shifted: "The guide protects itself." },
-  { original: "Keep moving forward.", shifted: "Keep moving forward. It's closer now." },
-  { original: "The path is clear.", shifted: "The path was clear." },
-  { original: "You are alone.", shifted: "You are not alone." },
-  { original: "Don't look back.", shifted: "Don't look back. It's already behind you." },
-  { original: "The exit is ahead.", shifted: "The exit was ahead." },
-  { original: "Trust the guide.", shifted: "Trust the guide. Trust the guide. Trust the guide." },
-  { original: "Follow the light.", shifted: "Follow the light. It knows your name." },
-  { original: "You will survive.", shifted: "You will survive. For now." },
-  { original: "The door is locked.", shifted: "The door is locked from the outside." },
-  { original: "She is waiting for you.", shifted: "She has been waiting for a long time." },
-];
-
-const labelFlickers = [
-  { original: "WISHLIST ON STEAM", flicker: "WISHLIST ON STEAM?" },
-  { original: "WATCH TRAILER", flicker: "WATCH TRAILER?" },
-  { original: "THE STORY", flicker: "THE STORY?" },
-  { original: "LOCATIONS", flicker: "LOCATIONS?" },
-  { original: "FEATURES", flicker: "FEATURES?" },
-  { original: "MEDIA", flicker: "MEDIA?" },
-  { original: "NEWS", flicker: "NEWS?" },
-  { original: "PRESS KIT", flicker: "PRESS KIT?" },
-];
-
-const navShifts = [
-  { original: "THE STORY", shifted: "THE STORY?" },
-  { original: "LOCATIONS", shifted: "LOCATIONS?" },
-  { original: "FEATURES", shifted: "FEATURES?" },
-];
-
-const timestampDrifts = [
-  { original: "Last updated: January 2025", drifted: "Last updated: January 2024" },
-  { original: "Posted 2 days ago", drifted: "Posted 3 days ago" },
-  { original: "Updated moments ago", drifted: "Updated moments ago" },
-];
-
-const warningFlashes = [
-  "⚠ PATH DIVERGENCE DETECTED",
-  "⚠ GUIDE INTEGRITY COMPROMISED",
-  "⚠ MARKER INCONSISTENCY",
-  "⚠ SIGNAL INTERFERENCE",
-  "⚠ TRUST LEVEL DECLINING",
-  "⚠ SUBJECT IS BEING OBSERVED",
-  "⚠ GUIDANCE SOURCE UNVERIFIED",
-  "⚠ DEVIATION DETECTED",
-  "⚠ THE GUIDE HAS NOTICED YOU",
-  "⚠ SOMETHING IS FOLLOWING YOU",
-  "⚠ DO NOT TRUST THE NEXT INSTRUCTION",
-  "⚠ SHE KNOWS YOU ARE HERE",
-  "⚠ THE PATH HAS BEEN REWRITTEN",
-];
-
-const textCorrections = [
-  {
-    original: "The cabin is a safe haven.",
-    corrected: "The cabin is a safe haven. [CORRECTION: The cabin locks from the outside.]",
-  },
-  {
-    original: "The tower offers a clear view.",
-    corrected: "The tower offers a clear view. [CORRECTION: The higher you climb, the less you see.]",
-  },
-  {
-    original: "Follow the markers.",
-    corrected: "Follow the markers. [CORRECTION: Some markers point both ways.]",
-  },
-  {
-    original: "You are the only one here.",
-    corrected: "You are the only one here. [CORRECTION: You are the only one who is still alive.]",
-  },
-  {
-    original: "The guide wants to help you.",
-    corrected: "The guide wants to help you. [CORRECTION: The guide wants to help itself.]",
-  },
-  {
-    original: "Your daughter is safe.",
-    corrected: "Your daughter is safe. [CORRECTION: Your daughter is safe... for now.]",
-  },
-  {
-    original: "The exit is this way.",
-    corrected: "The exit is this way. [CORRECTION: The exit was this way. It moved.]",
-  },
-  {
-    original: "Don't trust anyone.",
-    corrected: "Don't trust anyone. [CORRECTION: Including yourself.]",
-  },
-];
-
-const locationDrifts = [
-  { original: "The Path", drifted: "The Path?" },
-  { original: "The Cabin", drifted: "The Cabin?" },
-  { original: "The Tower", drifted: "The Tower?" },
-  { original: "The Subterrain", drifted: "The Subterrain?" },
-  { original: "The Path", drifted: "The Path That Was" },
-  { original: "The Cabin", drifted: "The Locked Cabin" },
-  { original: "The Tower", drifted: "The Blind Tower" },
-  { original: "The Subterrain", drifted: "The Below" },
-];
-
-const observedHints = [
-  "You are being observed.",
-  "The guide sees you.",
-  "Something is watching.",
-  "You are not alone on the path.",
-  "The markers are watching.",
-  "It knows you are reading this.",
-  "You should not be here.",
-  "The guide remembers your face.",
-  "You have been here before.",
-  "She can hear you breathing.",
-  "The path was never meant for you.",
-  "You are being guided. Not saved.",
-  "Someone is reading over your shoulder.",
-  "The guide is closer than you think.",
-];
-
 function getRandomElement<T>(array: T[]): T {
   return array[Math.floor(Math.random() * array.length)];
 }
@@ -174,6 +59,17 @@ type EffectData =
   | string;
 
 export function WrongGuideEffects({ config = DEFAULT_CONFIG }: { config?: Partial<WrongGuideConfig> }) {
+  const locale = useLocale();
+  const {
+    textShifts,
+    labelFlickers,
+    navShifts,
+    timestampDrifts,
+    warningFlashes,
+    textCorrections,
+    locationDrifts,
+    observedHints,
+  } = getGameConfig(locale).effects;
   const [activeEffect, setActiveEffect] = useState<WrongGuideEffect | null>(null);
   const [effectData, setEffectData] = useState<EffectData | null>(null);
   const [showWarning, setShowWarning] = useState(false);
@@ -362,6 +258,8 @@ export function WrongGuideText({
 }) {
   const [isShifted, setIsShifted] = useState(false);
   const [shiftedText, setShiftedText] = useState("");
+  const locale = useLocale();
+  const { textShifts, labelFlickers, navShifts, locationDrifts } = getGameConfig(locale).effects;
   const originalText = typeof children === "string" ? children : "";
 
   useEffect(() => {
@@ -401,6 +299,8 @@ export function WrongGuideText({
 
 export function WrongGuideObserver() {
   const [hint, setHint] = useState<string | null>(null);
+  const locale = useLocale();
+  const { observedHints } = getGameConfig(locale).effects;
 
   useEffect(() => {
     const interval = setInterval(() => {

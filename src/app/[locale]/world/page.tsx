@@ -1,21 +1,38 @@
 import { Metadata } from "next";
 import { World } from "@/components/sections";
 import { gameConfig } from "@/config/game";
+import { routing } from "@/i18n/routing";
 
-export const metadata: Metadata = {
-  title: "Locations",
-  description: "Explore the environments of The Wrong Guide - The Path, The Cabin, The Tower, The Subterrain.",
-  openGraph: {
+export const revalidate = 3600;
+
+interface Props {
+  params: Promise<{ locale: string }>;
+}
+
+export async function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+
+  return {
     title: "Locations | The Wrong Guide",
-    description: "Explore the environments of The Wrong Guide",
-  },
-};
+    description: "Explore the environments of The Wrong Guide - The Path, The Cabin, The Tower, The Subterrain.",
+    openGraph: {
+      title: "Locations | The Wrong Guide",
+      description: "Explore the environments of The Wrong Guide",
+    },
+  };
+}
 
-export default function WorldPage() {
+export default async function WorldPage({ params }: Props) {
+  const { locale } = await params;
+
   return (
     <>
       <div className="mt-24">
-        <World />
+        <World locale={locale} />
         <section className="py-16" aria-labelledby="cta-heading">
           <div className="container-custom text-center">
             <h2 id="cta-heading" className="font-display font-bold text-3xl md:text-4xl text-fg-primary mb-6">

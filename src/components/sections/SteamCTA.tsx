@@ -1,21 +1,25 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui";
-import { gameConfig } from "@/config/game";
+import { getGameConfig } from "@/config/game";
 import { ArrowRight, Check, Download, Monitor, WifiOff, User, Shield } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-const features = [
-  { icon: User, label: "Single Player", description: "Focused solo experience" },
-  { icon: WifiOff, label: "Offline Play", description: "No internet required" },
-  { icon: Monitor, label: "Steam Deck Verified", description: "Optimized for handheld" },
-  { icon: Shield, label: "No DRM", description: "Play anywhere, anytime" },
-  { icon: Download, label: "Cloud Saves", description: "Progress follows you" },
-  { icon: Check, label: "Full Controller Support", description: "Play your way" },
-];
+const featureIcons = [User, WifiOff, Monitor, Shield, Download, Check];
 
-export function SteamCTA() {
+interface SteamCTAProps {
+  locale: string;
+}
+
+export function SteamCTA({ locale }: SteamCTAProps) {
+  const t = useTranslations("steamCta");
+  const gameConfig = getGameConfig(locale);
+  const features = gameConfig.steamFeatures.map((feature, index) => ({
+    ...feature,
+    icon: featureIcons[index] ?? Check,
+  }));
   const isReleased = gameConfig.releaseStatus === "Released" || gameConfig.releaseStatus === "Available Now";
 
   return (
@@ -38,11 +42,11 @@ export function SteamCTA() {
                 </div>
 
                 <h2 id="steam-heading" className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-fg-primary tracking-tight mb-6">
-                  READY TO FOLLOW THE GUIDE?
+                  {t("heading")}
                 </h2>
 
                 <p className="text-fg-secondary text-lg leading-relaxed mb-8 max-w-xl">
-                  {gameConfig.shortDescription} Wishlist now to be notified when the guide becomes available.
+                  {gameConfig.shortDescription} {t("subheading")}
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-12">
@@ -54,7 +58,7 @@ export function SteamCTA() {
                       aria-label={isReleased ? `Buy ${gameConfig.title} on Steam` : `Wishlist ${gameConfig.title} on Steam`}
                     >
                       <Monitor className="w-6 h-6 mr-2" aria-hidden="true" />
-                      {isReleased ? "BUY ON STEAM" : "WISHLIST ON STEAM"}
+                      {isReleased ? t("buy") : t("wishlist")}
                       <ArrowRight className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                     </Button>
                   </Link>
@@ -65,7 +69,7 @@ export function SteamCTA() {
                     className="w-full sm:w-auto cursor-pointer"
                     onClick={() => document.getElementById("features")?.scrollIntoView({ behavior: "smooth" })}
                   >
-                    LEARN MORE
+                    {t("learnMore")}
                   </Button>
                 </div>
 
@@ -95,7 +99,7 @@ export function SteamCTA() {
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-center p-8">
                         <Monitor className="w-24 h-24 md:w-32 md:h-32 text-accent-red/30 mx-auto mb-4" aria-hidden="true" />
-                        <p className="text-fg-tertiary text-sm">STEAM PAGE</p>
+                        <p className="text-fg-tertiary text-sm">{t("steamPage")}</p>
                         <p className="text-fg-disabled text-xs mt-1">Steam capsule art</p>
                       </div>
                     </div>

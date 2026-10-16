@@ -2,23 +2,31 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ResponsiveImage } from "@/components/ui";
 import { cn, formatDate } from "@/lib/utils";
-import { gameConfig } from "@/config/game";
+import { getGameConfig } from "@/config/game";
 import { ChevronRight, ExternalLink, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui";
+import { useTranslations } from "next-intl";
 
-const categories = ["All", "Announcement", "Trailer", "Development", "Business"];
+const categoryIds = ["All", "Announcement", "Trailer", "Development", "Business"];
 
-export function News() {
+interface NewsProps {
+  locale: string;
+}
+
+export function News({ locale }: NewsProps) {
   const [activeCategory, setActiveCategory] = useState("All");
   const [displayCount, setDisplayCount] = useState(3);
   const [isLoading, setIsLoading] = useState(false);
+  const t = useTranslations("news");
+  const commonT = useTranslations("common");
+  const { news, categoryLabels } = getGameConfig(locale);
 
   const filteredNews = activeCategory === "All"
-    ? gameConfig.news
-    : gameConfig.news.filter((post) => post.category === activeCategory);
+    ? news
+    : news.filter((post) => post.category === activeCategory);
 
   const displayedNews = filteredNews.slice(0, displayCount);
   const hasMore = displayCount < filteredNews.length;
@@ -34,20 +42,20 @@ export function News() {
   return (
     <section id="news" className="relative mb-12" aria-labelledby="news-heading">
       <div className="absolute inset-0 -z-10" aria-hidden="true">
-        <div className="absolute inset-0 bg-linear-to-b from-transparent via-bg-secondary/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-bg-secondary/20 to-transparent" />
       </div>
 
       <div className="container-custom">
         <header className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 md:mb-16">
           <div>
             <h2 id="news-heading" className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-fg-primary tracking-tight mb-2">
-              NEWS
+              {t("heading")}
             </h2>
-            <p className="text-fg-secondary text-lg">Development updates, announcements, and behind-the-scenes content.</p>
+            <p className="text-fg-secondary text-lg">{t("subheading")}</p>
           </div>
 
           <div className="flex flex-wrap gap-2" role="tablist" aria-label="News categories">
-            {categories.map((cat) => (
+            {categoryIds.map((cat) => (
               <button
                 key={cat}
                 onClick={() => { setActiveCategory(cat); setDisplayCount(3); }}
@@ -61,7 +69,7 @@ export function News() {
                 aria-selected={activeCategory === cat}
                 aria-controls="news-panel"
               >
-                {cat}
+                {categoryLabels[cat] ?? cat}
               </button>
             ))}
           </div>
@@ -92,10 +100,10 @@ export function News() {
                         filter: "brightness(0.9) contrast(1.1) saturate(0.8)",
                       }}
                     />
-                    <div className="absolute inset-0 bg-linear-to-t from-bg-primary/70 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/70 via-transparent to-transparent" />
                     <div className="absolute top-4 left-4">
                       <span className="px-3 py-1 rounded-full bg-accent-red/20 border border-accent-red/30 text-accent-red text-xs font-medium tracking-wider uppercase">
-                        {post.category}
+                        {categoryLabels[post.category] ?? post.category}
                       </span>
                     </div>
                   </div>
@@ -115,7 +123,7 @@ export function News() {
 
                     <div className="flex items-center justify-between pt-4 border-t border-border-primary">
                       <span className="flex items-center gap-2 text-fg-tertiary text-sm font-medium text-accent-red group-hover:gap-3 transition-all">
-                        READ MORE
+                        {commonT("readMore")}
                         <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                       </span>
                       <ExternalLink className="w-4 h-4 text-fg-tertiary hover:text-accent-red transition-colors" aria-hidden="true" />
@@ -148,7 +156,7 @@ export function News() {
                 {isLoading ? (
                   <>
                     <Loader2 className="w-5 h-5 animate-spin mr-2" aria-hidden="true" />
-                    LOADING...
+                    {commonT("loading")}
                   </>
                 ) : (
                   <>

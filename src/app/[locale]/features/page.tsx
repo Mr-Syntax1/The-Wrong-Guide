@@ -1,21 +1,37 @@
 import { Metadata } from "next";
 import { Features } from "@/components/sections";
 import { gameConfig } from "@/config/game";
+import { routing } from "@/i18n/routing";
 
-export const metadata: Metadata = {
-  title: "Features",
-  description: "Core pillars that define The Wrong Guide experience - story-driven, single-player, offline, exploration, puzzles, atmospheric horror.",
-  openGraph: {
+export const revalidate = 3600;
+
+interface Props {
+  params: Promise<{ locale: string }>;
+}
+
+export async function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+
+  return {
     title: "Features | The Wrong Guide",
-    description: "Core pillars that define The Wrong Guide experience",
-  },
-};
+    description: "Core pillars that define The Wrong Guide experience - story-driven, single-player, offline, exploration, puzzles, atmospheric horror.",
+    openGraph: {
+      title: "Features | The Wrong Guide",
+      description: "Core pillars that define The Wrong Guide experience",
+    },
+  };
+}
 
-export default function FeaturesPage() {
+export default async function FeaturesPage({ params }: Props) {
+  const { locale } = await params;
+
   return (
     <>
-
-      <Features />
+      <Features locale={locale} />
       <section className="py-16" aria-labelledby="cta-heading">
         <div className="container-custom text-center">
           <h2 id="cta-heading" className="font-display font-bold text-3xl md:text-4xl text-fg-primary mb-6">
