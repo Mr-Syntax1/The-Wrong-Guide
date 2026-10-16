@@ -48,14 +48,14 @@ export function Media({ locale }: MediaProps) {
               </h2>
               <p className="text-fg-secondary text-lg mt-2">{t("subheading")}</p>
             </div>
-            <div className="flex items-center gap-2" role="tablist" aria-label="Media categories">
+            <div className="grid grid-cols-2 md:grid-cols-4 mx-auto gap-4 md:gap-2" role="tablist" aria-label="Media categories">
               <button
                 onClick={() => setActiveCategory("all")}
                 className={cn(
-                  "px-4 py-2 rounded-base text-sm font-medium tracking-wide transition-all",
+                  "px-4 py-3 rounded-base text-sm font-medium tracking-wide transition-all",
                   activeCategory === "all"
                     ? "bg-accent-red text-fg-primary"
-                    : "bg-bg-tertiary text-fg-secondary hover:text-fg-primary hover:bg-bg-elevated"
+                    : "bg-bg-tertiary text-fg-secondary hover:text-fg-primary hover:bg-bg-elevated cursor-pointer"
                 )}
                 role="tab"
                 aria-selected={activeCategory === "all"}
@@ -68,10 +68,10 @@ export function Media({ locale }: MediaProps) {
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
                   className={cn(
-                    "px-4 py-2 rounded-base text-sm font-medium tracking-wide transition-all cursor-pointer",
+                    "px-4 py-3 rounded-base text-sm font-medium tracking-wide transition-all",
                     activeCategory === cat.id
                       ? "bg-accent-red text-fg-primary"
-                      : "bg-bg-tertiary text-fg-secondary hover:text-fg-primary hover:bg-bg-elevated"
+                      : "bg-bg-tertiary text-fg-secondary hover:text-fg-primary hover:bg-bg-elevated cursor-pointer"
                   )}
                   role="tab"
                   aria-selected={activeCategory === cat.id}

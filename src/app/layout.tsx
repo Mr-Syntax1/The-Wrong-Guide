@@ -60,13 +60,13 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/images/favicon.ico", sizes: "any" },
+      { url: "/favicon.ico", sizes: "any" },
       { url: "/images/icon-v2.webp", type: "image/webp" },
     ],
     apple: "/images/icon-v2.webp",
-    shortcut: "/images/favicon.ico",
+    shortcut: "/favicon.ico",
   },
-  
+
   openGraph: {
     type: "website",
     locale: "en_US",

@@ -29,9 +29,9 @@ export function Story({ locale: _locale }: StoryProps) {
   const sections = t.raw("sections") as Array<{ title: string; text: string }>;
 
   return (
-    <section id="story" className="relative" aria-labelledby="story-heading">
+    <section id="story" className="relative mt-20" aria-labelledby="story-heading">
       <div className="absolute inset-0 -z-10" aria-hidden="true">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-bg-secondary/30 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-bg-secondary/30 to-transparent" />
       </div>
 
       <div className="container-custom">
@@ -77,7 +77,7 @@ export function Story({ locale: _locale }: StoryProps) {
                         filter: "brightness(0.8) contrast(1.12) saturate(0.9)",
                       }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/60 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-linear-to-t from-bg-primary/60 via-transparent to-transparent" />
                   </div>
 
                   {index === 1 && (
