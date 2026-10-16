@@ -59,8 +59,8 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/images/icon.jpg",
-    apple: "/images/icon.jpg",
+    icon: "/images/icon.webp",
+    apple: "/images/icon.webp",
   },
   openGraph: {
     type: "website",
