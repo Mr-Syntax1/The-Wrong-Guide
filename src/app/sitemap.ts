@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { gameConfig } from "@/config/game";
 
 const locales = ["en", "fa", "tr", "ja", "ru"] as const;
-const baseUrl = "https://thewrongguide.com";
+const baseUrl = "https://the-wrong-guide.vercel.app";
 const currentDate = new Date();
 
 const staticPaths = [
@@ -27,39 +27,40 @@ export default function sitemap(): MetadataRoute.Sitemap {
         ? baseUrl 
         : `${baseUrl}/${locale}${path}`;
       
+      const staticLanguages: Record<string, string> = {};
+      for (const l of locales) {
+        staticLanguages[l] =
+          l === "en" && path === "" ? baseUrl : `${baseUrl}/${l}${path}`;
+      }
+      staticLanguages["x-default"] = path === "" ? baseUrl : `${baseUrl}${path}`;
       routes.push({
         url,
         lastModified: currentDate,
         changeFrequency: "weekly",
         priority: path === "" ? 1 : 0.8,
         alternates: {
-          languages: Object.fromEntries(
-            locales.map((l) => [
-              l,
-              l === "en" && path === "" 
-                ? baseUrl 
-                : `${baseUrl}/${l}${path}`
-            ])
-          ),
+          languages: staticLanguages,
         },
       });
     }
 
-    // News routes
+    // News routes (default locale "en" has no prefix with `as-needed`)
     for (const post of gameConfig.news) {
-      const url = `${baseUrl}/${locale}/news/${post.slug}`;
+      const newsPath = (l: string) =>
+        l === "en" ? `/news/${post.slug}` : `/${l}/news/${post.slug}`;
+      const url = `${baseUrl}${newsPath(locale)}`;
+      const newsLanguages: Record<string, string> = {};
+      for (const l of locales) {
+        newsLanguages[l] = `${baseUrl}${newsPath(l)}`;
+      }
+      newsLanguages["x-default"] = `${baseUrl}${newsPath("en")}`;
       routes.push({
         url,
         lastModified: new Date(post.date),
         changeFrequency: "monthly",
         priority: 0.6,
         alternates: {
-          languages: Object.fromEntries(
-            locales.map((l) => [
-              l,
-              `${baseUrl}/${l}/news/${post.slug}`
-            ])
-          ),
+          languages: newsLanguages,
         },
       });
     }

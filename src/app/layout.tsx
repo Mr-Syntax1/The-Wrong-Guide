@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { OG_IMAGE, SITE_NAME, SITE_URL, websiteJsonLd } from "@/config/seo";
+import { SetHtmlLang } from "@/components/SetHtmlLang";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -22,11 +24,13 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "The Wrong Guide | Official Website",
-    template: `%s | The Wrong Guide`,
+    default: `${SITE_NAME} | Official Website`,
+    template: `%s | ${SITE_NAME}`,
   },
-  description: "A story-driven atmospheric horror game where the guide you follow may not be what it seems.",
+  description:
+    "A story-driven atmospheric horror game where the guide you follow may not be what it seems.",
   keywords: [
     "The Wrong Guide",
     "horror game",
@@ -51,43 +55,51 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  icons: {
+    icon: "/images/icon.jpg",
+    apple: "/images/icon.jpg",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://thewrongguide.com",
-    siteName: "The Wrong Guide",
-    title: "The Wrong Guide | Official Website",
-    description: "A story-driven atmospheric horror game where the guide you follow may not be what it seems.",
-    images: [
-      {
-        url: "/images/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "The Wrong Guide",
-      },
-    ],
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    title: `${SITE_NAME} | Official Website`,
+    description:
+      "A story-driven atmospheric horror game where the guide you follow may not be what it seems.",
+    images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     site: "@thewrongguide",
     creator: "@thewrongguide",
-    title: "The Wrong Guide | Official Website",
-    description: "A story-driven atmospheric horror game where the guide you follow may not be what it seems.",
-    images: ["/images/og-image.png"],
-  },
-  verification: {
-    google: "[GOOGLE_SITE_VERIFICATION]",
+    title: `${SITE_NAME} | Official Website`,
+    description:
+      "A story-driven atmospheric horror game where the guide you follow may not be what it seems.",
+    images: [OG_IMAGE.url],
   },
   category: "games",
 };
 
-export default function RootLayout({ children, }: { children: React.ReactNode; }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      suppressHydrationWarning
+    >
       <head>
-       
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
       </head>
       <body className="min-h-full flex flex-col bg-bg-primary text-fg-primary">
+        <SetHtmlLang />
         {children}
       </body>
     </html>

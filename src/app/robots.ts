@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/_next/", "/private/"],
     },
-    sitemap: "https://thewrongguide.com/sitemap.xml",
-    host: "https://thewrongguide.com",
+    sitemap: "https://the-wrong-guide.vercel.app/sitemap.xml",
+    host: "https://the-wrong-guide.vercel.app",
   };
 }

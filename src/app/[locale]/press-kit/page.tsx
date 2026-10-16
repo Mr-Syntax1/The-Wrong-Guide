@@ -1,7 +1,9 @@
 import { Metadata } from "next";
 import { PressKitPage } from "@/components/pages/PressKitPage";
 import { getGameConfig } from "@/config/game";
+import { pageMetadata } from "@/config/seo";
 import { routing } from "@/i18n/routing";
+import { getTranslations } from "next-intl/server";
 
 export const revalidate = 3600;
 
@@ -16,16 +18,14 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const gameConfig = getGameConfig(locale);
+  const pressT = await getTranslations({ locale, namespace: "pressKit" });
 
-  return {
-    title: "Press Kit | The Wrong Guide",
-    description: `Official press kit for ${gameConfig.title} - ${gameConfig.shortDescription}`,
-    openGraph: {
-      title: `Press Kit | ${gameConfig.title}`,
-      description: `Official press kit for ${gameConfig.title}`,
-      type: "website",
-    },
-  };
+  return pageMetadata({
+    locale,
+    path: "/press-kit",
+    title: pressT("heading"),
+    description: pressT("subheading"),
+  });
 }
 
 export default async function PressKit({ params }: Props) {

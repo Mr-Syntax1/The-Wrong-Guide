@@ -60,6 +60,7 @@ export function Navbar({ locale: _locale }: NavbarProps) {
               THE WRONG GUIDE
             </Link>
 
+            {/* Desktop menu */}
             <div className="hidden lg:flex items-center gap-1">
               {navigation.map((item) => (
                 <Link
@@ -68,40 +69,65 @@ export function Navbar({ locale: _locale }: NavbarProps) {
                   className={cn(
                     "px-4 py-2 text-sm font-medium tracking-wide transition-colors relative",
                     "hover:text-accent-red",
-                    pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href))
+                    pathname === item.href ||
+                      (item.href !== "/" && pathname.startsWith(item.href))
                       ? "text-accent-red"
                       : "text-fg-secondary"
                   )}
-                  aria-current={pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href)) ? "page" : undefined}
+                  aria-current={
+                    pathname === item.href ||
+                    (item.href !== "/" && pathname.startsWith(item.href))
+                      ? "page"
+                      : undefined
+                  }
                 >
                   {t(item.key)}
-                  {pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href)) && (
-                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-accent-red rounded-full" />
-                  )}
+                  {pathname === item.href ||
+                    ((item.href !== "/" && pathname.startsWith(item.href)) && (
+                      <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-accent-red rounded-full" />
+                    ))}
                 </Link>
               ))}
             </div>
 
+            {/* Desktop actions */}
             <div className="hidden lg:flex items-center gap-3">
               <LanguageSwitcher />
-              <Link href={gameConfig.steamUrl} target="_blank" rel="noopener noreferrer">
-                <Button variant="primary" size="sm" className="whitespace-nowrap cursor-pointer">
+              <Link
+                href={gameConfig.steamUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant="primary"
+                  size="sm"
+                  className="whitespace-nowrap cursor-pointer"
+                >
                   {t("wishlist")}
                 </Button>
               </Link>
             </div>
 
-            <button
-              className="lg:hidden p-2 text-fg-primary hover:text-accent-red transition-colors cursor-pointer"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-expanded={isMobileMenuOpen}
-              aria-controls="mobile-menu"
-              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-            >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+            {/* Mobile actions: LanguageSwitcher + hamburger */}
+            <div className="lg:hidden flex items-center gap-2">
+              <LanguageSwitcher />
+              <button
+                className="p-2 text-fg-primary hover:text-accent-red transition-colors cursor-pointer"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                aria-expanded={isMobileMenuOpen}
+                aria-controls="mobile-menu"
+                aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+              >
+                {isMobileMenuOpen ? (
+                  <X className="w-6 h-6" />
+                ) : (
+                  <Menu className="w-6 h-6" />
+                )}
+              </button>
+            </div>
           </div>
 
+          {/* Mobile menu */}
           <div
             id="mobile-menu"
             className={cn(
@@ -111,7 +137,7 @@ export function Navbar({ locale: _locale }: NavbarProps) {
             role="navigation"
             aria-label="Mobile navigation"
           >
-            <div className="pt-4 space-y-1 border-t border-border-primary ">
+            <div className="pt-4 space-y-1 border-t border-border-primary">
               {navigation.map((item) => (
                 <Link
                   key={item.key}
@@ -120,19 +146,34 @@ export function Navbar({ locale: _locale }: NavbarProps) {
                   className={cn(
                     "block px-4 py-3 text-base font-medium tracking-wide transition-colors",
                     "hover:text-accent-red hover:bg-bg-tertiary",
-                    pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href))
+                    pathname === item.href ||
+                      (item.href !== "/" && pathname.startsWith(item.href))
                       ? "text-accent-red bg-bg-tertiary"
                       : "text-fg-secondary"
                   )}
-                  aria-current={pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href)) ? "page" : undefined}
+                  aria-current={
+                    pathname === item.href ||
+                    (item.href !== "/" && pathname.startsWith(item.href))
+                      ? "page"
+                      : undefined
+                  }
                 >
                   {t(item.key)}
                 </Link>
               ))}
-              <div className="pt-4 border-t border-border-primary flex items-center gap-3">
-                <LanguageSwitcher />
-                <Link href={gameConfig.steamUrl} target="_blank" rel="noopener noreferrer">
-                  <Button variant="primary" size="md" className="w-full cursor-pointer">
+
+              {/* Steam CTA — بدون LanguageSwitcher */}
+              <div className="pt-4 border-t border-border-primary">
+                <Link
+                  href={gameConfig.steamUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button
+                    variant="primary"
+                    size="md"
+                    className="w-full cursor-pointer"
+                  >
                     {t("wishlist")}
                   </Button>
                 </Link>
@@ -142,6 +183,7 @@ export function Navbar({ locale: _locale }: NavbarProps) {
         </nav>
       </header>
 
+      {/* Backdrop */}
       <div
         className={cn(
           "fixed inset-0 z-[199] bg-bg-primary/50 backdrop-blur-sm lg:hidden",

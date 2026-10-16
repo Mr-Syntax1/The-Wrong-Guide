@@ -1,7 +1,9 @@
 import { Metadata } from "next";
 import { World } from "@/components/sections";
 import { gameConfig } from "@/config/game";
+import { pageMetadata } from "@/config/seo";
 import { routing } from "@/i18n/routing";
+import { getTranslations } from "next-intl/server";
 
 export const revalidate = 3600;
 
@@ -15,23 +17,25 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
+  const navT = await getTranslations({ locale, namespace: "nav" });
+  const metaT = await getTranslations({ locale, namespace: "meta" });
 
-  return {
-    title: "Locations | The Wrong Guide",
-    description: "Explore the environments of The Wrong Guide - The Path, The Cabin, The Tower, The Subterrain.",
-    openGraph: {
-      title: "Locations | The Wrong Guide",
-      description: "Explore the environments of The Wrong Guide",
-    },
-  };
+  return pageMetadata({
+    locale,
+    path: "/world",
+    title: navT("world"),
+    description: metaT("world"),
+  });
 }
 
 export default async function WorldPage({ params }: Props) {
   const { locale } = await params;
+  const worldT = await getTranslations({ locale, namespace: "world" });
 
   return (
     <>
       <div className="mt-24">
+        <h1 className="sr-only">{worldT("heading")}</h1>
         <World locale={locale} />
         <section className="py-16" aria-labelledby="cta-heading">
           <div className="container-custom text-center">

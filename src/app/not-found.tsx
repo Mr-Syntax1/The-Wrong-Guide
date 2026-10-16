@@ -4,8 +4,9 @@ import { ChevronLeft, ArrowRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
-  title: "404 — Page Not Found | The Wrong Guide",
+  title: { absolute: "404 — Page Not Found | The Wrong Guide" },
   description: "The page you followed the guide to doesn't exist. Or it did, once.",
+  robots: { index: false, follow: false },
 };
 
 export default async function NotFound() {

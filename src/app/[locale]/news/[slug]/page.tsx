@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { ResponsiveImage } from "@/components/ui";
 import { gameConfig, getGameConfig } from "@/config/game";
+import { SITE_URL, pageMetadata } from "@/config/seo";
 import { cn, formatDate } from "@/lib/utils";
 import { ChevronLeft } from "lucide-react";
 import { Suspense } from "react";
@@ -24,17 +25,22 @@ export default function NewsArticle({ params }: Props) {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   const post = getGameConfig(locale).news.find((p) => p.slug === slug);
-  if (!post) return { title: "Not Found" };
+  if (!post) return { title: "Not Found", robots: { index: false, follow: false } };
 
-  return {
+  const base = pageMetadata({
+    locale,
+    path: `/news/${post.slug}`,
     title: post.title,
     description: post.excerpt,
+  });
+
+  return {
+    ...base,
     openGraph: {
-      title: `${post.title} | The Wrong Guide`,
-      description: post.excerpt,
+      ...base.openGraph,
       type: "article",
       publishedTime: post.date,
-      images: [post.image],
+      images: [{ url: post.image, width: 1920, height: 1080, alt: post.title }],
     },
   };
 }
@@ -51,7 +57,7 @@ async function NewsArticleContent({ params }: Props) {
   if (!post) notFound();
 
   // Canonical share URL (default locale "en" has no prefix with localePrefix: "as-needed")
-  const shareUrl = `https://thewrongguide.com${locale === "en" ? "" : `/${locale}`}/news/${post.slug}`;
+  const shareUrl = `${SITE_URL}${locale === "en" ? "" : `/${locale}`}/news/${post.slug}`;
 
   const categoryColors: Record<string, string> = {
     Announcement: "bg-accent-red/20 border-accent-red/30 text-accent-red",

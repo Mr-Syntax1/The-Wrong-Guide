@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { getGameConfig } from "@/config/game";
+import { pageMetadata } from "@/config/seo";
 import { getTranslations } from "next-intl/server";
 import type { ReactNode } from "react";
 
@@ -14,10 +15,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const footerT = await getTranslations({ locale, namespace: "footer" });
   const gameConfig = getGameConfig(locale);
 
-  return {
-    title: `${footerT("terms")} | ${gameConfig.title}`,
+  return pageMetadata({
+    locale,
+    path: "/terms",
+    title: footerT("terms"),
     description: t("metaDescription", { title: gameConfig.title }),
-  };
+  });
 }
 
 export default async function TermsOfService({ params }: Props) {

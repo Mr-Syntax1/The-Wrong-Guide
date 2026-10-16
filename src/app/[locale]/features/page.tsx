@@ -1,7 +1,9 @@
 import { Metadata } from "next";
 import { Features } from "@/components/sections";
 import { gameConfig } from "@/config/game";
+import { pageMetadata } from "@/config/seo";
 import { routing } from "@/i18n/routing";
+import { getTranslations } from "next-intl/server";
 
 export const revalidate = 3600;
 
@@ -15,22 +17,24 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
+  const navT = await getTranslations({ locale, namespace: "nav" });
+  const metaT = await getTranslations({ locale, namespace: "meta" });
 
-  return {
-    title: "Features | The Wrong Guide",
-    description: "Core pillars that define The Wrong Guide experience - story-driven, single-player, offline, exploration, puzzles, atmospheric horror.",
-    openGraph: {
-      title: "Features | The Wrong Guide",
-      description: "Core pillars that define The Wrong Guide experience",
-    },
-  };
+  return pageMetadata({
+    locale,
+    path: "/features",
+    title: navT("features"),
+    description: metaT("features"),
+  });
 }
 
 export default async function FeaturesPage({ params }: Props) {
   const { locale } = await params;
+  const featuresT = await getTranslations({ locale, namespace: "features" });
 
   return (
     <>
+      <h1 className="sr-only">{featuresT("heading")}</h1>
       <Features locale={locale} />
       <section className="py-16" aria-labelledby="cta-heading">
         <div className="container-custom text-center">
