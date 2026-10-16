@@ -5,7 +5,7 @@
   <br />
   An official website for a story-driven psychological horror game by BMS Studio.
   <br /><br />
-  <a href="https://the-wrong-guide.netlify.app">
+  <a href="the-wrong-guide.vercel.app">
     <img src="https://img.shields.io/badge/WEBSITE-Live-8B1E2D?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Website" />
   </a>
   <a href="https://store.steampowered.com">
@@ -52,7 +52,7 @@ The experience extends beyond a conventional game landing page, using subtle vis
 </p>
 
 <p align="center">
-  <a href="https://the-wrong-guide.netlify.app">
+  <a href="the-wrong-guide.vercel.app">
     <strong>Explore the Live Website ↗</strong>
   </a>
 </p>
@@ -299,7 +299,7 @@ The source code, website content, and game assets may not be redistributed or re
   <br />
   <em>The guide remembers every wrong turn.</em>
   <br /><br />
-  <a href="https://the-wrong-guide.netlify.app">Website</a>
+  <a href="the-wrong-guide.vercel.app">Website</a>
   ·
   <a href="https://store.steampowered.com">Steam</a>
   ·
