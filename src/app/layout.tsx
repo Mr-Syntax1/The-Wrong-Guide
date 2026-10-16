@@ -41,6 +41,9 @@ export const metadata: Metadata = {
     "single player horror",
     "atmospheric horror",
   ],
+  verification: {
+    google: "MpwHhMRv-VMRRNTWV0qOb1kocjpJIpwIE7aKHYPrQoA",
+  },
   authors: [{ name: "BMS Studio" }],
   creator: "BMS Studio",
   publisher: "Sourena Games",
