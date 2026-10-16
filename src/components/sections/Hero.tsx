@@ -74,12 +74,12 @@ export function Hero({ locale: _locale }: HeroProps) {
           className="object-cover"
           sizes="100vw"
           style={{
-            filter: "brightness(0.8) contrast(1.18) saturate(0.9)",
+            filter: "brightness(0.82) contrast(1.12) saturate(0.9)",
           }}
           aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-bg-primary/60 via-bg-primary/30 to-bg-primary/80" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_40%,#030303_100%)]" />
+        <div className="absolute inset-0 bg-linear-to-b from-bg-primary/60 via-bg-primary/30 to-bg-primary/80" />
+        <div className="absolute inset-0 bg-[radial-linear(ellipse_at_center,_transparent_40%,#030303_100%)]" />
       </div>
 
       <div className="absolute inset-0 z-10 pointer-events-none opacity-3" aria-hidden="true">

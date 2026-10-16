@@ -53,10 +53,9 @@ export function Story({ locale: _locale }: StoryProps) {
               variants={sectionVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{
                 duration: 0.7,
-                delay: index * 0.10,
                 ease: [0.25, 0.46, 0.45, 0.84],
               }}
               className="relative"
