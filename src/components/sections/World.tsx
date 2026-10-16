@@ -25,6 +25,7 @@ export function World({ locale }: WorldProps) {
   const t = useTranslations("world");
 
   const { locations, moods: moodDescriptions } = getGameConfig(locale);
+  const isRTL = locale === "fa";
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     switch (e.key) {
@@ -46,9 +47,9 @@ export function World({ locale }: WorldProps) {
   };
 
   return (
-    <section id="world" className="relative" aria-labelledby="world-heading">
+    <section id="world" className="relative" aria-labelledby="world-heading" dir="ltr">
       <div className="absolute inset-0 -z-10" aria-hidden="true">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-bg-secondary/20 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-bg-secondary/20 to-transparent" />
       </div>
 
       <div className="container-custom">
@@ -62,7 +63,11 @@ export function World({ locale }: WorldProps) {
         </header>
 
         <div className="relative">
-          <div className="overflow-hidden">
+          {/* The slide track math (translateX by index) assumes LTR layout.
+              In RTL locales (fa) flexbox mirrors the row and the same
+              transform lands on empty track area, so slides appear blank.
+              Isolate the track in LTR and restore RTL only inside slides. */}
+          <div className="overflow-hidden" dir="ltr">
             <div
               className="flex transition-transform duration-700 ease-out"
               style={{ transform: `translateX(-${selectedIndex * 100}%)` }}
@@ -73,7 +78,8 @@ export function World({ locale }: WorldProps) {
               {locations.map((location, index) => (
                 <article
                   key={location.id}
-                  className="w-full flex-shrink-0 px-4"
+                  dir={isRTL ? "rtl" : "ltr"}
+                  className="w-full shrink-0 px-4"
                   role="group"
                   aria-roledescription="slide"
                   aria-label={`${location.name}, ${index + 1} of ${locations.length}`}
@@ -94,13 +100,13 @@ export function World({ locale }: WorldProps) {
                         filter: "brightness(0.9) contrast(1.1) saturate(0.9)",
                       }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/80 via-bg-primary/20 to-transparent" />
-                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_50%,#030303_100%)]" />
+                    <div className="absolute inset-0 bg-linear-to-t from-bg-primary/80 via-bg-primary/20 to-transparent" />
+                    <div className="absolute inset-0 bg-[radial-linear(ellipse_at_center,_transparent_50%,#030303_100%)]" />
 
                     <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
                       <div className="max-w-3xl">
                         <div className="flex items-center gap-3 mb-4">
-                          <MapPin className="w-5 h-5 text-accent-red flex-shrink-0" aria-hidden="true" />
+                          <MapPin className="w-5 h-5 text-accent-red shrink-0" aria-hidden="true" />
                           <h3 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl text-fg-primary tracking-tight">
                             {location.name.toUpperCase()}
                           </h3>
@@ -167,7 +173,7 @@ export function World({ locale }: WorldProps) {
             ))}
           </div>
 
-          <div className="flex items-center justify-center gap-4 mt-6">
+          <div className="flex items-center justify-center gap-4 mt-6" dir="ltr">
             <button
               onClick={() => setSelectedIndex((prev) => (prev === 0 ? locations.length - 1 : prev - 1))}
               onKeyDown={handleKeyDown}
@@ -213,7 +219,7 @@ function LocationDetail({ location, mood, moodColor, onClose }: { location: { na
 
   return (
     <div className="relative bg-bg-secondary border border-border-primary rounded-base overflow-hidden">
-      <div className="absolute top-4 right-4">
+      <div className="absolute top-4 end-4">
         <button
           onClick={onClose}
           className="p-2 rounded-full bg-bg-tertiary border border-border-primary text-fg-secondary hover:text-accent-red hover:border-accent-red/50 transition-colors cursor-pointer"
@@ -287,7 +293,7 @@ function LocationDetail({ location, mood, moodColor, onClose }: { location: { na
               className="object-cover"
               style={{ filter: "brightness(0.8) contrast(1.12) saturate(0.8)" }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/70 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-bg-primary/70 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 text-fg-tertiary text-sm font-mono tracking-wider">
               LOCATION DATA CLASSIFIED — GUIDE ACCESS ONLY
             </div>
