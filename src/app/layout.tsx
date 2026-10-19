@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { OG_IMAGE, SITE_NAME, SITE_URL, websiteJsonLd } from "@/config/seo";
+import { Analytics } from "@vercel/analytics/next";
 import { SetHtmlLang } from "@/components/SetHtmlLang";
 import "./globals.css";
 
@@ -109,6 +110,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-bg-primary text-fg-primary">
         <SetHtmlLang />
         {children}
+        <Analytics />
       </body>
     </html>
   );
