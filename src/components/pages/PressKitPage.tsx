@@ -79,6 +79,24 @@ export function PressKitPage({ locale }: PressKitPageProps) {
             </div>
           </div>
 
+          <section className="mb-16" aria-labelledby="team-credits-heading">
+            <h2 id="team-credits-heading" className="font-display font-bold text-2xl text-fg-primary mb-6">{t("teamCredits")}</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="p-6 bg-bg-secondary border border-border-primary rounded-base">
+                <h3 className="font-display font-semibold text-xl text-fg-primary mb-2">{t("gameDeveloper")}</h3>
+                <p className="text-fg-secondary">{t("gameDeveloperName")}</p>
+              </div>
+              <div className="p-6 bg-bg-secondary border border-border-primary rounded-base">
+                <h3 className="font-display font-semibold text-xl text-fg-primary mb-2">{t("websiteDesigner")}</h3>
+                <p className="text-fg-secondary">{t("websiteDesignerName")}</p>
+              </div>
+              <div className="p-6 bg-bg-secondary border border-border-primary rounded-base">
+                <h3 className="font-display font-semibold text-xl text-fg-primary mb-2">{t("modeler3D")}</h3>
+                <p className="text-fg-secondary">{t("modeler3DName")}</p>
+              </div>
+            </div>
+          </section>
+
           <div className="grid md:grid-cols-2 gap-6 mb-16">
             <div className="p-6 bg-bg-secondary border border-border-primary rounded-base">
               <h3 className="font-display font-semibold text-xl text-fg-primary mb-2">{t("developers")}</h3>

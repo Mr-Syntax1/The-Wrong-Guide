@@ -59,12 +59,12 @@ const baseLocations = [
 ] as const;
 
 const baseNews = [
-  {
-    id: "steam-page-live",
-    date: "2026-10-15",
-    image: "/images/news/steam-page.webp",
-    slug: "steam-page-live",
-  },
+  // {
+  //   id: "steam-page-live",
+  //   date: "2026-10-15",
+  //   image: "/images/news/steam-page.webp",
+  //   slug: "steam-page-live",
+  // },
   {
     id: "first-trailer",
     date: "2026-10-09",

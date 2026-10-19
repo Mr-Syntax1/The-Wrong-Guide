@@ -128,27 +128,27 @@ Rehber izliyor. Rehber yol gösteriyor. Ama rehber en başından beri yanlışt�
   ],
 
   news: [
-    {
-      id: "steam-page-live",
-      title: "Steam Sayfası Yayında",
-      excerpt:
-        "The Wrong Guide resmen Steam'e geldi. Rehber erişilebilir olduğunda haber almak için istek listene ekle.",
-      content: `The Wrong Guide resmen Steam'e geldi. Rehber erişilebilir olduğunda haber almak için istek listene ekle.
+//     {
+//       id: "steam-page-live",
+//       title: "Steam Sayfası Yayında",
+//       excerpt:
+//         "The Wrong Guide resmen Steam'e geldi. Rehber erişilebilir olduğunda haber almak için istek listene ekle.",
+//       content: `The Wrong Guide resmen Steam'e geldi. Rehber erişilebilir olduğunda haber almak için istek listene ekle.
 
-The Wrong Guide'ın resmi Steam mağaza sayfasının yayında olduğunu duyurmaktan heyecan duyuyoruz. Bu, geliştirme yolculuğumuzda büyük bir kilometre taşı.
+// The Wrong Guide'ın resmi Steam mağaza sayfasının yayında olduğunu duyurmaktan heyecan duyuyoruz. Bu, geliştirme yolculuğumuzda büyük bir kilometre taşı.
 
-Steam sayfasında bulacakların:
-- Resmi oyun açıklaması ve özellikler
-- Sistem gereksinimleri (minimum ve önerilen)
-- Oyunun atmosferik ortamlarını gösteren ekran görüntüleri
-- Resmi fragman
-- Oyun çıkınca haber almak için istek listesi düğmesi
+// Steam sayfasında bulacakların:
+// - Resmi oyun açıklaması ve özellikler
+// - Sistem gereksinimleri (minimum ve önerilen)
+// - Oyunun atmosferik ortamlarını gösteren ekran görüntüleri
+// - Resmi fragman
+// - Oyun çıkınca haber almak için istek listesi düğmesi
 
-Zekâna saygı duyan ve dikkatli gözlemi ödüllendiren atmosferik bir korku deneyimi yaratmak için çok çalıştık. Steam sayfası sadece başlangıç — önümüzdeki aylarda daha fazla geliştirme güncellemesi, kamera arkası içerik ve oynanış görüntüsü paylaşacağız.
+// Zekâna saygı duyan ve dikkatli gözlemi ödüllendiren atmosferik bir korku deneyimi yaratmak için çok çalıştık. Steam sayfası sadece başlangıç — önümüzdeki aylarda daha fazla geliştirme güncellemesi, kamera arkası içerik ve oynanış görüntüsü paylaşacağız.
 
-The Wrong Guide'ı bugün istek listene ekle, rehber erişilebilir olduğu an haberin olsun.`,
-      category: "Announcement",
-    },
+// The Wrong Guide'ı bugün istek listene ekle, rehber erişilebilir olduğu an haberin olsun.`,
+//       category: "Announcement",
+//     },
     {
       id: "first-trailer",
       title: "İlk Fragman Yayınlandı",

@@ -126,27 +126,27 @@ The guide is watching. The guide is leading. But the guide was wrong from the ve
   ],
 
   news: [
-    {
-      id: "steam-page-live",
-      title: "Steam Page Now Live",
-      excerpt:
-        "The Wrong Guide has officially landed on Steam. Add it to your wishlist to be notified when the guide becomes available.",
-      content: `The Wrong Guide has officially landed on Steam. Add it to your wishlist to be notified when the guide becomes available.
+//     {
+//       id: "steam-page-live",
+//       title: "Steam Page Now Live",
+//       excerpt:
+//         "The Wrong Guide has officially landed on Steam. Add it to your wishlist to be notified when the guide becomes available.",
+//       content: `The Wrong Guide has officially landed on Steam. Add it to your wishlist to be notified when the guide becomes available.
 
-We're thrilled to announce that The Wrong Guide now has its official Steam store page live. This marks a major milestone in our development journey.
+// We're thrilled to announce that The Wrong Guide now has its official Steam store page live. This marks a major milestone in our development journey.
 
-What you'll find on the Steam page:
-- Official game description and features
-- System requirements (minimum and recommended)
-- Screenshots showcasing the game's atmospheric environments
-- The official trailer
-- Wishlist button to get notified when the game releases
+// What you'll find on the Steam page:
+// - Official game description and features
+// - System requirements (minimum and recommended)
+// - Screenshots showcasing the game's atmospheric environments
+// - The official trailer
+// - Wishlist button to get notified when the game releases
 
-We've been working hard to create an atmospheric horror experience that respects your intelligence and rewards careful observation. The Steam page is just the beginning — we'll be sharing more development updates, behind-the-scenes content, and gameplay footage in the coming months.
+// We've been working hard to create an atmospheric horror experience that respects your intelligence and rewards careful observation. The Steam page is just the beginning — we'll be sharing more development updates, behind-the-scenes content, and gameplay footage in the coming months.
 
-Add The Wrong Guide to your wishlist today to be notified the moment the guide becomes available.`,
-      category: "Announcement",
-    },
+// Add The Wrong Guide to your wishlist today to be notified the moment the guide becomes available.`,
+//       category: "Announcement",
+//     },
     {
       id: "first-trailer",
       title: "First Trailer Released",
