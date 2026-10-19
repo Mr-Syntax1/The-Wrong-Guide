@@ -1,20 +1,30 @@
-export const gameLocaleContent = {
+import type { GameLocaleContent } from "./game.en";
+
+export const gameLocaleContent: GameLocaleContent = {
   shortDescription:
-    "A father. A phone call. A guide that was never meant to save him. A story-driven atmospheric horror game about misplaced trust and the price of following instructions.",
+    "A father. A phone call. A guide that was never meant to save him. A psychological horror game about a man trapped in an endless loop, guided by the monster who destroyed his past — where prayer pages hold the keys to his daughter's salvation, and every instruction is a lie.",
 
-  longDescription: `You are Mohsen. A father. A nature explorer. A man who loves his 9-year-old daughter more than anything in the world.
+  longDescription: `You are Mohsen. An Iranian father. A nature explorer. A man who loves his 9-year-old daughter more than anything in the world.
 
-One night, after an argument with his wife, Mohsen drives out to clear his head. His car runs out of gas. He stops at a lonely gas station on an empty desert highway. While he's filling the tank, his phone rings.
+One night, after a bitter argument with his wife, Mohsen drives out to clear his head. His car runs out of gas on a desolate desert highway. He stops at a lone gas station in the middle of nowhere. While filling the tank, his phone rings.
 
-The voice on the other end is familiar. Too familiar. It's the man his wife left him for years ago — a man with a dark past, a man who was once something else entirely.
+The voice on the other end is familiar. Painfully familiar. It's the man his wife left him for years ago — a man with a dark past, a man who was once something else entirely. A man known only as the Booklet Man. The Notebook Keeper. He holds secrets.
 
 "If you're a good father," the voice says, "come save your daughter."
 
-Mohsen rushes to leave. But before he can reach his car, someone strikes him from behind.
+Mohsen rushes to leave, desperate to reach his car and find her. But before he can, someone strikes him from behind. Darkness takes him.
 
-He wakes up in an abandoned hospital. The lights flicker. The hallways breathe. And somewhere in this decaying place, his daughter is waiting.
+He wakes in an abandoned hospital. Lights flicker. Hallways breathe. And somewhere in this decaying place, his daughter is waiting.
 
-The guide is watching. The guide is leading. But the guide was wrong from the very beginning.`,
+The Guide is watching. The Guide is leading. But the Guide was wrong from the very beginning.
+
+Mohsen is trapped in a loop that never ends — because from that very blow, the world went dark. (It's unclear if this is reality or not.) The man with the dark past, the Booklet Man, the Notebook Keeper — he holds the secrets. Mohsen calls him The Guide, but Mohsen knows what a wretch he truly is.
+
+He has scattered pages throughout the hospital, the courtyard, the surrounding environments — pages of prayer writing, blackened family names (the Iranian tradition of dua-nevisi). These pages are the keys. His motive? His own twisted amusement. A twisted revenge for a past that already happened.
+
+Mohsen must give everything for his daughter. Otherwise, a bitterness will take root that he never wanted...
+
+This path is just a wrong guide...`,
 
   genre: "Psychological Horror / Narrative Exploration / Story-Driven",
 
@@ -27,13 +37,13 @@ The guide is watching. The guide is leading. But the guide was wrong from the ve
       id: "story-driven",
       title: "STORY-DRIVEN",
       description:
-        "A deeply personal narrative about a father searching for his daughter. Every clue, every note, every whisper brings you closer to the truth — and further from safety.",
+        "A deeply personal narrative about a father trapped in a nightmare loop, hunting for prayer pages to save his daughter. Every clue, every blackened name, every whisper brings you closer to the truth — and further from salvation.",
     },
     {
       id: "single-player",
       title: "SINGLE-PLAYER",
       description:
-        "A focused, intimate horror experience designed to be played alone. No co-op, no multiplayer — just you, the hospital, and the voice guiding you through it.",
+        "A focused, intimate horror experience designed to be played alone. No co-op, no multiplayer — just you, the hospital, and the voice of the man who ruined your life guiding you through it.",
     },
     {
       id: "offline",
@@ -45,19 +55,19 @@ The guide is watching. The guide is leading. But the guide was wrong from the ve
       id: "exploration",
       title: "EXPLORATION",
       description:
-        "Navigate abandoned hospital wings, forgotten basements, and impossible corridors. The world rewards careful observation — but punishes blind trust.",
+        "Navigate abandoned hospital wings, forgotten courtyards, and impossible corridors. The world rewards careful observation — but punishes blind trust in the Guide.",
     },
     {
       id: "puzzles",
       title: "PUZZLES",
       description:
-        "Pay attention. The hospital has rules. The guide has instructions. But some doors are locked from the outside — and some signs were written by someone who didn't want you to leave.",
+        "Pay attention. The hospital has rules. The Guide has instructions. But some doors are locked from the outside — and the prayer pages were scattered by someone who didn't want you to leave.",
     },
     {
       id: "atmospheric-horror",
       title: "ATMOSPHERIC HORROR",
       description:
-        "Build tension through environment, sound, and uncertainty. No jump scares — only the slow, creeping dread of a father realizing he may never leave this place.",
+        "Build tension through environment, sound, and uncertainty. No jump scares — only the slow, creeping dread of a father realizing the Guide was never meant to save him.",
     },
   ],
 
@@ -66,35 +76,35 @@ The guide is watching. The guide is leading. But the guide was wrong from the ve
       id: "the-path",
       name: "The Path",
       description:
-        "A narrow trail through a dead forest. The guide says stay on it. But the trees lean inward — and somewhere ahead, a child is crying.",
+        "A narrow trail through a dead forest. The Guide says stay on it. But the trees lean inward — and somewhere ahead, a child is crying. The prayer pages flutter in wind that shouldn't exist.",
     },
     {
       id: "the-cabin",
       name: "The Cabin",
       description:
-        "A decaying structure in a clearing. Mohsen remembers this place — but not from this life. The door opens inward. The lock is on the outside.",
+        "A decaying structure in a clearing. Mohsen remembers this place — but not from this life. The door opens inward. The lock is on the outside. A stack of blackened pages sits on the table.",
     },
     {
       id: "the-tower",
       name: "The Tower",
       description:
-        "A monolith rising from the fog. The guide says climb it for a better view. But the higher Mohsen climbs, the clearer he sees: his daughter is not at the top.",
+        "A monolith rising from the fog. The Guide says climb it for a better view. But the higher Mohsen climbs, the clearer he sees: his daughter is not at the top. The Notebook Keeper is watching from the window.",
     },
     {
       id: "the-subterrain",
       name: "The Subterrain",
       description:
-        "Tunnels beneath everything. The guide says this is the shortcut. But the walls breathe, the map lies, and somewhere in the dark, a man is waiting.",
+        "Tunnels beneath everything. The Guide says this is the shortcut. But the walls breathe, the map lies, and somewhere in the dark, the Booklet Man is waiting with the final pages.",
     },
   ],
 
-    coreDesign: {
+  coreDesign: {
     label: "CORE DESIGN",
     heading: "No Hand-Holding. No False Safety.",
     paragraph1:
-      "The Wrong Guide respects your intelligence. There are no objective markers, no quest logs, no highlighted interactables. The world communicates through environmental cues, audio, and the guide itself — which may or may not be reliable.",
+      "The Wrong Guide respects your intelligence. There are no objective markers, no quest logs, no highlighted interactables. The world communicates through environmental cues, audio, and the Guide itself — which may or may not be reliable.",
     paragraph2:
-      "Every mechanic serves the narrative. Puzzles emerge from observation. Horror emerges from uncertainty. The guide emerges from the question: what happens when the only thing keeping you alive might be the thing leading you to your end?",
+      "Every mechanic serves the narrative. Puzzles emerge from observation. Horror emerges from uncertainty. The Guide emerges from the question: what happens when the only thing keeping you alive might be the thing leading you to your end?",
   },
 
   moods: {
@@ -114,7 +124,7 @@ The guide is watching. The guide is leading. But the guide was wrong from the ve
       label: "CLAUSTROPHOBIC",
       description: "Confined spaces, walls closing in, limited escape",
     },
-  } as Record<string, { label: string; description: string }>,
+  },
 
   steamFeatures: [
     { label: "Single Player", description: "Focused solo experience" },
@@ -126,27 +136,6 @@ The guide is watching. The guide is leading. But the guide was wrong from the ve
   ],
 
   news: [
-//     {
-//       id: "steam-page-live",
-//       title: "Steam Page Now Live",
-//       excerpt:
-//         "The Wrong Guide has officially landed on Steam. Add it to your wishlist to be notified when the guide becomes available.",
-//       content: `The Wrong Guide has officially landed on Steam. Add it to your wishlist to be notified when the guide becomes available.
-
-// We're thrilled to announce that The Wrong Guide now has its official Steam store page live. This marks a major milestone in our development journey.
-
-// What you'll find on the Steam page:
-// - Official game description and features
-// - System requirements (minimum and recommended)
-// - Screenshots showcasing the game's atmospheric environments
-// - The official trailer
-// - Wishlist button to get notified when the game releases
-
-// We've been working hard to create an atmospheric horror experience that respects your intelligence and rewards careful observation. The Steam page is just the beginning — we'll be sharing more development updates, behind-the-scenes content, and gameplay footage in the coming months.
-
-// Add The Wrong Guide to your wishlist today to be notified the moment the guide becomes available.`,
-//       category: "Announcement",
-//     },
     {
       id: "first-trailer",
       title: "First Trailer Released",
@@ -157,13 +146,13 @@ The guide is watching. The guide is leading. But the guide was wrong from the ve
 Our first trailer showcases the atmospheric world of The Wrong Guide — a place where the guide you follow may not be what it seems. The trailer features:
 
 - Cinematic footage of The Path, The Cabin, The Tower, and The Subterrain
-- Glimpses of the guide's mysterious instructions
+- Glimpses of the Guide's mysterious instructions
 - The game's distinctive visual style and atmospheric lighting
-- Hints at the environmental puzzles and narrative mysteries
+- Hints at the prayer page puzzles and narrative mysteries
 
 The trailer was crafted to give you a taste of the game's atmosphere without spoiling any of its mysteries. We wanted to capture the feeling of uncertainty and dread that permeates the experience.
 
-Watch it now and decide for yourself: can you trust the guide?`,
+Watch it now and decide for yourself: can you trust the Guide?`,
       category: "Trailer",
     },
     {
@@ -178,12 +167,13 @@ In this first development log, we're pulling back the curtain on the core concep
 The idea started with a simple question: what if the only thing keeping you alive in a horror game was also the thing leading you to your doom? Traditional horror games give you clear objectives, clear paths, clear enemies. But what if the very system designed to help you — the objective markers, the guide voice, the path markers — was fundamentally unreliable?
 
 This became the central pillar of The Wrong Guide's design. Every mechanic serves this theme:
-- The guide's instructions appear helpful but may lead you astray
+- The Guide's instructions appear helpful but may lead you astray
 - Environmental markers contradict each other
 - Audio cues shift subtly when you deviate from the "intended" path
 - The map shows rooms that don't exist
+- The prayer pages (dua-nevisi) are both keys and traps
 
-We've iterated on this concept extensively. Early prototypes had the guide as an explicit antagonist, but we found that ambiguity is far more unsettling. The player should never be entirely sure if the guide is malfunctioning, malevolent, or if they're simply misinterpreting it.
+We've iterated on this concept extensively. Early prototypes had the Guide as an explicit antagonist, but we found that ambiguity is far more unsettling. The player should never be entirely sure if the Guide is malfunctioning, malevolent, or if they're simply misinterpreting it.
 
 This philosophy extends to every aspect of the game — level design, audio, UI, narrative. The result is an experience that gets under your skin not through jump scares, but through the slow, creeping realization that you can't trust the very thing you've been trained to trust in games.
 
@@ -210,7 +200,7 @@ We're excited to work with a team that respects the game's artistic vision while
 
 More details about the release timeline and marketing plans will be shared in the coming months. In the meantime, development continues at full speed — we're in the final stages of content creation and moving into polish and optimization.
 
-Thank you for your patience and support. The guide is almost ready.`,
+Thank you for your patience and support. The Guide is almost ready.`,
       category: "Business",
     },
   ],
@@ -221,13 +211,13 @@ Thank you for your patience and support. The guide is almost ready.`,
     Trailer: "Trailer",
     Development: "Development",
     Business: "Business",
-  } as Record<string, string>,
+  },
 
   faq: [
     {
       question: "What platforms will the game be on?",
       answer:
-        "Steam (Windows). Steam Deck verification is planned. Console ports are [TO BE ANNOUNCED].",
+        "Steam (Windows). Steam Deck verification is planned. No console ports.",
     },
     {
       question: "How much will it cost?",
@@ -235,32 +225,32 @@ Thank you for your patience and support. The guide is almost ready.`,
     },
     {
       question: "When does it release?",
-      answer: "2027. A specific date will be announced when the guide is ready.",
+      answer: "2027. A specific date will be announced when the Guide is ready.",
     },
     {
       question: "What languages are supported?",
       answer:
-        "English and Persian at launch. Additional localizations are planned post-release.",
+        "Persian, English, Turkish, Japanese, and Russian at launch.",
     },
     {
       question: "Is the game multiplayer?",
       answer:
-        "No. The Wrong Guide is a single-player, offline experience. You follow the guide alone.",
+        "No. The Wrong Guide is a single-player, offline experience. You follow the Guide alone.",
     },
     {
       question: "How long is the game?",
       answer:
-        "Approximately 4-6 hours for the main story. The guide knows the exact number. It isn't telling.",
+        "Approximately 2-4 hours for the main story. The Guide knows the exact number. It isn't telling.",
     },
     {
       question: "Is there combat?",
       answer:
-        "No. The game focuses on exploration, environmental puzzles, and atmosphere. Your only weapons are observation and doubt.",
+        "Yes, with firearms but minimal. The game focuses on exploration, environmental puzzles, and atmosphere.",
     },
     {
       question: "What accessibility options exist?",
       answer:
-        "Adjustable text size, subtitle scaling, colorblind modes, reduced motion toggle, and a content warning screen at startup. The guide adapts. You can too.",
+        "Adjustable text size, subtitle scaling, colorblind modes, reduced motion toggle, and a content warning screen at startup. The Guide adapts. You can too.",
     },
     {
       question: "Does it support controllers?",
@@ -270,7 +260,7 @@ Thank you for your patience and support. The guide is almost ready.`,
     {
       question: "Is it verified for Steam Deck?",
       answer:
-        "Steam Deck verification is a launch target. The guide fits in your hands.",
+        "Steam Deck verification is a launch target. The Guide fits in your hands.",
     },
     {
       question: "How scary is it?",
@@ -279,7 +269,7 @@ Thank you for your patience and support. The guide is almost ready.`,
     },
     {
       question: "Will there be DLC or a sequel?",
-      answer: "The guide does not answer that question. Yet.",
+      answer: "The Guide does not answer that question. Yet.",
     },
   ],
 
@@ -320,7 +310,7 @@ Thank you for your patience and support. The guide is almost ready.`,
       alt: "Gameplay footage - Path exploration",
       caption: "Gameplay: Path exploration",
     },
-  } as Record<string, { alt: string; caption: string }>,
+  },
 
   pressKit: {
     assets: {
@@ -356,7 +346,7 @@ Thank you for your patience and support. The guide is almost ready.`,
         name: "Gameplay Teaser",
         description: "Raw gameplay footage",
       },
-    } as Record<string, { name: string; description: string }>,
+    },
     screenshotCaptions: {
       "screenshot-01.webp": "The Path - First steps into the unknown",
       "screenshot-02.webp": "The Cabin - Safety or trap?",
@@ -366,7 +356,7 @@ Thank you for your patience and support. The guide is almost ready.`,
       "screenshot-06.webp": "The Guide's instructions - Follow them?",
       "screenshot-07.webp": "Atmospheric interior - Light and shadow",
       "screenshot-08.webp": "A moment of wrongness - Something changed",
-    } as Record<string, string>,
+    },
     conceptCaptions: {
       "concept-01.webp": "Early Path environment concept",
       "concept-02.webp": "Cabin interior mood study",
@@ -374,19 +364,19 @@ Thank you for your patience and support. The guide is almost ready.`,
       "concept-04.webp": "Subterrain tunnel system",
       "concept-05.webp": "Guide UI/UX iterations",
       "concept-06.webp": "Character silhouette studies",
-    } as Record<string, string>,
+    },
   },
 
   effects: {
     textShifts: [
       { original: "You are safe.", shifted: "You were safe." },
-      { original: "The guide protects you.", shifted: "The guide protects itself." },
+      { original: "The Guide protects you.", shifted: "The Guide protects itself." },
       { original: "Keep moving forward.", shifted: "Keep moving forward. It's closer now." },
       { original: "The path is clear.", shifted: "The path was clear." },
       { original: "You are alone.", shifted: "You are not alone." },
       { original: "Don't look back.", shifted: "Don't look back. It's already behind you." },
       { original: "The exit is ahead.", shifted: "The exit was ahead." },
-      { original: "Trust the guide.", shifted: "Trust the guide. Trust the guide. Trust the guide." },
+      { original: "Trust the Guide.", shifted: "Trust the Guide. Trust the Guide. Trust the Guide." },
       { original: "Follow the light.", shifted: "Follow the light. It knows your name." },
       { original: "You will survive.", shifted: "You will survive. For now." },
       { original: "The door is locked.", shifted: "The door is locked from the outside." },
@@ -445,8 +435,8 @@ Thank you for your patience and support. The guide is almost ready.`,
         corrected: "You are the only one here. [CORRECTION: You are the only one who is still alive.]",
       },
       {
-        original: "The guide wants to help you.",
-        corrected: "The guide wants to help you. [CORRECTION: The guide wants to help itself.]",
+        original: "The Guide wants to help you.",
+        corrected: "The Guide wants to help you. [CORRECTION: The Guide wants to help itself.]",
       },
       {
         original: "Your daughter is safe.",
@@ -473,19 +463,19 @@ Thank you for your patience and support. The guide is almost ready.`,
     ],
     observedHints: [
       "You are being observed.",
-      "The guide sees you.",
+      "The Guide sees you.",
       "Something is watching.",
       "You are not alone on the path.",
       "The markers are watching.",
       "It knows you are reading this.",
       "You should not be here.",
-      "The guide remembers your face.",
+      "The Guide remembers your face.",
       "You have been here before.",
       "She can hear you breathing.",
       "The path was never meant for you.",
       "You are being guided. Not saved.",
       "Someone is reading over your shoulder.",
-      "The guide is closer than you think.",
+      "The Guide is closer than you think.",
     ],
   },
 };

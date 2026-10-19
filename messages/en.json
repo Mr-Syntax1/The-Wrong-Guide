@@ -14,42 +14,42 @@
     "watchTrailer": "WATCH TRAILER",
     "scrollToBegin": "SCROLL TO BEGIN",
     "taglines": [
-      "You followed the guide. It led you here.",
+      "You followed the Guide. It led you here.",
       "The call said she was waiting.",
       "But she wasn't waiting for you.",
       "The path remembers your footsteps.",
       "The markers point both ways now.",
       "Your daughter is somewhere ahead.",
       "So is the thing that took her.",
-      "Trust the guide. Or trust what's left of you."
+      "Trust the Guide. Or trust what's left of you."
     ],
     "wishlist": "WISHLIST ON STEAM"
   },
   "story": {
     "heading": "THE STORY",
-    "subheading": "What kind of experience is this? What is the player doing? What is the \"guide\"? Why should the player care? What feels wrong?",
+    "subheading": "A father. A phone call. A Guide that was never meant to save him. What kind of experience is this? What is the player doing? What is the \"Guide\"? Why should the player care? What feels wrong?",
     "sections": [
       {
         "title": "THE PREMISE",
-        "text": "You are Mohsen. A father. A nature explorer. A man who loves his 9-year-old daughter more than anything in the world. One night, after an argument with his wife, Mohsen drives out to clear his head. His car runs out of gas. He stops at a lonely gas station on an empty desert highway. While he's filling the tank, his phone rings. The voice on the other end is familiar. Too familiar. It's the man his wife left him for years ago — a man with a dark past, a man who was once something else entirely. \"If you're a good father,\" the voice says, \"come save your daughter.\" Mohsen rushes to leave. But before he can reach his car, someone strikes him from behind. He wakes up in an abandoned hospital. The lights flicker. The hallways breathe. And somewhere in this decaying place, his daughter is waiting. The guide is watching. The guide is leading. But the guide was wrong from the very beginning."
+        "text": "You are Mohsen. An Iranian father. A nature explorer. A man who loves his 9-year-old daughter more than anything in the world. One night, after a bitter argument with his wife, Mohsen drives out to clear his head. His car runs out of gas on a desolate desert highway. He stops at a lone gas station in the middle of nowhere. While filling the tank, his phone rings. The voice on the other end is familiar. Painfully familiar. It's the man his wife left him for years ago — a man with a dark past, a man who was once something else entirely. A man known only as the Booklet Man. The Notebook Keeper. He holds secrets. \"If you're a good father,\" the voice says, \"come save your daughter.\" Mohsen rushes to leave, desperate to reach his car and find her. But before he can, someone strikes him from behind. Darkness takes him. He wakes in an abandoned hospital. Lights flicker. Hallways breathe. And somewhere in this decaying place, his daughter is waiting. The Guide is watching. The Guide is leading. But the Guide was wrong from the very beginning."
       },
       {
         "title": "THE GUIDE",
-        "text": "It speaks through notes, signs, voices on the radio. It marks the way with paint, with lights, with breadcrumbs of certainty. You follow because the alternative is the unknown. And the unknown is where they are."
+        "text": "It speaks through notes, signs, voices on the radio. It marks the way with paint, with lights, with breadcrumbs of certainty. You follow because the alternative is the unknown. And the unknown is where they are. But this Guide — the Booklet Man, the Notebook Keeper — Mohsen knows what a wretch he truly is. He scattered prayer pages (dua-nevisi) throughout the hospital, the courtyard, the surrounding environments — blackened family names, Iranian tradition twisted into keys. His motive? Twisted amusement. A revenge for a past that already happened."
       },
       {
-        "title": "THE WRONGNESS",
-        "text": "But sometimes the guide hesitates. A marker points two ways. A voice static-cracks into something else. The map shows a room that isn't there. The instruction says \"safe\" but your fingers find a lock on the outside."
+        "title": "THE LOOP",
+        "text": "Mohsen is trapped in a loop that never ends — because from that very blow, the world went dark. It's unclear if this is reality or not. The Guide was wrong from the beginning. Every instruction is a lie. Every marker a potential trap. The prayer pages are the keys to his daughter's salvation — if he can find them before the bitterness takes root forever."
       },
       {
         "title": "THE CHOICE",
-        "text": "How far do you follow before you stop? What happens when the guide leads you somewhere the guide itself warns you about? The path was never yours. But the choice to leave it... that might be the only thing that is."
+        "text": "How far do you follow before you stop? What happens when the Guide leads you somewhere the Guide itself warns you about? The path was never yours. But the choice to leave it... that might be the only thing that is. Mohsen must give everything for his daughter. Otherwise, a bitterness will take root that he never wanted... This path is just a wrong guide..."
       }
     ]
   },
   "world": {
     "heading": "BEYOND THE GUIDE",
-    "subheading": "The environments you'll traverse. Each location holds its own rules, its own secrets, and its own relationship to the guide."
+    "subheading": "The environments you'll traverse. Each location holds its own rules, its own secrets, and its own relationship to the Guide — and the Booklet Man who watches from the shadows."
   },
   "features": {
     "heading": "FEATURES",
@@ -72,7 +72,7 @@
   },
   "steamCta": {
     "heading": "READY TO FOLLOW THE GUIDE?",
-    "subheading": "A story-driven atmospheric horror game about misplaced trust and the price of following instructions. Wishlist now to be notified when the guide becomes available.",
+    "subheading": "A psychological horror game about a father trapped in an endless loop, guided by the monster who destroyed his past — where prayer pages hold the keys to his daughter's salvation, and every instruction is a lie. Wishlist now to be notified when the Guide becomes available.",
     "wishlist": "WISHLIST ON STEAM",
     "buy": "BUY ON STEAM",
     "learnMore": "LEARN MORE",
@@ -81,7 +81,7 @@
     "steamPage": "STEAM PAGE"
   },
   "footer": {
-    "tagline": "A story-driven atmospheric horror game where the guide you follow may not be what it seems.",
+    "tagline": "A psychological horror game where the Guide you follow may not be what it seems — and the man holding the pages knows exactly what he's doing.",
     "theGame": "THE GAME",
     "community": "COMMUNITY",
     "legal": "LEGAL",
@@ -100,12 +100,12 @@
   },
   "faq": {
     "heading": "FREQUENTLY ASKED",
-    "subheading": "What the guide would want you to know. Or not."
+    "subheading": "What the Guide would want you to know. Or not."
   },
   "notFound": {
     "title": "404",
-    "message": "You followed the guide. It led you here.",
-    "description": "This page doesn't exist. Or it did, once. The guide apologizes for the inconvenience. The guide is lying.",
+    "message": "You followed the Guide. It led you here.",
+    "description": "This page doesn't exist. Or it did, once. The Guide apologizes for the inconvenience. The Guide is lying.",
     "returnHome": "RETURN TO THE PATH"
   },
   "common": {
@@ -178,7 +178,7 @@
     "metaDescription": "Privacy Policy for {title} official website. This static informational website does not collect personal data from visitors.",
     "lastUpdatedLabel": "Last Updated",
     "date": "October 15, 2026",
-    "intro": "This Privacy Policy applies to the official website for <b>{title}</b> (“the Site”), operated by <b>{developer}</b> (“we,” “us,” or “our”). The Site is a static informational website showcasing a single-player, offline, story-driven horror game. We respect your privacy and are committed to being transparent about our data practices.",
+    "intro": "This Privacy Policy applies to the official website for <b>{title}</b> (\u201cthe Site\u201d), operated by <b>{developer}</b> (\u201cwe,\u201d \u201cus,\u201d or \u201cour\u201d). The Site is a static informational website showcasing a single-player, offline, story-driven horror game. We respect your privacy and are committed to being transparent about our data practices.",
     "s1Heading": "1. Information We Collect",
     "s1P1": "The Site does not collect, store, or process any personal data from visitors. We do not use contact forms, newsletter signups, user accounts, or any other mechanism that would require you to provide personal information.",
     "s1P2": "When you visit the Site, your browser automatically sends certain technical information to our server (such as your IP address, browser type, operating system, and referring page). This information is handled by our hosting provider and is not stored or analyzed by us.",
@@ -191,15 +191,15 @@
     "s3Li1Link": "Steam Privacy Policy",
     "s3Li2Label": "YouTube / Google",
     "s3Li2Link": "Google Privacy Policy",
-    "s3Li3": "Social Media (Twitter/X, Discord, etc.) — Each platform has its own privacy policy governing data collected when you interact with their services.",
+    "s3Li3": "Social Media (Twitter/X, Discord, etc.) \u2014 Each platform has its own privacy policy governing data collected when you interact with their services.",
     "s3P2": "We do not embed third-party scripts, tracking pixels, or social media widgets that would collect data on our behalf.",
     "s4Heading": "4. Analytics",
     "s4P1": "The Site does not currently use any analytics or tracking services (such as Google Analytics, Plausible, or similar). No visitor behavior is measured, recorded, or analyzed.",
     "s4P2": "If analytics are added in the future, this section will be updated to disclose what data is collected, how it is used, and how you can opt out.",
-    "s5Heading": "5. Children’s Privacy",
-    "s5P1": "The Site is not directed at children under 13 years of age. We do not knowingly collect personal information from children under 13. The game itself is rated “Mature 17+” and is not intended for children.",
+    "s5Heading": "5. Children\u2019s Privacy",
+    "s5P1": "The Site is not directed at children under 13 years of age. We do not knowingly collect personal information from children under 13. The game itself is rated \u201cMature 17+\u201d and is not intended for children.",
     "s6Heading": "6. Changes to This Policy",
-    "s6P1": "We may update this Privacy Policy from time to time to reflect changes in our practices or for legal, regulatory, or operational reasons. The “Last Updated” date at the top of this page will be revised accordingly.",
+    "s6P1": "We may update this Privacy Policy from time to time to reflect changes in our practices or for legal, regulatory, or operational reasons. The \u201cLast Updated\u201d date at the top of this page will be revised accordingly.",
     "s6P2": "We encourage you to review this page periodically. Continued use of the Site after changes are posted constitutes acceptance of the updated policy.",
     "s7Heading": "7. Contact",
     "s7P1": "If you have questions or concerns about this Privacy Policy or our data practices, you may contact us at:"
@@ -208,12 +208,12 @@
     "metaDescription": "Terms of Service for {title} official website. By using this site, you agree to these terms.",
     "lastUpdatedLabel": "Last Updated",
     "date": "October 15, 2026",
-    "intro": "Welcome to the official website for <b>{title}</b> (“the Site”), operated by <b>{developer}</b> (“we,” “us,” or “our”). By accessing or using the Site, you agree to be bound by these Terms of Service (“Terms”). If you do not agree to these Terms, please do not use the Site.",
+    "intro": "Welcome to the official website for <b>{title}</b> (\u201cthe Site\u201d), operated by <b>{developer}</b> (\u201cwe,\u201d \u201cus,\u201d or \u201cour\u201d). By accessing or using the Site, you agree to be bound by these Terms of Service (\u201cTerms\u201d). If you do not agree to these Terms, please do not use the Site.",
     "s1Heading": "1. Acceptance of Terms",
     "s1P1": "These Terms constitute a legally binding agreement between you and {developer} regarding your use of the Site. By accessing, browsing, or using the Site in any manner, you acknowledge that you have read, understood, and agree to be bound by these Terms, as well as any applicable laws and regulations.",
-    "s1P2": "We reserve the right to modify these Terms at any time. Changes will be posted on this page with an updated “Last Updated” date. Your continued use of the Site after changes are posted constitutes acceptance of the modified Terms.",
+    "s1P2": "We reserve the right to modify these Terms at any time. Changes will be posted on this page with an updated \u201cLast Updated\u201d date. Your continued use of the Site after changes are posted constitutes acceptance of the modified Terms.",
     "s2Heading": "2. Intellectual Property",
-    "s2P1": "All content on the Site — including but not limited to text, graphics, images, logos, artwork, trailers, screenshots, concept art, audio, video, code, and the arrangement thereof — is the exclusive property of <b>{developer}</b> and/or <b>{publisher}</b> (collectively, the “Rights Holders”) and is protected by copyright, trademark, and other intellectual property laws.",
+    "s2P1": "All content on the Site \u2014 including but not limited to text, graphics, images, logos, artwork, trailers, screenshots, concept art, audio, video, code, and the arrangement thereof \u2014 is the exclusive property of <b>{developer}</b> and/or <b>{publisher}</b> (collectively, the \u201cRights Holders\u201d) and is protected by copyright, trademark, and other intellectual property laws.",
     "s2P2": "<b>{title}</b>, its logo, character names, and distinctive visual elements are trademarks of the Rights Holders. Unauthorized use of these trademarks is strictly prohibited.",
     "s3Heading": "3. Permitted Use",
     "s3P1": "Subject to your compliance with these Terms, you are granted a limited, non-exclusive, non-transferable, revocable license to:",
@@ -232,7 +232,7 @@
     "s4Li5": "Use the Site for any unlawful purpose or in any way that could damage, disable, overburden, or impair the Site.",
     "s4Li6": "Remove or alter any copyright, trademark, or proprietary notices from Site content.",
     "s5Heading": "5. Disclaimer of Warranties",
-    "s5P1": "THE SITE AND ALL CONTENT ARE PROVIDED “AS IS” AND “AS AVAILABLE” WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.",
+    "s5P1": "THE SITE AND ALL CONTENT ARE PROVIDED \u201cAS IS\u201d AND \u201cAS AVAILABLE\u201d WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.",
     "s5P2": "We do not warrant that the Site will be uninterrupted, error-free, secure, or free of viruses or other harmful components. We do not warrant the accuracy, completeness, or currency of any information on the Site. Release dates, features, system requirements, and pricing are subject to change without notice.",
     "s6Heading": "6. Limitation of Liability",
     "s6P1": "TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL {developer}, {publisher}, OR THEIR RESPECTIVE OFFICERS, DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM:",
@@ -242,14 +242,14 @@
     "s6Li4": "Any viruses or malware transmitted through the Site.",
     "s6P2": "Our total liability to you for any claims arising out of or related to these Terms or the Site shall not exceed the amount you paid to access the Site (which is zero).",
     "s7Heading": "7. Changes to These Terms",
-    "s7P1": "We may revise these Terms at any time. The updated version will be posted on this page with a new “Last Updated” date. Material changes will be noted with a brief summary of what changed.",
+    "s7P1": "We may revise these Terms at any time. The updated version will be posted on this page with a new \u201cLast Updated\u201d date. Material changes will be noted with a brief summary of what changed.",
     "s7P2": "Your continued use of the Site after the effective date of revised Terms constitutes your acceptance of the changes. If you do not agree to the revised Terms, your sole remedy is to stop using the Site.",
     "s8Heading": "8. Contact",
     "s8P1": "If you have questions about these Terms, please contact us at:"
   },
   "meta": {
-    "story": "The story of The Wrong Guide: a father searching for his daughter, and a guide that was wrong from the very beginning.",
-    "world": "Explore the haunted locations of The Wrong Guide — The Path, The Cabin, The Tower, and The Subterrain.",
+    "story": "The story of The Wrong Guide: an Iranian father searching for his daughter in an endless loop, guided by the Booklet Man who destroyed his past — where prayer pages hold the keys to salvation.",
+    "world": "Explore the haunted locations of The Wrong Guide — The Path, The Cabin, The Tower, and The Subterrain. Each holds prayer pages and the Guide's lies.",
     "features": "Single-player, offline, story-driven: the core pillars of The Wrong Guide horror experience.",
     "media": "Screenshots, gameplay footage, and concept art from The Wrong Guide.",
     "news": "Latest development updates, announcements, and behind-the-scenes content for The Wrong Guide."

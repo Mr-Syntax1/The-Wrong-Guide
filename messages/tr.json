@@ -27,29 +27,29 @@
   },
   "story": {
     "heading": "HİKAYE",
-    "subheading": "Bu deneyim ne? Oyuncu ne yapıyor? \"Rehber\" kim? Neden önem vermeli? Ne hissettiriyor yanlışlık?",
+    "subheading": "Bir baba. Bir telefon araması. Onu asla kurtarması için tasarlanmamış bir Rehber. Bu deneyim ne? Oyuncu ne yapıyor? \"Rehber\" kim? Neden önem vermeli? Ne hissettiriyor yanlışlık?",
     "sections": [
       {
         "title": "ÖNSEL",
-        "text": "Sen Mohsen'sin. Bir baba. Bir doğa keşifçisi. 9 yaşındaki kızını dünyadan fazla seven bir adam. Bir gece, eşiyle tartışmadan sonra kafasını dinlemek için arabayla yola çıkar. Benzin biter. Boş bir çöllü otoyolunda yalnız bir benzin istasyonunda durursun. Depo doldururken telefon çalar. Öbür uçtaki ses tanıdık. Çok tanıdık. Eşinin yıllar önce terk ettiği adam — karanlık bir geçmişi olan, bir zamanlar başkasıydı o. \"İyi bir baba isen,\" der ses, \"kızını kurtar gel.\" Mohsen aceleyle koşar. Ama arabasına ulaşmadan önce birisi arkadan vurur. Terk edilmiş bir hastanede uyanır. Işıklar titrer. Koridorlar nefes alır. Ve bu çürümüş yerde, kızı onu bekliyor. Rehber izliyor. Rehber yönlendiriyor. Ama rehber baştan beri yanlıştı."
+        "text": "Sen Mohsen'sin. İranlı bir baba. Bir doğa keşifçisi. 9 yaşındaki kızını dünyadan fazla seven bir adam. Bir gece, eşiyle kavgadan sonra kafasını dinlemek için arabayla yola çıkar. Çölde boş bir otoyolda benzin biter. Tek başına bir benzin istasyonunda durur. Depoyu doldururken telefon çalar. Öbür uçtaki ses tanıdık. Çok tanıdık. Yıllar önce eşini kendisi için terk eden adam — karanlık bir geçmişi olan, bir zamanlar başkasıydı. Sadece \"Defterli Adam\" veya \"Defter Sahibi\" olarak bilinen. O sırları elinde tutuyor. \"Eğer iyi bir baba isen,\" der ses, \"kızını kurtar gel.\" Mohsen aceleyle arabasına koşar, kızını bulmak için. Ama arabasına ulaşmadan önce biri arkadan vurur. Karanlık onu kaplar. Terk edilmiş bir hastanede uyanır. Işıklar titrer. Koridorlar nefes alır. Ve bu çürümüş yerin bir yerinde, kızı onu bekliyor. Rehber izliyor. Rehber yönlendiriyor. Ama Rehber baştan beri yanlıştı."
       },
       {
         "title": "REHBER",
-        "text": "Notlar, işaretler, radyo sesleriyle konuşur. Yolu boya, ışık, güvenin iri pırıltılarıyla işaretler. Takip edersin çünkü diğer seçenek bilinmez. Ve bilinmez, onların olduğu yerdir."
+        "text": "O notlar, işaretler, radyo sesleriyle konuşur. Yolu boya, ışık, güvenin iri pırıltılarıyla işaretler. Takip edersin çünkü diğer seçenek bilinmez. Ve bilinmez, onların olduğu yerdir. Ama bu Rehber — Defterli Adam, Defter Sahibi — Mohsen onun ne kadar alçak biri olduğunu biliyor. Hastane, avlu, çevre ortam her yerine sayfalar saçmış — dua yazma sayfaları (dua-nevisi), kara boyayıp yazılmış aile isimleri (İran geleneği). Bu sayfalar anahtar. Motivasyonu? Kendi buruk eğlencesi. Zaten olmuş bir geçmişe yönelik buruk bir intikam."
       },
       {
-        "title": "YANLIŞLIK",
-        "text": "Ama bazen rehber tereddüt eder. Bir işaret iki yolu gösterir. Ses parazitle başkasına dönüşür. Harita olmayan bir odayı gösterir. Talimat \"güvenli\" der ama parmakların dıştan kilitli bir kapıyı bulur."
+        "title": "DÖNGÜ",
+        "text": "Mohsen asla bitmeyen bir döngüye hapsolmuş — çünkü o darbeden beri dünya karanlık. (Bu gerçek mi değil mi belli değil.) Rehber baştan beri yanlıştı. Her talimat bir yalan. Her işaretçi bir tuzak potansiyeli. Dua sayfaları kızının kurtuluşunun anahtarı — acı kökleşmeden önce bulabilirse."
       },
       {
         "title": "SEÇİM",
-        "text": "Ne kadar takip edersin durmadan önce? Rehber kendisi uyardığı yere götürürse ne olur? Yol asla senin değildi. Ama onu bırakmayı seçmek... belki de senin olan tek şeydir."
+        "text": "Ne kadar takip edersin durmadan önce? Rehber kendisi uyardığı yere götürürse ne olur? Yol asla senin değildi. Ama onu bırakmayı seçmek... belki de senin olan tek şeydir. Mohsen kızı için her şeyi vermeli. Aksi takdirde asla istemediği bir acı kökleşecek... Bu yol sadece yanlış bir rehber..."
       }
     ]
   },
   "world": {
     "heading": "REHBERİN ÖTESİ",
-    "subheading": "Adım atacakların mekanlar. Her yerin kendi kuralları, sırları ve rehberle ilişkisi var."
+    "subheading": "Adım atacakların mekanlar. Her yerin kendi kuralları, sırları ve Rehber ile ilişkisi var — ve gölgelerden izleyen Defterli Adam ile."
   },
   "features": {
     "heading": "ÖZELLİKLER",
@@ -72,7 +72,7 @@
   },
   "steamCta": {
     "heading": "REHBERİ TAKİP ETMEYE HAZIR MISIN?",
-    "subheading": "Yanlış güven ve talimatlara uymak bedeli üzerine kurulu atmosferik bir korku oyunu. Rehber hazır olduğunda haberdar olmak için wishlist'e ekle.",
+    "subheading": "Geçmişini yok eden canavar tarafından yönlendirilen, sonsuz bir döngüye hapsolmuş bir babanın hikayesi — dua sayfaları kızının kurtuluşunun anahtarını tutarken, her talimat bir yalandır. Rehber hazır olduğunda haberdar olmak için wishlist'e ekle.",
     "wishlist": "STEAM'DE WISHLIST",
     "buy": "STEAM'DEN SATIN AL",
     "learnMore": "DAHA FAZLA BİL",
@@ -81,7 +81,7 @@
     "steamPage": "STEAM SAYFASI"
   },
   "footer": {
-    "tagline": "Takip ettiğin rehber göründüğü gibi olmayabilecek bir atmosferik korku oyunu.",
+    "tagline": "Takip ettiğin Rehber göründüğü gibi olmayabilecek — ve sayfaları tutan adamın tam ne yaptığını bildiği bir psikolojik korku oyunu.",
     "theGame": "OYUN",
     "community": "TOPLOLUK",
     "legal": "YASAL",
@@ -248,8 +248,8 @@
     "s8P1": "Bu Şartlarla ilgili sorularınız varsa lütfen bizimle iletişime geçin:"
   },
   "meta": {
-    "story": "The Wrong Guide’ın hikâyesi: kızını arayan bir baba ve en başından beri yanlış olan bir rehber.",
-    "world": "The Wrong Guide’ın ürkütücü mekânlarını keşfet — Patika, Kulübe, Kule ve Yeraltı.",
+    "story": "The Wrong Guide’ın hikâyesi: sonsuz bir döngüde kızını arayan İranlı bir baba ve onun geçmişini yok eden Defterli Adam — dua sayfaları kurtuluşun anahtarını tutuyor.",
+    "world": "The Wrong Guide’ın ürkütücü mekânlarını keşfet — Yol, Kulübe, Kule ve Yeraltı. Her biri dua sayfalarını ve Rehber’in yalanlarını barındırıyor.",
     "features": "Tek oyunculu, çevrimdışı, hikâye odaklı: The Wrong Guide korku deneyiminin temel direkleri.",
     "media": "The Wrong Guide’dan ekran görüntüleri, oynanış kayıtları ve konsept tasarımlar.",
     "news": "The Wrong Guide için en son geliştirme güncellemeleri, duyurular ve kamera arkası içerikler."

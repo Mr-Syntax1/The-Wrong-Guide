@@ -122,9 +122,8 @@ export function Story({ locale: _locale }: StoryProps) {
                   {index === sections.length - 1 && (
                     <div className="mt-10 pt-6 border-t border-border-primary">
                       <p className="text-fg-tertiary text-sm leading-relaxed">
-                        The Wrong Guide is a single-player, offline, story-driven horror experience.
-                        No jump scares. No combat. Only observation, deduction, and the creeping certainty
-                        that something fundamental about your situation has been misrepresented.
+                        The Wrong Guide is a single-player, offline, story-driven psychological horror experience.
+                        Minimal gunplay. No jump scares. Only observation, deduction, prayer pages (dua-nevisi) scattered as keys, and the creeping certainty that the Guide leading you — the Booklet Man who destroyed your past — has misrepresented everything about your situation.
                       </p>
                     </div>
                   )}

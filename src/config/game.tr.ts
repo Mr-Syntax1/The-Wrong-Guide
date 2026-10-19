@@ -2,23 +2,31 @@ import type { GameLocaleContent } from "./game.en";
 
 export const gameLocaleContent: GameLocaleContent = {
   shortDescription:
-    "Bir baba. Bir telefon görüşmesi. Onu kurtarmak için hiç var olmamış bir rehber. Yanlış güven ve talimatlara uymanın bedeli üzerine kurulu, hikâye odaklı atmosferik bir korku oyunu.",
+    "Bir baba. Bir telefon araması. Onu asla kurtarması için tasarlanmamış bir Rehber. Geçmişini yok eden canavar tarafından yönlendirilen, sonsuz bir döngüye hapsolmuş bir babanın hikayesi — dua sayfaları kızının kurtuluşunun anahtarını tutarken, her talimat bir yalandır.",
 
-  longDescription: `Sen Mohsen'sin. Bir baba. Bir doğa kaşifi. 9 yaşındaki kızını dünyadaki her şeyden çok seven bir adam.
+  longDescription: `Sen Mohsen'sin. İranlı bir baba. Bir doğa keşifçisi. 9 yaşındaki kızını dünyadan fazla seven bir adam.
 
-Bir gece, eşiyle tartıştıktan sonra kafasını dağıtmak için arabayla dışarı çıkar. Benzini biter. Issız bir çöl otoyolunda yalnız bir benzin istasyonunda durur. Depoyu doldururken telefonu çalar.
+Bir gece, eşiyle kavgadan sonra kafasını dinlemek için arabayla yola çıkar. Çölde boş bir otoyolda benzin biter. Tek başına bir benzin istasyonunda durur. Depoyu doldururken telefon çalar.
 
-Hattın diğer ucundaki ses tanıdık. Fazla tanıdık. Bu, eşinin yıllar önce uğruna onu terk ettiği adam — karanlık bir geçmişi olan, bir zamanlar bambaşka biri olmuş bir adam.
+Öbür uçtaki ses tanıdık. Çok tanıdık. Yıllar önce eşini kendisi için terk eden adam — karanlık bir geçmişi olan, bir zamanlar başka biriydi. Sadece "Defterli Adam" veya "Defter Sahibi" olarak bilinen. O sırları elinde tutuyor.
 
-"Eğer iyi bir babaysan," der ses, "gel kızını kurtar."
+"Eğer iyi bir baba isen," der ses, "kızını kurtar gel."
 
-Mohsen aceleyle gitmek ister. Ama arabasına ulaşamadan biri ona arkadan vurur.
+Mohsen aceleyle arabasına koşar, kızını bulmak için. Ama arabasına ulaşmadan önce biri arkadan vurur. Karanlık onu kaplar.
 
-Terk edilmiş bir hastanede uyanır. Işıklar titrer. Koridorlar nefes alır. Ve bu çürüyen yerin bir yerinde, kızı onu beklemektedir.
+Terk edilmiş bir hastanede uyanır. Işıklar titrer. Koridorlar nefes alır. Ve bu çürümüş yerin bir yerinde, kızı onu bekliyor.
 
-Rehber izliyor. Rehber yol gösteriyor. Ama rehber en başından beri yanlıştı.`,
+Rehber izliyor. Rehber yönlendiriyor. Ama Rehber baştan beri yanlıştı.
 
-  genre: "Psikolojik Korku / Anlatı Keşfi / Hikâye Odaklı",
+Mohsen asla bitmeyen bir döngüye hapsolmuş — çünkü o darbeden beri dünya karanlık. (Bu gerçek mi değil mi belli değil.) Karanlık geçmişli adam, Defterli Adam, Defter Sahibi — o sırları biliyor. Mohsen ona "Rehber" diyor ama Mohsen onun ne kadar alçak biri olduğunu biliyor.
+
+Hastane, avlu, çevre ortam her yerine sayfalar saçmış — dua yazma sayfaları (dua-nevisi), kara boyayıp yazılmış aile isimleri (İran geleneği). Bu sayfalar anahtar. Motivasyonu? Kendi buruk eğlencesi. Zaten olmuş bir geçmişe yönelik buruk bir intikam.
+
+Mohsen kızı için her şeyi vermeli. Aksi takdirde asla istemediği bir acı kökleşecek...
+
+Bu yol sadece yanlış bir rehber...`,
+
+  genre: "Psikolojik Korku / Anlatı Odaklı Keşif / Hikaye Odaklı",
 
   releaseStatus: "Yakında",
 
@@ -27,467 +35,365 @@ Rehber izliyor. Rehber yol gösteriyor. Ama rehber en başından beri yanlışt�
   features: [
     {
       id: "story-driven",
-      title: "HİKÂYE ODAKLI",
+      title: "HİKAYE ODAKLI",
       description:
-        "Kızını arayan bir baba hakkında derinden kişisel bir anlatı. Her ipucu, her not, her fısıltı seni gerçeğe yaklaştırır — ve güvenlikten uzaklaştırır.",
+        "Sonsuz bir kabus döngüsüne hapsolmuş, kızını kurtarmak için dua sayfaları arayan bir babanın derin derece kişisel hikayesi. Her ipucu, her karalanmış isim, her fısılda seni gerçeğe yaklaştırır — ve kurtuluştan uzaklaştırır.",
     },
     {
       id: "single-player",
-      title: "TEK OYUNCULU",
+      title: "TEK OYUNCU",
       description:
-        "Yalnız oynanmak üzere tasarlanmış, odaklı ve samimi bir korku deneyimi. Co-op yok, çok oyunculu yok — sadece sen, hastane ve sana yol gösteren ses.",
+        "Yalnız oynanmak için tasarlanmış odaklanmış, samimi bir korku deneyimi. Koop yok, çok oyunculu yok — sadece sen, hastane ve hayatını mahveden adamın sesi seni yönlendiriyor.",
     },
     {
       id: "offline",
-      title: "ÇEVRİMDIŞI",
+      title: "ÇEVRIMDIŞI",
       description:
-        "İnternet bağlantısı gerekmez. DRM veya sürekli çevrimiçi zorunluluğu olmadan, her yerde ve her zaman oyna.",
+        "İnternet bağlantısı gerekmez. Her yerde, her zaman DRM'siz ve sürekli çevrimiçi olma zorunluluğu olmadan oyna.",
     },
     {
       id: "exploration",
       title: "KEŞİF",
       description:
-        "Terk edilmiş hastane kanatlarında, unutulmuş bodrumlarda ve imkânsız koridorlarda ilerle. Dünya dikkatli gözlemi ödüllendirir — ama kör güveni cezalandırır.",
+        "Terk edilmiş hastane kanatları, unutulmuş avlular ve imkansız koridorlarda ilerle. Dünya dikkatli gözlemi ödüllendirir — ama Rehber'e kör güven cezalandırır.",
     },
     {
       id: "puzzles",
       title: "BULMACALAR",
       description:
-        "Dikkat et. Hastanenin kuralları var. Rehberin talimatları var. Ama bazı kapılar dışarıdan kilitli — ve bazı işaretler, gitmeni istemeyen biri tarafından yazıldı.",
+        "Dikkat et. Hastanenin kuralları var. Rehber'in talimatları var. Ama bazı kapılar dışarıdan kilitli — ve dua sayfaları seni gitmesini istemeyen biri tarafından saçılmış.",
     },
     {
       id: "atmospheric-horror",
       title: "ATMOSFERİK KORKU",
       description:
-        "Ortam, ses ve belirsizlikle gerilim inşa eder. Ani korkutmalar yok — sadece bu yerden asla çıkamayabileceğini fark eden bir babanın yavaş, sinsi dehşeti.",
+        "Ortam, ses ve belirsizlik yoluyla gerilim yaratır. Jumpscare yok — Rehber'in asla onu kurtarmak için tasarlanmadığını anlayan bir babanın yavaş, sinsi dehşeti var.",
     },
   ],
 
   locations: [
     {
       id: "the-path",
-      name: "Patika",
+      name: "Yol",
       description:
-        "Ölü bir ormanda dar bir iz. Rehber üzerinde kalmanı söylüyor. Ama ağaçlar içe doğru eğiliyor — ve ileride bir yerde bir çocuk ağlıyor.",
+        "Ölü birorman içinden geçen dar bir yol. Rehber इस üzerinde kal demiş. Ama ağaçlar içeri doğru eğilmiş — ve önde bir yerde bir çocuk ağlıyor. Olmaması gereken rüzgarda dua sayfaları sallanıyor.",
     },
     {
       id: "the-cabin",
       name: "Kulübe",
       description:
-        "Açıklıkta çürüyen bir yapı. Mohsen bu yeri hatırlıyor — ama bu hayattan değil. Kapı içe açılıyor. Kilit dışarıda.",
+        "Bir açıklığa çöken dökük bir yapı. Mohsen bu yeri hatırlıyor — ama bu hayattan değil. Kapı içeri açılıyor. Kilit dışarıda. Masada kara boyayıp yazılmış sayfalar yığını duruyor.",
     },
     {
       id: "the-tower",
       name: "Kule",
       description:
-        "Sisin içinden yükselen bir monolit. Rehber daha iyi bir manzara için tırmanmanı söylüyor. Ama Mohsen ne kadar yükselirse o kadar net görüyor: kızı tepede değil.",
+        "Sislerden yükselen bir monolit. Rehber daha iyi görmek için tırman demiş. Ama Mohsen ne kadar yükselirse o kadar net görüyor: kızı tepedeki değil. Defter Sahibi pencereden izliyor.",
     },
     {
       id: "the-subterrain",
       name: "Yeraltı",
       description:
-        "Her şeyin altındaki tüneller. Rehber bunun kestirme olduğunu söylüyor. Ama duvarlar nefes alıyor, harita yalan söylüyor ve karanlıkta bir yerde bir adam bekliyor.",
+        "Her şeyin altındaki tüneller. Rehber bu bir kısayol demiş. Ama duvarlar nefes alıyor, harita yalan söylüyor ve karanlık bir yerde Defterli Adam son sayfalarla bekliyor.",
     },
   ],
 
   coreDesign: {
-    label: "ÇEKİRDEK TASARIM",
-    heading: "El Tutma Yok. Sahte Güvenlik Yok.",
+    label: "ANA TASARIM",
+    heading: "El Tutma. Yanlış Güvenlik Yok.",
     paragraph1:
-      "The Wrong Guide zekâna saygı duyar. Hedef işaretleri yok, görev günlükleri yok, vurgulanmış etkileşim öğeleri yok. Dünya çevresel ipuçları, ses ve rehberin kendisiyle iletişim kurar — ki bu güvenilir olabilir de olmayabilir de.",
+      "The Wrong Guide zekanı sayar. Hedef işaretçisi yok, görev günlüğü yok, vurgulanmış etkileşim öğesi yok. Dünya çevresel ipuçları, ses ve Rehber kendisi aracılığıyla iletişim kurar — güvenilir olsun ya da olmasın.",
     paragraph2:
-      "Her mekanik anlatıya hizmet eder. Bulmacalar gözlemden doğar. Korku belirsizlikten doğar. Rehber şu sorudan doğar: seni hayatta tutan tek şey, seni sonuna götüren şey olabilirse ne olur?",
+      "Her mekanik anlatıma hizmet eder. Bulmacalar gözlemden doğar. Korku belirsizlikten doğar. Rehber şu sorudan doğar: seni hayatta tutan tek şey seni sonuna götüren şeyse ne olur?",
   },
 
   moods: {
     oppressive: {
-      label: "BASKICI",
-      description: "Ağır atmosfer, sürekli baskı, izlenme hissi",
+      label: "BAŞKALDIRICI",
+      description: "Ağır atmosfer, sürekli baskı, gözetlenme hissi",
     },
     uncanny: {
-      label: "TEKİNSİZ",
-      description: "Tanıdık ama derinden yanlış, ince bozulmalar",
+      label: "TUHAF",
+      description: "Tanıdık ama derinlerde yanlış, ince bozulmalar",
     },
     vertigo: {
-      label: "BAŞ DÖNDÜRÜCÜ",
-      description: "Yön kaybettiren dikeylik, mekânsal zeminin kaybı",
+      label: "BAŞ DÖNMESİ",
+      description: "Yönsüzlüğü bozan dikeylik, uzamsal kaybolma",
     },
     claustrophobic: {
-      label: "KLASTROFOBİK",
-      description: "Kapalı alanlar, üzerine kapanan duvarlar, sınırlı kaçış",
+      label: "KAPALI ALAN KORKUSU",
+      description: "Kapalı mekanlar, yaklaştıran duvarlar, sınırlı kaçış yolları",
     },
   },
 
   steamFeatures: [
-    { label: "Tek Oyunculu", description: "Odaklı solo deneyim" },
+    { label: "Tek Oyunculu", description: "Odaklanmış solo deneyim" },
     { label: "Çevrimdışı Oynama", description: "İnternet gerekmez" },
-    { label: "Steam Deck Onaylı", description: "El cihazı için optimize" },
+    { label: "Steam Deck Doğrulanmış", description: "Taşınabilir için optimize" },
     { label: "DRM Yok", description: "Her yerde, her zaman oyna" },
-    { label: "Bulut Kayıtları", description: "İlerlemen seni takip eder" },
-    { label: "Tam Kontrolcü Desteği", description: "Kendi tarzında oyna" },
+    { label: "Bulut Kayıtları", description: "İlerlemen seninle" },
+    { label: "Tam Kontrolcü Desteği", description: "Kendi tarzınla oyna" },
   ],
 
   news: [
-//     {
-//       id: "steam-page-live",
-//       title: "Steam Sayfası Yayında",
-//       excerpt:
-//         "The Wrong Guide resmen Steam'e geldi. Rehber erişilebilir olduğunda haber almak için istek listene ekle.",
-//       content: `The Wrong Guide resmen Steam'e geldi. Rehber erişilebilir olduğunda haber almak için istek listene ekle.
-
-// The Wrong Guide'ın resmi Steam mağaza sayfasının yayında olduğunu duyurmaktan heyecan duyuyoruz. Bu, geliştirme yolculuğumuzda büyük bir kilometre taşı.
-
-// Steam sayfasında bulacakların:
-// - Resmi oyun açıklaması ve özellikler
-// - Sistem gereksinimleri (minimum ve önerilen)
-// - Oyunun atmosferik ortamlarını gösteren ekran görüntüleri
-// - Resmi fragman
-// - Oyun çıkınca haber almak için istek listesi düğmesi
-
-// Zekâna saygı duyan ve dikkatli gözlemi ödüllendiren atmosferik bir korku deneyimi yaratmak için çok çalıştık. Steam sayfası sadece başlangıç — önümüzdeki aylarda daha fazla geliştirme güncellemesi, kamera arkası içerik ve oynanış görüntüsü paylaşacağız.
-
-// The Wrong Guide'ı bugün istek listene ekle, rehber erişilebilir olduğu an haberin olsun.`,
-//       category: "Announcement",
-//     },
     {
       id: "first-trailer",
       title: "İlk Fragman Yayınlandı",
       excerpt:
-        "The Wrong Guide'ın resmi tanıtım fragmanını izle. Gördüklerine güvenebilir misin diye soran iki dakikalık atmosferik korku.",
-      content: `The Wrong Guide'ın resmi tanıtım fragmanını izle. Gördüklerine güvenebilir misin diye soran iki dakikalık atmosferik korku.
+        "The Wrong Guide'ın resmi tanıtım fragmanını izleyin. İzlediğiniz şeye güvenip güvenemeyeceğinizi soran iki dakikalık atmosferik korku.",
+      content: `The Wrong Guide'ın resmi tanıtım fragmanını izleyin. İzlediğiniz şeye güvenip güvenemeyeceğinizi soran iki dakikalık atmosferik korku.
 
-İlk fragmanımız The Wrong Guide'ın atmosferik dünyasını gösteriyor — takip ettiğin rehberin göründüğü gibi olmayabileceği bir yer. Fragmanda şunlar var:
+İlk fragmanımız, takip ettiğin Rehber'in göründüğü gibi olmayabileceği The Wrong Guide'ın atmosferik dünyasını sergiliyor. Fragmanda:
 
-- Patika, Kulübe, Kule ve Yeraltı'ndan sinematik görüntüler
-- Rehberin gizemli talimatlarına bakışlar
-- Oyunun kendine özgü görsel tarzı ve atmosferik ışıklandırması
-- Çevresel bulmacalara ve anlatı gizemlerine ipuçları
+- Yol, Kulübe, Kule ve Yeraltı'nın sinematik kareleri
+- Rehber'in gizemli talimatlarının parçaları
+- Oyunun benzersiz görsel stili ve atmosferik ışıklandırması
+- Dua sayfası bulmacaları ve anlatısal gizemlere ipuçları
 
-Fragman, gizemlerinden hiçbirini bozmadan sana oyunun atmosferinden bir tat vermek için hazırlandı. Deneyime sinen belirsizlik ve dehşet hissini yakalamak istedik.
+Fragman, oyunun hiçbir gizemini açığa çıkarmadan atmosferinin tadını çıkarman için yapıldı. Deneyimin her yanına işleyen belirsizlik ve dehşet hissini yakalamak istedik.
 
-Şimdi izle ve kendin karar ver: rehbere güvenebilir misin?`,
+Şimdi izle ve kendin karar ver: Rehber'e güvenebilir misin?`,
       category: "Trailer",
     },
     {
       id: "devlog-1",
-      title: "Geliştirici Günlüğü #1: Baba, Rehber ve Yalan",
+      title: "Geliştirme Günlüğü #1: Baba, Rehber ve Yalan",
       excerpt:
-        "Çekirdek tasarım felsefesine kamera arkası bakış: oyuncunun tek rehberlik kaynağı en büyük tehdidine dönüştüğünde ne olur?",
-      content: `Çekirdek tasarım felsefesine kamera arkası bakış: oyuncunun tek rehberlik kaynağı en büyük tehdidine dönüştüğünde ne olur?
+        "Oyuncunun tek rehber kaynağı en büyük tehdidine dönüştüğünde ne olur? Temel tasarım felsefesinin arkasında kalanlara bakış.",
+      content: `Oyuncunun tek rehber kaynağı en büyük tehdidine dönüştüğünde ne olur? Temel tasarım felsefesinin arkasında kalanlara bakış.
 
-Bu ilk geliştirici günlüğünde The Wrong Guide'ın arkasındaki çekirdek konseptin perdesini aralıyoruz.
+Bu ilk geliştirme günlüğünde, The Wrong Guide'ın arkasındaki temel kavramın perde arkasını açıyoruz.
 
-Fikir basit bir soruyla başladı: bir korku oyununda seni hayatta tutan tek şey, aynı zamanda seni felakete sürükleyen şey olsaydı ne olurdu? Geleneksel korku oyunları net hedefler, net yollar, net düşmanlar verir. Ama sana yardım için tasarlanmış sistemin ta kendisi — hedef işaretleri, rehber sesi, yol işaretleri — özünde güvenilmez olsaydı?
+Fikir basit bir soruyla başladı: Bir korku oyununda seni hayatta tutan tek şey, seni de yok edecek şey olursa ne olur? Geleneksel korku oyunları net hedefler, net yollar, net düşmanlar verir. Ama seni yardım için tasarlanan sistem — hedef işaretçileri, rehber sesi, yol işaretleri — kökten güvenilmezse ne olur?
 
-Bu, The Wrong Guide tasarımının merkezi direği oldu. Her mekanik bu temaya hizmet ediyor:
-- Rehberin talimatları yardımsever görünür ama seni yanlış yöne götürebilir
-- Çevresel işaretler birbiriyle çelişir
-- "İstenen" yoldan saptığında ses ipuçları ince ince değişir
-- Harita var olmayan odalar gösterir
+Bu The Wrong Guide tasarımının merkezi direği oldu. Her mekanik bu temaya hizmet eder:
+- Rehber'in talimatları faydalı görünse de seni sapıtabilir
+- Çevresel işaretler birbirleriyle çelişir
+- "Kastedilen" yoldan sapıldığında ses ipuçları incecik değişir
+- Haritada olmayan odalar görünür
+- Dua sayfaları (dua-nevisi) hem anahtar hem tuzak
 
-Bu konsept üzerinde kapsamlı şekilde çalıştık. İlk prototiplerde rehber açık bir düşmandı, ama belirsizliğin çok daha tedirgin edici olduğunu gördük. Oyuncu, rehberin bozuk mu, kötü niyetli mi olduğundan yoksa sadece yanlış mı yorumladığından asla tam emin olmamalı.
+Bu kavram üzerinde geniş çapta yineleme yaptık. Erken prototiplerde Rehber'i açık bir antagonist yaptık, ama belirsizlik çok daha rahatsız edici olduğunu keştik. Oyuncu Rehber'in bozuk mu, kötü niyetli mi, yoksa sadece yanlış yorumladığını asla tam bilememeli.
 
-Bu felsefe oyunun her alanına uzanıyor — seviye tasarımı, ses, arayüz, anlatı. Sonuç, ani korkutmalarla değil, oyunlarda güvenmeye şartlandığın şeye güvenemeyeceğini yavaş yavaş fark etmenle derine işleyen bir deneyim.
+Bu felsefe oyunun her yönüne yayılır — seviye tasarımı, ses, UI, anlatı. Sonuç, jumpscare'ler yerine, oyunların sana güvenmeni öğrettiği şeye güvenemeyeceğini yavaş yavaş fark etmenle derinine işleyen bir deneyim.
 
-Çevresel hikâye anlatımı, ses tasarımı ve güvenilmez bir rehber sistemi kurmanın teknik zorlukları üzerine daha fazla günlük yakında geliyor.`,
-      category: "Development",
+Çevresel hikaye anlatımı, ses tasarımı ve güvenilmez rehber sistemi inşa etmenin teknik zorluklarını kapsayan daha fazla geliştirme günlüğü gelecek.`,
+      category: "Geliştirme",
     },
     {
       id: "publisher-announcement",
-      title: "Yayıncı Duyuruldu",
+      title: "Yayıncı Açıklandı",
       excerpt:
-        "The Wrong Guide'ın Steam'de küresel çıkışı için Sourena Games ile ortaklığımızı duyurmaktan gurur duyuyoruz.",
-      content: `The Wrong Guide'ın Steam'de küresel çıkışı için Sourena Games ile ortaklığımızı duyurmaktan gurur duyuyoruz.
+        "The Wrong Guide'ın Steam'deki küresel yayını için Sourena Games ile ortaklığımızı duyurmak için gururluyuz.",
+      content: `The Wrong Guide'ın Steam'deki küresel yayını için Sourena Games ile ortaklığımızı duyurmak için gururluyuz.
 
-Aylar süren doğru ortak arayışından sonra vizyonumuzu paylaşan bir yayıncı bulduk. Sourena Games'in atmosferik, anlatı odaklı bağımsız oyunlarda kanıtlanmış bir geçmişi var ve kolayca kategorize edilemeyen bir oyunu pazarlamanın benzersiz zorluklarını anlıyorlar.
+Doğru ortağı arayarak aylar geçti, The Wrong Guide için vizyonumuzu paylaşan bir yayıncı bulduk. Sourena Games, atmosferik, anlatı odaklı indie oyunlarda kanıtlanmış geçmişi var ve kolay kategorize edilemeyen bir oyunun pazarlamasındaki benzersiz zorlukları anlıyor.
 
-Bu ortaklık şu anlama geliyor:
-- Küresel Steam dağıtımı ve bölgesel fiyatlandırma
-- İstek listesi kampanyası ve çıkış için pazarlama desteği
-- Birden çok dil için QA ve yerelleştirme desteği
+Bu ortaklık şunları تعني eder:
+- Steam'de küresel dağıtım ve bölgesel fiyatlandırma
+- Wishlist kampanyası ve lansman için pazarlama desteği
+- Çoklu dil için QA ve yerelleştirme desteği
 - Steam Deck doğrulama yardımı
-- Çıkış sonrası destek ve güncelleme hattı
+- Lansman sonrası destek ve güncelleme hattı
 
-Oyunun sanatsal vizyonuna saygı duyarken en geniş kitleye ulaşmamıza yardım eden bir ekiple çalışmaktan heyecanlıyız. The Wrong Guide kendi şartlarında deneyimlenmeyi talep eden bir oyun ve Sourena Games bunu anlıyor.
+Oyunun sanatsal vizyonuna saygı duyarken en geniş kitleye ulaşmamızı sağlayacak bir ekiple çalışmaktan mutluluk duyuyoruz. The Wrong Guide kendi şartlarında yaşanması gereken bir oyun ve Sourena Games bunu anlıyor.
 
-Çıkış takvimi ve pazarlama planları hakkında daha fazla detay önümüzdeki aylarda paylaşılacak. Bu arada geliştirme tam hız devam ediyor — içerik üretiminin son aşamalarındayız ve cilalama ile optimizasyona geçiyoruz.
+Yayın zamanı ve pazarlama planları hakkında detaylar gelecek aylerde paylaşılacak. Bu arada geliştirme tam hızde devam ediyor — içerik üretiminin son aşamalarında ve poliş/optimizasyon fazına geçiyoruz.
 
-Sabrin ve desteğin için teşekkürler. Rehber neredeyse hazır.`,
-      category: "Business",
+Sabrınız ve destekleriniz için teşekkürler. Rehber neredeyse hazır.`,
+      category: "İş",
     },
   ],
 
   categoryLabels: {
-    All: "Tümü",
+    All: "Hepsi",
     Announcement: "Duyuru",
     Trailer: "Fragman",
     Development: "Geliştirme",
-    Business: "Ticari",
+    Business: "İş",
   },
 
   faq: [
     {
-      question: "Oyun hangi platformlarda olacak?",
-      answer:
-        "Steam (Windows). Steam Deck doğrulaması planlanıyor. Konsol sürümleri [DUYURULACAK].",
+      question: "Hangi platformlarda çıkacak?",
+      answer: "Steam (Windows). Steam Deck doğrulaması planlanıyor. Konsol portu yok.",
     },
     {
-      question: "Fiyatı ne kadar olacak?",
-      answer: "7,99 USD. Steam'de bölgesel fiyatlandırma uygulanır.",
+      question: "Ne kadar tutacak?",
+      answer: "$7.99 USD. Steam'de bölgesel fiyatlandırma uygulanır.",
     },
     {
       question: "Ne zaman çıkacak?",
-      answer: "2027. Rehber hazır olduğunda net tarih duyurulacak.",
+      answer: "2027. Rehber hazır olduğunda kesin tarih duyurulacak.",
     },
     {
       question: "Hangi diller destekleniyor?",
-      answer:
-        "Çıkışta İngilizce ve Farsça. Çıkış sonrası ek yerelleştirmeler planlanıyor.",
+      answer: "Lansmanda Farsça, İngilizce, Türkçe, Japonca ve Rusça.",
     },
     {
-      question: "Oyun çok oyunculu mu?",
-      answer:
-        "Hayır. The Wrong Guide tek oyunculu, çevrimdışı bir deneyim. Rehberi yalnız takip ediyorsun.",
+      question: "Çok oyunculu mu?",
+      answer: "Hayır. The Wrong Guide tek oyunculu, çevrimdışı bir deneyim. Rehber'i yalnızsın takip ediyorsun.",
     },
     {
-      question: "Oyun ne kadar sürüyor?",
-      answer:
-        "Ana hikâye yaklaşık 4-6 saat. Rehber tam sayıyı biliyor. Söylemiyor.",
+      question: "Oyun ne kadar sürer?",
+      answer: "Ana hikaye için yaklaşık 2-4 saat. Rehber kesin süreyi biliyor. Söylemiyor.",
     },
     {
       question: "Savaş var mı?",
-      answer:
-        "Hayır. Oyun keşif, çevresel bulmacalar ve atmosfere odaklanıyor. Tek silahların gözlem ve şüphe.",
+      answer: "Evet, silahlı savaş var ama minimal. Oyun keşif, çevresel bulmacalar ve atmosfere odaklanır.",
     },
     {
-      question: "Hangi erişilebilirlik seçenekleri var?",
-      answer:
-        "Ayarlanabilir metin boyutu, altyazı ölçekleme, renk körü modları, azaltılmış hareket düğmesi ve başlangıçta içerik uyarı ekranı. Rehber uyum sağlar. Sen de sağlayabilirsin.",
+      question: "Erişilebilirlik seçenekleri neler?",
+      answer: "Ayarlanabilir metin boyutu, altyazı ölçekleme, renk körlüğü modları, hareket azaltma, başlangıçta içerik uyarısı ekranı. Rehber uyum sağlar. Sen de sağlayabilirsin.",
     },
     {
       question: "Kontrolcü destekliyor mu?",
-      answer:
-        "Tam kontrolcü desteği (Xbox / DualSense / Steam Input). Klavye ve fare de tam destekleniyor.",
+      answer: "Tam kontrolcü desteği (Xbox / DualSense / Steam Input). Klavye ve fare de tam desteklenir.",
     },
     {
-      question: "Steam Deck için onaylı mı?",
-      answer:
-        "Steam Deck doğrulaması çıkış hedefi. Rehber ellerine sığıyor.",
+      question: "Steam Deck için doğrulanmış mı?",
+      answer: "Steam Deck doğrulaması lansman hedefi. Rehber eline sığar.",
     },
     {
       question: "Ne kadar korkutucu?",
-      answer:
-        "17+. Psikolojik korku — dehşet, belirsizlik ve yanlış güvenin terörü. Ani korkutma yok. Kan yok. Korku görmediklerinde yaşıyor.",
+      answer: "17+. Psikolojik korku — korku, belirsizlik ve yanlış güvenin dehşeti. Jumpscare yok. Kan yok. Korku görmediğin şeylerde yaşar.",
     },
     {
-      question: "DLC veya devam oyunu olacak mı?",
-      answer: "Rehber bu soruyu yanıtlamıyor. Henüz.",
+      question: "DLC veya devam edecek mi?",
+      answer: "Rehber bu soruya cevap vermiyor. Henüz.",
     },
   ],
 
   mediaCaptions: {
-    "scr-1": {
-      alt: "Patika - Bilinmeze ilk adımlar",
-      caption: "Patika - Bilinmeze ilk adımlar",
-    },
-    "scr-2": {
-      alt: "Kulübe - Güvenlik mi tuzak mı?",
-      caption: "Kulübe - Güvenlik mi tuzak mı?",
-    },
-    "scr-3": {
-      alt: "Kule - Siste yükseliş",
-      caption: "Kule - Siste yükseliş",
-    },
-    "scr-4": {
-      alt: "Çevresel bulmaca - İşaretleri dikkatle oku",
-      caption: "Çevresel bulmaca - İşaretleri dikkatle oku",
-    },
-    "scr-5": {
-      alt: "Yeraltı - Yüzeyin altı",
-      caption: "Yeraltı - Yüzeyin altı",
-    },
-    "scr-6": {
-      alt: "Rehberin talimatları - Onları takip etmeli misin?",
-      caption: "Rehberin talimatları - Onları takip etmeli misin?",
-    },
-    "scr-7": {
-      alt: "Atmosferik iç mekân - Işık ve gölge",
-      caption: "Atmosferik iç mekân - Işık ve gölge",
-    },
-    "scr-8": {
-      alt: "Bir yanlışlık anı - Bir şey değişti",
-      caption: "Bir yanlışlık anı - Bir şey değişti",
-    },
-    "gp-1": {
-      alt: "Oynanış görüntüsü - Patika keşfi",
-      caption: "Oynanış: Patika keşfi",
-    },
+    "scr-1": { alt: "Yol - Bilinmeze İlk Adımlar", caption: "Yol - Bilinmeze İlk Adımlar" },
+    "scr-2": { alt: "Kulübe - Güvenlik mi Tuzak mı?", caption: "Kulübe - Güvenlik mi Tuzak mı?" },
+    "scr-3": { alt: "Kule - Sise Tırmanış", caption: "Kule - Sise Tırmanış" },
+    "scr-4": { alt: "Çevresel Bulmaca - İşaretleri Dikkatle Oku", caption: "Çevresel Bulmaca - İşaretleri Dikkatle Oku" },
+    "scr-5": { alt: "Yeraltı - Yüzeyin Altında", caption: "Yeraltı - Yüzeyin Altında" },
+    "scr-6": { alt: "Rehber'in Talimatları - Takip Eder misin?", caption: "Rehber'in Talimatları - Takip Eder misin?" },
+    "scr-7": { alt: "Atmosferik İç Mekan - Işık ve Gölge", caption: "Atmosferik İç Mekan - Işık ve Gölge" },
+    "scr-8": { alt: "Yanlışlık Anı - Bir Şey Değişti", caption: "Yanlışlık Anı - Bir Şey Değişti" },
+    "gp-1": { alt: "Oynanış Kayıtı - Yol Keşfi", caption: "Oynanış: Yol Keşfi" },
   },
 
   pressKit: {
     assets: {
-      "logo-horizontal.webp": {
-        name: "Logo - Yatay",
-        description: "Başlık kullanımı için birincil yatay logo",
-      },
-      "logo-vertical.webp": {
-        name: "Logo - Dikey",
-        description: "Kare formatlar için istiflenmiş logo",
-      },
-      "logo-icon.webp": {
-        name: "Logo - Yalnızca Simge",
-        description: "Favicon ve sosyal avatarlar için minimal simge",
-      },
-      "key-art-main.webp": {
-        name: "Ana Görsel - Ana",
-        description: "Birincil pazarlama görseli",
-      },
-      "key-art-vertical.webp": {
-        name: "Ana Görsel - Dikey",
-        description: "Mobil ve poster için dikey format",
-      },
-      "key-art-capsule.webp": {
-        name: "Ana Görsel - Kapsül",
-        description: "Steam kapsül formatı",
-      },
-      "trailer-announce.mp4": {
-        name: "Tanıtım Fragmanı",
-        description: "Resmi tanıtım fragmanı",
-      },
-      "trailer-gameplay.mp4": {
-        name: "Oynanış Tanıtımı",
-        description: "Ham oynanış görüntüsü",
-      },
+      "logo-horizontal.webp": { name: "Logo - Yatay", description: "Üst kısım için birincil yatay logo" },
+      "logo-vertical.webp": { name: "Logo - Dikey", description: "Kare formatlar için yığın logo" },
+      "logo-icon.webp": { name: "Logo - Sadece İkon", description: "Favicon ve sosyal avatarlar için minimal ikon" },
+      "key-art-main.webp": { name: "Anahtar Sanat - Ana", description: "Birincil pazarlama sanat çalışması" },
+      "key-art-vertical.webp": { name: "Anahtar Sanat - Dikey", description: "Mobil ve afiş için dikey format" },
+      "key-art-capsule.webp": { name: "Anahtar Sanat - Kapsül", description: "Steam kapsül sanat formatı" },
+      "trailer-announce.mp4": { name: "Tanıtım Fragmanı", description: "Resmi tanıtım fragmanı" },
+      "trailer-gameplay.mp4": { name: "Oynanış Önizlemesi", description: "Ham oynanış kaydı" },
     },
     screenshotCaptions: {
-      "screenshot-01.webp": "Patika - Bilinmeze ilk adımlar",
-      "screenshot-02.webp": "Kulübe - Güvenlik mi tuzak mı?",
-      "screenshot-03.webp": "Kule - Siste yükseliş",
-      "screenshot-04.webp": "Çevresel bulmaca - İşaretleri dikkatle oku",
-      "screenshot-05.webp": "Yeraltı - Yüzeyin altı",
-      "screenshot-06.webp": "Rehberin talimatları - Onları takip etmeli misin?",
-      "screenshot-07.webp": "Atmosferik iç mekân - Işık ve gölge",
-      "screenshot-08.webp": "Bir yanlışlık anı - Bir şey değişti",
+      "screenshot-01.webp": "Yol - Bilinmeze İlk Adımlar",
+      "screenshot-02.webp": "Kulübe - Güvenlik mi Tuzak mı?",
+      "screenshot-03.webp": "Kule - Sise Tırmanış",
+      "screenshot-04.webp": "Çevresel Bulmaca - İşaretleri Dikkatle Oku",
+      "screenshot-05.webp": "Yeraltı - Yüzeyin Altında",
+      "screenshot-06.webp": "Rehber'in Talimatları - Takip Eder misin?",
+      "screenshot-07.webp": "Atmosferik İç Mekan - Işık ve Gölge",
+      "screenshot-08.webp": "Yanlışlık Anı - Bir Şey Değişti",
     },
     conceptCaptions: {
-      "concept-01.webp": "Erken Patika ortam konsepti",
-      "concept-02.webp": "Kulübe iç mekân ruh çalışması",
-      "concept-03.webp": "Kule mimari keşfi",
-      "concept-04.webp": "Yeraltı tünel sistemi",
-      "concept-05.webp": "Rehber arayüz yinelemeleri",
-      "concept-06.webp": "Karakter siluet çalışmaları",
+      "concept-01.webp": "Erken Yol Ortamı Konsepti",
+      "concept-02.webp": "Kulübe İç Mekan Hali Çalışması",
+      "concept-03.webp": "Kule Mimarisi Keşfi",
+      "concept-04.webp": "Yeraltı Tünel Sistemi",
+      "concept-05.webp": "Rehber UI/UX Yinelemeleri",
+      "concept-06.webp": "Karakter Siluet Çalışmaları",
     },
   },
 
   effects: {
     textShifts: [
-      { original: "G\u00fcvendesin.", shifted: "G\u00fcvendeydin." },
-      { original: "Rehber seni koruyor.", shifted: "Rehber kendini koruyor." },
-      { original: "\u0130lerlemeye devam et.", shifted: "\u0130lerlemeye devam et. Art\u0131k daha yak\u0131n." },
-      { original: "Yol a\u00e7\u0131k.", shifted: "Yol a\u00e7\u0131kt\u0131." },
-      { original: "Yaln\u0131zs\u0131n.", shifted: "Yaln\u0131z de\u011filsin." },
-      { original: "Arkana bakma.", shifted: "Arkana bakma. Zaten arkanda." },
-      { original: "\u00c7\u0131k\u0131\u015f ileride.", shifted: "\u00c7\u0131k\u0131\u015f ilerideydi." },
-      { original: "Rehbere g\u00fcven.", shifted: "Rehbere g\u00fcven. Rehbere g\u00fcven. Rehbere g\u00fcven." },
-      { original: "I\u015f\u0131\u011f\u0131 takip et.", shifted: "I\u015f\u0131\u011f\u0131 takip et. Ad\u0131n\u0131 biliyor." },
-      { original: "Hayatta kalacaks\u0131n.", shifted: "Hayatta kalacaks\u0131n. \u015eimdilik." },
-      { original: "Kap\u0131 kilitli.", shifted: "Kap\u0131 d\u0131\u015far\u0131dan kilitli." },
-      { original: "O seni bekliyor.", shifted: "O uzun zamand\u0131r bekliyor." },
+      { original: "Sen güvenlisin.", shifted: "Sen güvendin." },
+      { original: "Rehber seni korur.", shifted: "Rehber kendini korur." },
+      { original: "İleri gitmeye devam et.", shifted: "İleri gitmeye devam et. O şimdi daha yakın." },
+      { original: "Yol açık.", shifted: "Yol açıktı." },
+      { original: "Sen yalnızsın.", shifted: "Sen yalnız değilsin." },
+      { original: "Arkana bakma.", shifted: "Arkana bakma. O zaten arkanda." },
+      { original: "Çıkış öndedir.", shifted: "Çıkış öndeyken vardı." },
+      { original: "Rehber'e güven.", shifted: "Rehber'e güven. Rehber'e güven. Rehber'e güven." },
+      { original: "Işığı takip et.", shifted: "Işığı takip et. Senin adını biliyor." },
+      { original: "Sağ kalacaksın.", shifted: "Sağ kalacaksın. Şimdilik." },
+      { original: "Kapı kilitli.", shifted: "Kapı dışarıdan kilitli." },
+      { original: "O seni bekliyor.", shifted: "O uzun süredir bekliyor." },
     ],
     labelFlickers: [
       { original: "STEAM'DE WISHLIST", flicker: "STEAM'DE WISHLIST?" },
-      { original: "FRAGMAN \u0130ZLE", flicker: "FRAGMAN \u0130ZLE?" },
-      { original: "H\u0130KAYE", flicker: "H\u0130KAYE?" },
+      { original: "FRAGMAN İZLE", flicker: "FRAGMAN İZLE?" },
+      { original: "HİKAYE", flicker: "HİKAYE?" },
       { original: "MEKANLAR", flicker: "MEKANLAR?" },
-      { original: "\u00d6ZELL\u0130KLER", flicker: "\u00d6ZELL\u0130KLER?" },
+      { original: "ÖZELLİKLER", flicker: "ÖZELLİKLER?" },
       { original: "MEDYA", flicker: "MEDYA?" },
       { original: "HABERLER", flicker: "HABERLER?" },
-      { original: "BASIN K\u0130T\u0130", flicker: "BASIN K\u0130T\u0130?" },
+      { original: "BASIN KİTİ", flicker: "BASIN KİTİ?" },
     ],
     navShifts: [
-      { original: "H\u0130KAYE", shifted: "H\u0130KAYE?" },
+      { original: "HİKAYE", shifted: "HİKAYE?" },
       { original: "MEKANLAR", shifted: "MEKANLAR?" },
-      { original: "\u00d6ZELL\u0130KLER", shifted: "\u00d6ZELL\u0130KLER?" },
+      { original: "ÖZELLİKLER", shifted: "ÖZELLİKLER?" },
     ],
     timestampDrifts: [
-      { original: "Son g\u00fcncelleme: Ocak 2025", drifted: "Son g\u00fcncelleme: Ocak 2024" },
-      { original: "2 g\u00fcn \u00f6nce yay\u0131nland\u0131", drifted: "3 g\u00fcn \u00f6nce yay\u0131nland\u0131" },
-      { original: "Az \u00f6nce g\u00fcncellendi", drifted: "Az \u00f6nce g\u00fcncellendi" },
+      { original: "Son güncelleme: Ocak 2025", drifted: "Son güncelleme: Ocak 2024" },
+      { original: "2 gün önce yayınlandı", drifted: "3 gün önce yayınlandı" },
+      { original: "Az önce güncellendi", drifted: "Az önce güncellendi" },
     ],
     warningFlashes: [
-      "\u26a0 YOL SAPMASI TESP\u0130T ED\u0130LD\u0130",
-      "\u26a0 REHBER B\u00dcT\u00dcNL\u00dc\u011e\u00dc TEHL\u0130KEDE",
-      "\u26a0 \u0130\u015eARET\u00c7\u0130 TUTARSIZLI\u011eI",
-      "\u26a0 S\u0130NYAL PARAZ\u0130T\u0130",
-      "\u26a0 G\u00dcVEN SEV\u0130YES\u0130 D\u00dc\u015e\u00dcYOR",
-      "\u26a0 \u00d6ZNE G\u00d6ZET\u0130M ALTINDA",
-      "\u26a0 REHBERL\u0130K KAYNA\u011eI DO\u011eRULANMADI",
-      "\u26a0 SAPMA TESP\u0130T ED\u0130LD\u0130",
-      "\u26a0 REHBER SEN\u0130 FARK ETT\u0130",
-      "\u26a0 B\u0130R \u015eEY SEN\u0130 TAK\u0130P ED\u0130YOR",
-      "\u26a0 SONRAK\u0130 TAL\u0130MATA G\u00dcVENME",
-      "\u26a0 O BURADA OLDU\u011eUNU B\u0130L\u0130YOR",
-      "\u26a0 YOL YEN\u0130DEN YAZILDI",
+      "\u26a0 YOL SAPMASI TESPİT EDİLDİ",
+      "\u26a0 REHBER BÜTÜNLÜĞÜ TEHLİKEDE",
+      "\u26a0 İŞARETÇİ UYUMSUZLUĞU",
+      "\u26a0 SİNYAL PARAZİTİ",
+      "\u26a0 GÜVEN SEVİYESİ DÜŞÜYOR",
+      "\u26a0 KONU GÖZLEM ALTINDA",
+      "\u26a0 YÖNLENDİRME KAYNAĞI ONAYLANMADI",
+      "\u26a0 SAPMA TESPİT EDİLDİ",
+      "\u26a0 REHBER SİZİ FARK ETTİ",
+      "\u26a0 BİR ŞEY SİZİ TAKİP EDİYOR",
+      "\u26a0 BİR SONRAKİ TALİMATA GÜVENMEYİN",
+      "\u26a0 O SİZİN BURADA OLDUĞUNU BİLİYOR",
+      "\u26a0 YOL YENİDEN YAZILDI",
     ],
     textCorrections: [
-      {
-        original: "Kul\u00fcbe g\u00fcvenli bir s\u0131\u011f\u0131nak.",
-        corrected: "Kul\u00fcbe g\u00fcvenli bir s\u0131\u011f\u0131nak. [D\u00dcZELTME: Kul\u00fcbe d\u0131\u015far\u0131dan kilitleniyor.]",
-      },
-      {
-        original: "Kule net bir manzara sunuyor.",
-        corrected: "Kule net bir manzara sunuyor. [D\u00dcZELTME: Ne kadar y\u00fckselirsen o kadar az g\u00f6r\u00fcrs\u00fcn.]",
-      },
-      {
-        original: "\u0130\u015faretleri takip et.",
-        corrected: "\u0130\u015faretleri takip et. [D\u00dcZELTME: Baz\u0131 i\u015faretler iki y\u00f6n\u00fc g\u00f6steriyor.]",
-      },
-      {
-        original: "Burada yaln\u0131z olan sensin.",
-        corrected: "Burada yaln\u0131z olan sensin. [D\u00dcZELTME: H\u00e2l\u00e2 hayatta olan tek ki\u015fi sensin.]",
-      },
-      {
-        original: "Rehber sana yard\u0131m etmek istiyor.",
-        corrected: "Rehber sana yard\u0131m etmek istiyor. [D\u00dcZELTME: Rehber kendine yard\u0131m etmek istiyor.]",
-      },
-      {
-        original: "K\u0131z\u0131n g\u00fcvende.",
-        corrected: "K\u0131z\u0131n g\u00fcvende. [D\u00dcZELTME: K\u0131z\u0131n g\u00fcvende... \u015fimdilik.]",
-      },
-      {
-        original: "\u00c7\u0131k\u0131\u015f bu tarafta.",
-        corrected: "\u00c7\u0131k\u0131\u015f bu tarafta. [D\u00dcZELTME: \u00c7\u0131k\u0131\u015f bu taraftayd\u0131. Yer de\u011fi\u015ftirdi.]",
-      },
-      {
-        original: "Kimseye g\u00fcvenme.",
-        corrected: "Kimseye g\u00fcvenme. [D\u00dcZELTME: Kendin dahil.]",
-      },
+      { original: "Kulübe güvenli bir sığınaktır.", corrected: "Kulübe güvenli bir sığınaktır. [DÜZELTME: Kulübe dışarıdan kilitlenir.]" },
+      { original: "Kule net bir manzara sunar.", corrected: "Kule net bir manzara sunar. [DÜZELTME: Ne kadar yükselirsen o kadar az görürsün.]" },
+      { original: "İşaretçileri takip et.", corrected: "İşaretçileri takip et. [DÜZELTME: Bazı işaretçiler iki yöne gösterir.]" },
+      { original: "Sen burada tek kişisin.", corrected: "Sen burada tek kişisin. [DÜZELTME: Hala yaşayan tek kişi sensin.]" },
+      { original: "Rehber sana yardım etmek istiyor.", corrected: "Rehber sana yardım etmek istiyor. [DÜZELTME: Rehber kendisine yardım etmek istiyor.]" },
+      { original: "Kızın güvenli.", corrected: "Kızın güvenli. [DÜZELTME: Kızın güvenli... şimdilik.]" },
+      { original: "Çıkış buradadır.", corrected: "Çıkış buradadır. [DÜZELTME: Çıkış buradaydı. Taşındı.]" },
+      { original: "Kimseye güvenme.", corrected: "Kimseye güvenme. [DÜZELTME: Kendini de dahil.]" },
     ],
     locationDrifts: [
-      { original: "Patika", drifted: "Patika?" },
-      { original: "Kul\u00fcbe", drifted: "Kul\u00fcbe?" },
+      { original: "Yol", drifted: "Yol?" },
+      { original: "Kulübe", drifted: "Kulübe?" },
       { original: "Kule", drifted: "Kule?" },
-      { original: "Yeralt\u0131", drifted: "Yeralt\u0131?" },
-      { original: "Patika", drifted: "Eski Patika" },
-      { original: "Kul\u00fcbe", drifted: "Kilitli Kul\u00fcbe" },
-      { original: "Kule", drifted: "K\u00f6r Kule" },
-      { original: "Yeralt\u0131", drifted: "Derinlik" },
+      { original: "Yeraltı", drifted: "Yeraltı?" },
+      { original: "Yol", drifted: "Olan Yol" },
+      { original: "Kulübe", drifted: "Kilitli Kulübe" },
+      { original: "Kule", drifted: "Kör Kule" },
+      { original: "Yeraltı", drifted: "Aşağı" },
     ],
     observedHints: [
-      "G\u00f6zetleniyorsun.",
-      "Rehber seni g\u00f6r\u00fcyor.",
-      "Bir \u015fey izliyor.",
-      "Patikada yaln\u0131z de\u011filsin.",
-      "\u0130\u015faret\u00e7iler izliyor.",
-      "Bunu okudu\u011funu biliyor.",
-      "Burada olmamal\u0131yd\u0131n.",
-      "Rehber y\u00fcz\u00fcn\u00fc hat\u0131rl\u0131yor.",
-      "Daha \u00f6nce buradayd\u0131n.",
-      "O nefesini duyabiliyor.",
-      "Patika asla senin i\u00e7in de\u011fildi.",
-      "Y\u00f6nlendiriliyorsun. Kurtar\u0131lm\u0131yorsun.",
-      "Biri omzunun \u00fczerinden okuyor.",
-      "Rehber sand\u0131\u011f\u0131ndan daha yak\u0131n.",
+      "Sen gözetleniyorsun.",
+      "Rehber seni görüyor.",
+      "Bir şey izliyor.",
+      "Yolda yalnız değilsin.",
+      "İşaretçiler bakıyor.",
+      "Bunu okuduğunu biliyor.",
+      "Sen burada olmamalısın.",
+      "Rehber yüzünü hatırlıyor.",
+      "Daha önce buradaydın.",
+      "O nefesini duyuyor.",
+      "Yol asla senin için değildi.",
+      "Sen yönlendiriliyorsun. Kurtarılmıyorsun.",
+      "Birisi omzundan okuyor.",
+      "Rehber sandığından daha yakın.",
     ],
   },
 };
+
+export type GameLocaleContent = typeof gameLocaleContent;
